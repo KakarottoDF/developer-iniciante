@@ -8,7 +8,7 @@ Nota Conceito
 50 a 64 Regular
 65 a 84 Bom
 85 a 100 Ótimo
-Crie um algoritmo que apresente o conceito e a nota do aluno.a
+Crie um algoritmo que apresente o conceito e a nota do aluno.
 
 SINTESE
     ENTRADA: nota
@@ -28,15 +28,19 @@ int main(){
 
     if(nota >= 0 && nota <= 49){
         conceito = 'I';
+        printf("Conceito: %c\nNota: %d\n", conceito, nota);
     }else{
         if(nota >= 50 && nota <= 64){
             conceito = 'R';
+            printf("Conceito: %c\nNota: %d\n", conceito, nota);
         }else{
             if(nota >= 65 && nota <= 84){
                 conceito = 'B';
+                printf("Conceito: %c\nNota: %d\n", conceito, nota);
             }else{
                 if(nota >= 85 && nota <= 100){
                     conceito = 'O';
+                    printf("Conceito: %c\nNota: %d\n", conceito, nota);
                 }
             }
         }
