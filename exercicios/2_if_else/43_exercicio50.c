@@ -8,7 +8,7 @@ Nota Conceito
 50 a 64 Regular
 65 a 84 Bom
 85 a 100 Ótimo
-Crie um algoritmo que apresente o conceito e a nota do aluno.a
+Crie um algoritmo que apresente o conceito e a nota do aluno.
 
 SINTESE
     ENTRADA: nota
