@@ -12,7 +12,7 @@ acima de 601 40% do valor do saldo médio
 SINTESE
     ENTRADA: saldoMedio
     PROCESSAMENTO: valorDoCredito
-    SAIDA: saldoMedio, valorDoCredito
+    SAIDA: saldoMedio, valorDoCreditoa
 */
 
 #include <stdio.h>
