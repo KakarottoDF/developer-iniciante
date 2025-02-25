@@ -4,7 +4,7 @@ Faça um algoritmo que leia três números e mostre-os em ordem decrescente.
 SINTESE
     ENTRADA: primeiroNumero, segundoNumero, terceiroNumero
     PROCESSAMENTO: comparação
-    SAIDA: mostrar em ordem decrescente
+    SAIDA: mostrar em ordem decrescentea
 */
 
 #include <stdio.h>
