@@ -8,37 +8,13 @@ c) se 2.000,00 <= salarioAtual < 3.000,00: aumento igual a 7%
 d) se salarioAtual acima de 3.000,00: aumento igual a 5%.
 
 SINTESE
-    ENTRADA: salarioEmpregado
-    PROCESSAMENTO: aumentoSalarial
-    SAIDA: aumentoSalarial
+    ENTRADA: quantidadeDeCarroVendidos
+    PROCESSAMENTO: valorDasVendas
+    SAIDA: salarioTotalDoVendedor
 */
 
 #include <stdio.h>
 
 int main(){
-
-    float salarioEmpregado;
-    float aumentoSalarial;
-
-    printf("Informe o salario do empregado: ");
-    scanf("%f", &salarioEmpregado);
-
-    if(salarioEmpregado >= 1500 && salarioEmpregado < 1750){
-        aumentoSalarial = salarioEmpregado * 0.12;
-    }else{ 
-        if(salarioEmpregado >= 1750 && salarioEmpregado < 2000){
-        aumentoSalarial = salarioEmpregado * 0.10;
-        }else{
-            if(salarioEmpregado >= 2000 && salarioEmpregado < 3000){
-                aumentoSalarial = salarioEmpregado * 0.07;
-            }else{
-                if(salarioEmpregado >= 3000){
-                    aumentoSalarial = salarioEmpregado * 0.05;
-                }else{
-                    aumentoSalarial = salarioEmpregado * 0.15;
-                }
-            }
-        }
-    }
-    printf("O aumento salarial sera de R$ %.2f\n", aumentoSalarial);
+    
 }
