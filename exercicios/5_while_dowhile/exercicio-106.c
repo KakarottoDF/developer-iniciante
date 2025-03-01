@@ -1,6 +1,6 @@
 /*
 SINTESE
-    ENTRADA: 
+    ENTRADA: ii
     PROCESSAMENTO: 
     SAIDA: 
 */
