@@ -1,7 +1,7 @@
 /*
 SINTESE
     ENTRADA: idade, altura
-    PROCESSAMENTO:  mediaDaIdadeDoAluno e mediaDaAlturaDoAluno
+    PROCESSAMENTO:  mediaDaIdadeDoAluno e mediaDaAlturaDoAlunoll
     SAIDA: médias da idade e altura dos alunos
 */
 
