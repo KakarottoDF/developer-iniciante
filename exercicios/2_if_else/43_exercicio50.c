@@ -4,7 +4,7 @@ Suponha que o conceito de um aluno seja determinado em função da sua nota.
 Suponha, também, que esta nota seja um valor inteiro na faixa de 0 a 100,
 conforme a seguinte faixa:
 Nota Conceito
-0 a 49 Insuficiente
+0 a 49 Insuficiente2
 50 a 64 Regular
 65 a 84 Bom
 85 a 100 Ótimo
