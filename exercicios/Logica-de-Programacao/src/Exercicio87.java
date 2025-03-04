@@ -2,7 +2,7 @@
 SINTESE
     ENTRADA: quantidadeDeRepeticoesDoSistema, entradaDeNumero
     PROCESSAMENTO: maior
-    SAIDA: maior
+    SAIDA:
 */
 
 public class Exercicio87 {
