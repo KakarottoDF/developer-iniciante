@@ -1,7 +1,7 @@
 /*
 SINTESE
     ENTRADA: quantidadeDeRepeticoesDoSistema, entradaDeNumero
-    PROCESSAMENTO: maior
+    PROCESSAMENTO:
     SAIDA:
 */
 
