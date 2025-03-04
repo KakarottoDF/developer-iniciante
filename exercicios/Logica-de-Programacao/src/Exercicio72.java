@@ -1,29 +1,48 @@
 /*
 SINTESE
-    ENTRADA: quantidadeDeRepeticoesDoSistema, entradaDeNumero
-    PROCESSAMENTO: maior
-    SAIDA: maior
-    Um determinado clube de futebol pretende classificar seus atletas em categorias
-e para isto ele contratou um programador para criar um programa que
-executasse esta tarefa. Para isso o clube criou uma tabela que continha a faixa
-etária do atleta e sua categoria. A tabela está demonstrada abaixo:
-IDADE
-CATEGORIA
-De 05 a 10
-Infantil
-De 11 a 15
-Juvenil
-De 16 a 20
-Junior
-De 21 a 25
-Profissional
-Construa um programa que solicite o nome e a idade de um atleta e imprima a
-sua categoria.
+    ENTRADA: nomeDoAtleta, idadeDoAtleta
+    PROCESSAMENTO: idadeDoAtleta
+    SAIDA: nomeDoAtleta, sua categoria
 */
+
+import java.util.Scanner;
 
 public class Exercicio72 {
 
     public static void main(String[] args) {
+
+        String nomeDoAtleta;
+        int idadeDoAtleta;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Digite o nome do atlela: ");
+        nomeDoAtleta = scan.nextLine();
+
+        System.out.print("Digite a idade deste atleta: ");
+        idadeDoAtleta = scan.nextInt();
+
+        switch(idadeDoAtleta){
+            case 5, 6, 7, 8, 9, 10:
+                System.out.println("O atleta " + nomeDoAtleta + ", está na categoria INFANTIL.");
+                break;
+
+            case 11, 12, 13, 14, 15:
+                System.out.println("O atleta " + nomeDoAtleta + ", está na categoria JUVENIL.");
+                break;
+
+            case 16, 17, 18, 19, 20:
+                System.out.println("O atleta " + nomeDoAtleta + ", está na categoria JÚNIOR.");
+                break;
+
+            case 21, 22, 23, 24, 25:
+                System.out.println("O atleta " + nomeDoAtleta + ", está na categoria PROFISSIONAL.");
+                break;
+
+            default:
+                System.out.println("Você digitou uma idade fora de todas as categorias. Encerrando o programa!");
+                break;
+        }
 
     }
 }
