@@ -48,6 +48,5 @@ public class Exercicio74 {
                 System.out.println("Escolha inválida. Encerrando o sistema..");
                 break;
         }
-
     }
 }
