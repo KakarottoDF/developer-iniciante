@@ -66,7 +66,7 @@ public class Exercicio84 {
     public static double retirar(double saldo, double valor){
         if (valor > saldo) {
             System.out.println("Erro: saldo insuficiente para a retirada!");
-            return saldo; // Retorna o saldo inalterado
+            return saldo;
         } else {
             return saldo - valor;
         }

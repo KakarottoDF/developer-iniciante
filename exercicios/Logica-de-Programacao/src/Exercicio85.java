@@ -40,7 +40,6 @@ public class Exercicio85 {
         }
     }
 
-    // Método para ler a escolha do jogador
     public static String lerEscolhaJogador(String msg) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(msg);
