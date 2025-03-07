@@ -4,7 +4,7 @@ SINTESE
     PROCESSAMENTO: criar um terceiro vetor com o dobro do tamanho dos outros dois
     SAIDA: terceiroVetor
 Faça um algoritmo que faça a união de dois vetores de mesmo tamanho e
-mesmo tipo em um terceiro vetor com dobro do tamanho.
+mesmo tipo em um terceiro vetor com dobro do tamanho.a
 */
 
 public class Main {
