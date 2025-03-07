@@ -10,9 +10,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int []vetorGabaritoLoteriaEsportiva = new int[4];
+        int []vetorGabaritoLoteriaEsportiva = new int[13];
         int quantidadeDeApostadores;
-        int []vetorApostador = new int[4];
+        int []vetorApostador = new int[13];
         boolean validarNumeroDoGabarito;
         boolean validarJogador;
         int somaJogada = 0;
