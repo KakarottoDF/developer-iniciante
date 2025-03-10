@@ -8,5 +8,8 @@ isso.
 public class Main{
     public static void main(String[] args) {
         System.out.println("TESTE");
+        /**
+         * O Java possui uma coisa chamada JVM que é a máquina virtual que interpreta o bytecode gerado pelo compilador Java dos códigos que escrevemos independentemente da plataforma e essa é a característica que o exercício está falando.
+         */
     }
 }
