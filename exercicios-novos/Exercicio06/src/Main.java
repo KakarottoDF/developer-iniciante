@@ -16,6 +16,9 @@ o seu programa quantas vezes ele quiser
 */
 public class Main{
     public static void main(String[] args) {
+        MyMath usuario = new MyMath();
 
+        usuario.primeiroValor = MyMath.lerValores("Insira o primeiro valor: ");
+        System.out.println(MyMath.fatorial(usuario.primeiroValor));
     }
 }
