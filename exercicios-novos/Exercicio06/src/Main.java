@@ -1,8 +1,8 @@
 /*
 SINTESE
-    ENTRADA:
-    PROCESSAMENTO:
-    SAIDA:
+    ENTRADA: primeiroValor, segundoValor
+    PROCESSAMENTO: fatorial, maior, numeroPar, numeroPrimo
+    SAIDA: resultado
 
 Você deve fazer a implementação de uma classe chamada MyMath.java que deverá ter 4
 métodos conforme a listagem a seguir:
