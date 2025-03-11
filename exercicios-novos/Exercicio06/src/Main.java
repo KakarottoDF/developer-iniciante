@@ -3,22 +3,29 @@ SINTESE
     ENTRADA: primeiroValor, segundoValor
     PROCESSAMENTO: fatorial, maior, numeroPar, numeroPrimo
     SAIDA: resultado
-
-Você deve fazer a implementação de uma classe chamada MyMath.java que deverá ter 4
-métodos conforme a listagem a seguir:
-1. receber um número inteiro como argumento e calcular o fatorial.
-2. receber dois valores como argumento e retornar o número que for maior.
-3. receber um valor inteiro como argumento e retornar se ele é um número par. (retorne
-true ou false)
-4. receber um número inteiro e retornar se ele é um número primo matemático.
-Faça um programa principal para testar sua classe implementada permitindo o usuário usar
-o seu programa quantas vezes ele quiser
 */
 public class Main{
     public static void main(String[] args) {
         MyMath usuario = new MyMath();
 
-        usuario.primeiroValor = MyMath.lerValores("Insira o primeiro valor: ");
-        System.out.println(MyMath.fatorial(usuario.primeiroValor));
+        while(usuario.continuarPrograma.equals("S")) {
+
+            usuario.primeiroValor = MyMath.lerValores("Insira um valor: ");
+            System.out.println(MyMath.fatorial(usuario.primeiroValor));
+
+            usuario.primeiroValor = MyMath.lerValores("Insira o primeiro valor: ");
+            usuario.segundoValor = MyMath.lerValores("Insira o segundo valor: ");
+            System.out.println("O maior número digitado foi " + MyMath.maiorNumero(usuario.primeiroValor, usuario.segundoValor));
+
+            usuario.primeiroValor = MyMath.lerValores("Insira um valor: ");
+            System.out.println(MyMath.numeroPar(usuario.primeiroValor));
+
+            usuario.primeiroValor = MyMath.lerValores("Insira um valor: ");
+            System.out.println(MyMath.numeroPrimo(usuario.primeiroValor));
+
+            usuario.continuarPrograma = MyMath.lerContinuarPrograma("Deseja continuar com o programa? [S]Sim [N]Não: ");
+            MyMath.validarContinuarPrograma(usuario.continuarPrograma);
+
+        }
     }
 }
