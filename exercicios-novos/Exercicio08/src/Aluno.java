@@ -22,4 +22,23 @@ public class Aluno{
         System.out.print(msg);
         return lerNome();
     }
+
+    public static String mediaDoAluno(Aluno aluno){
+        double totalNotas = 0;
+        double mediaFinal;
+
+        for(int i = 0; i < aluno.QUANTIDADE_DE_NOTAS; i++){
+            totalNotas += aluno.notas[i];
+        }
+
+        mediaFinal = totalNotas / aluno.QUANTIDADE_DE_NOTAS;
+
+        if(mediaFinal >= 6){
+            System.out.println("A média final desse aluno foi " + mediaFinal);
+            return "Aluno Aprovado";
+        }else{
+            System.out.println("A média final desse aluno foi " + mediaFinal);
+            return "Aluno Reprovado";
+        }
+    }
 }

@@ -18,5 +18,11 @@ public class Main{
         for(int i = 0; i < aluno.QUANTIDADE_DE_NOTAS; i++){
             aluno.notas[i] = Aluno.lerNotas("Digite a " + (i + 1) + "ª nota do aluno: ");
         }
+
+        System.out.println("ALUNO: " + aluno.nome);
+        for(int i = 0; i < aluno.QUANTIDADE_DE_NOTAS; i++){
+            System.out.println("Nota " + (i + 1) + ": " + aluno.notas[i]);
+        }
+        System.out.println(Aluno.mediaDoAluno(aluno));
     }
 }
