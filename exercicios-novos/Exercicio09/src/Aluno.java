@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Aluno {
     int quantidadeDeAlunosNaSala;
-    String []nomeDoAluno;
-    String []matriculaDoAluno;
-    String []situacaoDoAluno;
+    String []nomeDoAluno;// = new String[quantidadeDeAlunosNaSala];
+    String []matriculaDoAluno;// = new String[quantidadeDeAlunosNaSala];
+    String []situacaoDoAluno;// = new String[quantidadeDeAlunosNaSala];
     int quantidadeDeAlunosRegulares;
     int quantidadeDeAlunosBolsistas;
 
