@@ -12,19 +12,9 @@ quantidade de alunos bolsistas.
 
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno = new Aluno();
 
-        aluno.quantidadeDeAlunosNaSala = Aluno.lerQuantidadeDeAlunosNaSala("Quantos alunos existem nesta sala de Aula? ");
-
-        aluno.nomeDoAluno = new String[aluno.quantidadeDeAlunosNaSala];
-        aluno.matriculaDoAluno = new String[aluno.quantidadeDeAlunosNaSala];
-        aluno.situacaoDoAluno = new String[aluno.quantidadeDeAlunosNaSala];
-
-        for(int i = 0; i < aluno.quantidadeDeAlunosNaSala; i++){
-            aluno.nomeDoAluno[i] = Aluno.lerDadoDoAluno("Digite o nome do " + (i + 1) + "º aluno: ");
-            aluno.matriculaDoAluno[i] = Aluno.lerDadoDoAluno("Digite a matrícula do(a) " + aluno.nomeDoAluno[i] + ": ");
+    Leitor.lerAluno();
 
 
-        }
     }
 }
