@@ -19,6 +19,11 @@ public class Leitor{
         return lerInt();
     }
 
+    public static boolean lerSituacao(String msg){
+        System.out.print(msg);
+        return lerSituacao();
+    }
+
     public static boolean lerSituacao(){
         String resposta;
         while(true) {
@@ -33,9 +38,15 @@ public class Leitor{
         }
     }
 
-    public static boolean lerSituacao(String msg){
-        System.out.print(msg);
-        return lerSituacao();
+    public static Aluno lerAluno() {
+        Aluno aluno = new Aluno();
+
+        aluno.nome = lerString("Informe o nome do aluno: ");
+        aluno.matricula = lerString("Informe a matrícula do aluno: ");
+
+        aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
+
+        return aluno;
     }
 
     public static Turma lerTurma(int totalDeAlunos) {
@@ -51,16 +62,5 @@ public class Leitor{
     public static Turma lerTurma(String msg){
         int qtdAlunos = lerInt(msg);
         return lerTurma(qtdAlunos);
-    }
-
-    public static Aluno lerAluno() {
-        Aluno aluno = new Aluno();
-
-            aluno.nome = lerString("Informe o nome do aluno: ");
-            aluno.matricula = lerString("Informe a matrícula do aluno: ");
-
-            aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
-
-        return aluno;
     }
 }

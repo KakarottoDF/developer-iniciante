@@ -15,7 +15,5 @@ public class Imprimir {
 
         System.out.println("Alunos bolsistas: " + turma.totalBolsistas);
         System.out.println("Alunos regulares: " + turma.totalRegulares);
-
     }
-
 }
