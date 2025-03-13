@@ -10,6 +10,15 @@ public class Leitor{
         return lerString();
     }
 
+    public static int lerInt(){
+        return new Scanner(System.in).nextInt();
+    }
+
+    public static int lerInt(String msg){
+        System.out.print(msg);
+        return lerInt();
+    }
+
     public static boolean lerSituacao(){
         String resposta;
         while(true) {
@@ -29,26 +38,29 @@ public class Leitor{
         return lerSituacao();
     }
 
-    public static int lerInt(){
-        return new Scanner(System.in).nextInt();
-    }
-
-    public static int lerInt(String msg){
-        System.out.print(msg);
-        return lerInt();
-    }
-
-    public static int lerQuantidade() {
-        return lerInt("Quantos alunos existem na sala de aula? ");
-    }
-
-    public static void lerAluno(Aluno aluno, int quantidadeDeAlunoEmTurma) {
-
-        for (int i = 0; i < quantidadeDeAlunoEmTurma; i++) {
-            aluno.nome[i] = lerString("Informe o nome do aluno: ");
-            aluno.matricula[i] = lerString("Informe a matrícula do aluno: ");
-            aluno.situacaoRegular[i] = lerSituacao("O aluno é Regular? ");
-            aluno.situacaoBolsista[i] = lerSituacao("O aluno é Bolsista? ");
+    public static Turma lerTurma(int totalDeAlunos) {
+        Turma turma = new Turma();
+        turma.quantidadeDeAlunoEmTurma = totalDeAlunos;
+        turma.alunos = new Aluno[totalDeAlunos];
+        for(int i = 0; i < totalDeAlunos; i++){
+            turma.alunos[i] = lerAluno();
         }
+        return turma;
+    }
+
+    public static Turma lerTurma(String msg){
+        int qtdAlunos = lerInt(msg);
+        return lerTurma(qtdAlunos);
+    }
+
+    public static Aluno lerAluno() {
+        Aluno aluno = new Aluno();
+
+            aluno.nome = lerString("Informe o nome do aluno: ");
+            aluno.matricula = lerString("Informe a matrícula do aluno: ");
+
+            aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
+
+        return aluno;
     }
 }

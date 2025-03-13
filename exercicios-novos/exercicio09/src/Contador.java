@@ -1,20 +1,14 @@
 public class Contador{
 
-    public static void contarAlunos(Aluno alunos, Turma turma){
-
-        int regulares = 0;
-        int bolsistas = 0;
+    public static void contarAlunos(Turma turma){
 
         for (int i = 0; i < turma.quantidadeDeAlunoEmTurma; i++) {
-            if (alunos.situacaoRegular[i]) {
-                regulares++;
-            }
-            if (alunos.situacaoBolsista[i]) {
-                bolsistas++;
+            if (turma.alunos[i].situacaoBolsista) {
+                turma.totalBolsistas++;
+            }else{
+                turma.totalRegulares++;
             }
         }
-        System.out.println("Quantidade de alunos regulares: " + regulares);
-        System.out.println("Quantidade de alunos bolsistas: " + bolsistas);
     }
 
 }

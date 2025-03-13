@@ -1,16 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Turma turma = new Turma();
+        Turma turma = Leitor.lerTurma("Informe quantos alunos tem a turma: ");
 
-        turma.quantidadeDeAlunoEmTurma = Leitor.lerQuantidade();
+        Contador.contarAlunos(turma);
 
-        Aluno alunos = new Aluno();
+        Imprimir.printTurma(turma);
 
-        Inicializador.iniciarArrays(alunos, turma);
-
-        Leitor.lerAluno(alunos, turma.quantidadeDeAlunoEmTurma);
-
-        ImprimirAlunos.imprimirAluno(alunos, turma);
-        Contador.contarAlunos(alunos, turma);
     }
 }
