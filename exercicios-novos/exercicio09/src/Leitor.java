@@ -29,13 +29,26 @@ public class Leitor{
         return lerSituacao();
     }
 
-    public static Aluno lerAluno(){
-        Aluno aluno = new Aluno();
+    public static int lerInt(){
+        return new Scanner(System.in).nextInt();
+    }
 
-        aluno.nome = lerString("Informe o nome do aluno: ");
-        aluno.matricula = lerString("Informe a matrícula do aluno: ");
-        aluno.situacaoRegular = lerSituacao("O aluno é Regular? ");
-        aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
-        return aluno;
+    public static int lerInt(String msg){
+        System.out.print(msg);
+        return lerInt();
+    }
+
+    public static int lerQuantidade() {
+        return lerInt("Quantos alunos existem na sala de aula? ");
+    }
+
+    public static void lerAluno(Aluno aluno, int quantidadeDeAlunoEmTurma) {
+
+        for (int i = 0; i < quantidadeDeAlunoEmTurma; i++) {
+            aluno.nome[i] = lerString("Informe o nome do aluno: ");
+            aluno.matricula[i] = lerString("Informe a matrícula do aluno: ");
+            aluno.situacaoRegular[i] = lerSituacao("O aluno é Regular? ");
+            aluno.situacaoBolsista[i] = lerSituacao("O aluno é Bolsista? ");
+        }
     }
 }
