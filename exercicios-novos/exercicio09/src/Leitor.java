@@ -38,17 +38,6 @@ public class Leitor{
         }
     }
 
-    public static Aluno lerAluno() {
-        Aluno aluno = new Aluno();
-
-        aluno.nome = lerString("Informe o nome do aluno: ");
-        aluno.matricula = lerString("Informe a matrícula do aluno: ");
-
-        aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
-
-        return aluno;
-    }
-
     public static Turma lerTurma(int totalDeAlunos) {
         Turma turma = new Turma();
         turma.quantidadeDeAlunoEmTurma = totalDeAlunos;
@@ -63,4 +52,15 @@ public class Leitor{
         int qtdAlunos = lerInt(msg);
         return lerTurma(qtdAlunos);
     }
+
+    public static Aluno lerAluno() {
+        Aluno aluno = new Aluno();
+
+        aluno.nome = lerString("Informe o nome do aluno: ");
+        aluno.matricula = lerString("Informe a matrícula do aluno: ");
+        aluno.situacaoBolsista = lerSituacao("O aluno é Bolsista? ");
+
+        return aluno;
+    }
+
 }
