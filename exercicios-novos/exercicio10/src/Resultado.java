@@ -1,12 +1,18 @@
 public class Resultado {
 
-    public static void resultdoDaCorrida(Piloto pilotos, Corrida corrida){
+    public static void printPiloto(Piloto piloto){
+        System.out.println("Nome do piloto: " + piloto.nome);
+        System.out.println("Escuderia: " + piloto.escuderia);
+        System.out.println("Tempo de volta: " + piloto.tempoDeVolta);
+    }
 
-        for (int i = 0; i < corrida.quantidadeDeVoltas; i++) {
-            System.out.println("Piloto " + (i + 1) + ": " + pilotos.nome[i]);
-            System.out.println("Escuderia: " + pilotos.escuderia[i]);
-            //System.out.println("Regular: " + (aluno.situacaoRegular[i] ? "Sim" : "Não"));
-
+    public static void printCorrida(Corrida corrida){
+        for (Piloto piloto : corrida.pilotos) {
+            printPiloto(piloto);
         }
+        System.out.println("O tempo médio da corrida foi de: " + corrida.mediaTempo);
+        System.out.println("O piloto mais rápido foi " + corrida.pilotoMaisRapido.nome + " com o tempo de " + corrida.pilotoMaisRapido.tempoDeVolta + " minutos.");
+        System.out.println("O piloto mais lento foi " + corrida.pilotoMaisLento.nome + " com o tempo de " + corrida.pilotoMaisLento.tempoDeVolta + " minutos.");
+
     }
 }

@@ -1,4 +1,6 @@
 public class Corrida{
-    double[] tempoDeVolta;
-    int quantidadeDeVoltas;
+    Piloto[] pilotos;
+    Piloto pilotoMaisRapido;
+    Piloto pilotoMaisLento;
+    double mediaTempo;
 }
