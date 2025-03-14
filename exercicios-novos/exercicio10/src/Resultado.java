@@ -10,7 +10,8 @@ public class Resultado {
         for (Piloto piloto : corrida.pilotos) {
             printPiloto(piloto);
         }
-        System.out.println("O tempo médio da corrida foi de: " + corrida.mediaTempo);
+
+        System.out.println(String.format("O tempo médio da corrida foi de: " + corrida.mediaTempo));
         System.out.println("O piloto mais rápido foi " + corrida.pilotoMaisRapido.nome + " com o tempo de " + corrida.pilotoMaisRapido.tempoDeVolta + " minutos.");
         System.out.println("O piloto mais lento foi " + corrida.pilotoMaisLento.nome + " com o tempo de " + corrida.pilotoMaisLento.tempoDeVolta + " minutos.");
 

@@ -9,6 +9,7 @@ public class ServiceCorrida {
 
         corrida.mediaTempo = somaTempos / qtdCorridas;
         return corrida.mediaTempo;
+
     }
 
     public static void rankearPilotos(Corrida corrida){
