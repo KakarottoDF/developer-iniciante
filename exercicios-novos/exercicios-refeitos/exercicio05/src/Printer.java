@@ -20,6 +20,6 @@ public class Printer {
     }
 
     public static void resultadoExponenciacao(Usuario usuario){
-        System.out.print("O expoente de " + usuario.getPrimeiroValor() + " = " + ServiceUsuario.expoente(usuario.getPrimeiroValor()));
+        System.out.print(usuario.getPrimeiroValor() + " ^ " + usuario.getSegundoValor() + " = " + ServiceUsuario.expoente(usuario.getPrimeiroValor(), usuario.getSegundoValor()));
     }
 }

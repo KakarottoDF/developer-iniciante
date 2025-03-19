@@ -34,6 +34,7 @@ public class Main {
                 break;
             case 6:
                 System.out.println("EXPOENTE");
+                ServiceUsuario.inserirSegundoValor(usuario);
                 Printer.resultadoExponenciacao(usuario);
                 break;
             default:

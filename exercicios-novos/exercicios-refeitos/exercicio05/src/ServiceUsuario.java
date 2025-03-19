@@ -66,9 +66,9 @@ public class ServiceUsuario{
         return primeiroValor;
     }
 
-    public static double expoente(double primeiroValor){
+    public static double expoente(double primeiroValor, double segundoValor){
         double resultado = 1;
-        for(int i = 0; i < primeiroValor; i++){
+        for(int i = 0; i < segundoValor; i++){
             resultado *= primeiroValor;
         }
         return resultado;
