@@ -1,3 +1,3 @@
 public class Usuario{
-    int []valores = new int[5000];
+    int []valores = new int[3];
 }

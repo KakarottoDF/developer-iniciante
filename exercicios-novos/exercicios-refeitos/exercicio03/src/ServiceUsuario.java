@@ -16,10 +16,10 @@ public class ServiceUsuario{
         return media = somarValores / usuario.valores.length;
     }
 
-    public static int valoresImpares(Usuario usuario){
+    public static int valoresImpares(int[] valores){
         int impares = 0;
-        for(int i = 0; i < usuario.valores.length; i++){
-            if(usuario.valores[i] % 2 != 0){
+        for(int i = 0; i < valores.length; i++){
+            if(valores[i] % 2 != 0){
                 impares ++;
             }
         }

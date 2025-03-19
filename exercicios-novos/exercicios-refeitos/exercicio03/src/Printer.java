@@ -14,7 +14,7 @@ public class Printer {
     }
 
     public static void printarNumerosImpares(Usuario usuario){
-        System.out.println("Foram digitados " + ServiceUsuario.valoresImpares(usuario) + " número ímpares.");
+        System.out.println("Foram digitados " + ServiceUsuario.valoresImpares(usuario.valores) + " número ímpares.");
     }
 
 }
