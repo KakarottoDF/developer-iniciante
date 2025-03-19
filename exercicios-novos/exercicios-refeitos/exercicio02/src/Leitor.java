@@ -10,6 +10,17 @@ public class Leitor{
         return lerString();
     }
 
+    public static String lerString(String msg, String msgError){
+        String entrada;
+        do {
+            entrada = lerString(msg);
+            if (!entrada.equals("S") && !entrada.equals("N")) {
+                System.out.println(msgError);
+            }
+        } while (!entrada.equals("S") && !entrada.equals("N"));
+        return entrada;
+    }
+
     public static double lerDouble(){
         return new Scanner(System.in).nextDouble();
     }
