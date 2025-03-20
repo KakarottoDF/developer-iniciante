@@ -13,9 +13,9 @@ public class ServiceUsuario{
         return usuario.getOperador();
     }
 
-    public static double inserirSegundoValor(Usuario usuario){
+    public static Usuario inserirSegundoValor(Usuario usuario){
         usuario.setSegundoValor(Leitor.lerDouble("Insira o segundo valor: "));
-        return usuario.getSegundoValor();
+        return usuario;
     }
 
     public static double adicao(double primeiroValor, double segundoValor){

@@ -4,6 +4,6 @@ public class Main {
 
         ServiceTemperatura.inserirValorCelsius(temperatura);
         ServiceTemperatura.fahrenheit(temperatura.celsius);
-        Printer.printarConversao(temperatura);
+        Printer.printarConversao(temperatura.celsius);
     }
 }
