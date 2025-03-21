@@ -4,18 +4,12 @@ public class Corrida{
     Piloto pilotoMaisLento;
     double mediaTempo;
 
-    public static Corrida iniciarCorrida(){
-        int qtdPilotos = Leitor.lerInt("Quantos pilotos participaram da corrida? ");
-        return iniciarCorrida(qtdPilotos);
+    public static void atribuirMaisRapido(Corrida corrida){
+        corrida.pilotoMaisRapido = corrida.pilotos[0];
     }
 
-    public static Corrida iniciarCorrida(int qtdPilotos){
-        Corrida corrida = new Corrida();
-        corrida.pilotos = new Piloto[qtdPilotos];
-        for (int i = 0; i < corrida.pilotos.length; i++) {
-            corrida.pilotos[i] = Piloto.setPiloto();
-        }
-        return corrida;
+    public static void atribuirMaisLento(Corrida corrida){
+        corrida.pilotoMaisLento = corrida.pilotos[corrida.pilotos.length - 1];
     }
 }
 

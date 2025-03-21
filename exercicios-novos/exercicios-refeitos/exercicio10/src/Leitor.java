@@ -38,4 +38,18 @@ public class Leitor{
         }while (valor < min || valor > max);
         return valor;
     }
+
+    public static Corrida lerCorrida(){
+        int qtdPilotos = Leitor.lerInt("Quantos pilotos participaram da corrida? ");
+        return lerCorrida(qtdPilotos);
+    }
+
+    public static Corrida lerCorrida(int qtdPilotos){
+        Corrida corrida = new Corrida();
+        corrida.pilotos = new Piloto[qtdPilotos];
+        for (int i = 0; i < corrida.pilotos.length; i++) {
+            corrida.pilotos[i] = Piloto.setPiloto();
+        }
+        return corrida;
+    }
 }

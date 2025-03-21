@@ -7,6 +7,15 @@ public class Leitor {
         return lerCorrida(qtdPilotos);
     }
 
+    public static Corrida lerCorrida(int qtdPilotos){
+        Corrida corrida = new Corrida();
+        corrida.pilotos = new Piloto[qtdPilotos];
+        for (int i = 0; i < corrida.pilotos.length; i++) {
+            corrida.pilotos[i] = lerPiloto();
+        }
+        return corrida;
+    }
+
     public static Piloto lerPiloto() {
         Piloto piloto = new Piloto();
         piloto.nome = lerString("Informe o nome do piloto: ");
@@ -24,15 +33,6 @@ public class Leitor {
             }
         }while (valor < min || valor > max);
         return valor;
-    }
-
-    public static Corrida lerCorrida(int qtdPilotos){
-        Corrida corrida = new Corrida();
-        corrida.pilotos = new Piloto[qtdPilotos];
-        for (int i = 0; i < corrida.pilotos.length; i++) {
-            corrida.pilotos[i] = lerPiloto();
-        }
-        return corrida;
     }
 
     public static double lerDouble(){

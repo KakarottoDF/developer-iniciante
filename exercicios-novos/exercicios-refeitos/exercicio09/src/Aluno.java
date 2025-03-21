@@ -11,17 +11,17 @@ public class Aluno {
 
         aluno.nome = Leitor.lerString("Informe o nome do aluno: ");
         aluno.matricula = Leitor.lerString("Informe a matrícula do aluno: ");
-        aluno.situacaoBolsista = Aluno.lerSituacao("O aluno é Bolsista? [S]Sim [N]Não: ");
+        aluno.situacaoBolsista = respostaDaSituacao("O aluno é Bolsista? [S]Sim [N]Não: ");
 
         return aluno;
     }
 
-    public static boolean lerSituacao(String msg){
+    public static boolean respostaDaSituacao(String msg){
         System.out.print(msg);
-        return lerSituacao();
+        return respostaDaSituacao();
     }
 
-    public static boolean lerSituacao(){
+    public static boolean respostaDaSituacao(){
         String resposta;
         while(true) {
             resposta = new Scanner(System.in).nextLine().trim().toUpperCase();
