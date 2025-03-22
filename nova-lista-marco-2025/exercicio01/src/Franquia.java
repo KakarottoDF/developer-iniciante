@@ -4,11 +4,14 @@ public class Franquia {
     public double preco;
     public String nomeDaEmpresa;
 
-    public static Franquia setFranquia(){
-        Franquia franquias = new Franquia();
-        franquias.quantidadeDeGB = Reader.getInt("Digite a quantidade de GB:");
-        franquias.diaDeExpiracao = Reader.getString("Digite o dia de expiração:");
+    public String toString(){
+        String franquia =
+                "Nome da empresa: " + this.nomeDaEmpresa +
+                "\nPreço da franquia: " + this.preco +
+                "\nDia de expiração: " + this.diaDeExpiracao +
+                "\nQuantidade de GB: " + this.quantidadeDeGB;
 
-        return franquias;
+        return franquia;
     }
+
 }
