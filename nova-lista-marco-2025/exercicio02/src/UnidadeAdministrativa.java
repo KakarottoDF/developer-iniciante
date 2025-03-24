@@ -1,7 +1,12 @@
 public class UnidadeAdministrativa {
-    Acoes[] acoes;
+    Acao[] acoes;
     String nome;
-    int quantidadeDeAcoes;
+
+    //criar métodos de regras de negócios
+    //findBySemestre
+    //findByAno
+    //findByPrioridade
+    //pensar sempre em criar coisas especializadas
 
 }
 

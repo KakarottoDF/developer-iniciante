@@ -1,30 +1,29 @@
-import java.lang.module.FindException;
 import java.util.Scanner;
 
 public class Read {
 
-    public String getString(){
+    public String setString(){
         return new Scanner(System.in).nextLine().trim().toLowerCase();
     }
 
-    public String getString(String msg){
+    public String setString(String msg){
         System.out.print(msg);
-        return getString();
+        return setString();
     }
 
-    public int getInt(){
+    public int setInt(){
         return new Scanner(System.in).nextInt();
     }
 
-    public int getInt(String msg){
+    public int setInt(String msg){
         System.out.print(msg);
-        return getInt();
+        return setInt();
     }
 
-    public int getInt(String msg, String msgError, int min, int max){
+    public int setInt(String msg, String msgError, int min, int max){
         int valor;
         do {
-            valor = getInt(msg);
+            valor = setInt(msg);
             if(valor < min || valor > max){
                 System.out.println(msgError);
             }
@@ -32,20 +31,20 @@ public class Read {
         return valor;
     }
 
-    public boolean getBoolean(){
+    public boolean setBoolean(){
         return new Scanner(System.in).nextBoolean();
     }
 
-    public boolean getBoolean(String msg){
+    public boolean setBoolean(String msg){
         System.out.print(msg);
-        return getBoolean();
+        return setBoolean();
     }
 
-    public boolean getBoolean(String msg, String msgError, String sim, String nao){
+    public boolean setBoolean(String msg, String msgError, String sim, String nao){
         String escolha;
         boolean retornoEscolha = true;
         do {
-            escolha = getString(msg);
+            escolha = setString(msg);
             if(!escolha.equalsIgnoreCase(sim) && !escolha.equalsIgnoreCase(nao)){
                 System.out.println(msgError);
             } else {
@@ -59,18 +58,18 @@ public class Read {
         return retornoEscolha;
     }
 
-    public Acoes setAcoes(){
-        Acoes acoes = new Acoes();
-        acoes.descricao = getString("Informe a descrição desta ação: ");
-        acoes.mes = getInt("Informe o mês desta ação em números: ", "O mês tem que ser entre 1 até 12", 1, 12);
+    public Acao setAcoes(){
+        Acao acoes = new Acao();
+        acoes.descricao = setString("Informe a descrição desta ação: ");
+        acoes.mes = setInt("Informe o mês desta ação em números: ", "O mês tem que ser entre 1 até 12", 1, 12);
         setTrimestre(acoes, acoes.mes);
-        acoes.ano = getInt("Informe o ano desta ação: ", "O ano não pode ser menor que 2015 e nem maior que 2020", 2015, 2020);
-        acoes.acaoPrioritaria = getBoolean("Esta é uma ação prioritária? [S]Sim [N]Não: ", "Digite somente [S]SIm ou [N]Não", "S", "N");
+        acoes.ano = setInt("Informe o ano desta ação: ", "O ano não pode ser menor que 2015 e nem maior que 2020", 2015, 2020);
+        acoes.acaoPrioritaria = setBoolean("Esta é uma ação prioritária? [S]Sim [N]Não: ", "Digite somente [S]SIm ou [N]Não", "S", "N");
 
         return acoes;
     }
 
-    public Acoes setTrimestre(Acoes acoes, int mes){
+    public Acao setTrimestre(Acao acoes, int mes){
         switch(mes){
             case 1, 2, 3:
                 acoes.trimestre = "Primeiro";
@@ -84,9 +83,6 @@ public class Read {
             case 10, 11, 12:
                 acoes.trimestre = "Quarto";
                 break;
-            default:
-                System.out.println("Erro inesperado!");
-                break;
         }
         return acoes;
     }
@@ -94,17 +90,17 @@ public class Read {
     public UnidadeAdministrativa setUnidadeAdministrativa(){
         UnidadeAdministrativa unidade = new UnidadeAdministrativa();
 
-        unidade.nome = getString("Informe o nome da unidade administrativa: ");
+        unidade.nome = setString("Informe o nome da unidade administrativa: ");
 
         return setUnidadeAdministrativa(unidade);
     }
 
     public UnidadeAdministrativa setUnidadeAdministrativa
             (UnidadeAdministrativa unidade){
-        int quantidadeDeAcoes = getInt("Quantas ações tem essa unidade administrativa? ");
+        int quantidadeDeAcoes = setInt("Quantas ações tem essa unidade administrativa? ");
 
         unidade.quantidadeDeAcoes = quantidadeDeAcoes;
-        unidade.acoes = new Acoes[quantidadeDeAcoes];
+        unidade.acoes = new Acao[quantidadeDeAcoes];
 
         for (int i = 0; i < unidade.acoes.length; i++) {
             unidade.acoes[i] = setAcoes();

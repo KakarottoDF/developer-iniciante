@@ -8,7 +8,7 @@ public class Printer {
         System.out.println("lista de ações cadastradas:\n");
         System.out.println("nome da unidade administrativa: " + unidades.nome.toLowerCase());
 
-        for (Acoes acoes : unidades.acoes) {
+        for (Acao acoes : unidades.acoes) {
             System.out.println(acoes.toString().toLowerCase());
             System.out.println("-------------------------");
         }
@@ -19,7 +19,7 @@ public class Printer {
 
         System.out.println("ações prioritárias da unidade administrativa: " + unidade.nome.toLowerCase());
 
-        for (Acoes acao : unidade.acoes) {
+        for (Acao acao : unidade.acoes) {
             if (acao.acaoPrioritaria) {
                 System.out.println(acao.toString().toLowerCase());
                 System.out.println("-------------------------");
@@ -37,7 +37,7 @@ public class Printer {
 
         System.out.println("ações do terceiro trimestre da unidade administrativa: " + unidade.nome.toLowerCase());
 
-        for (Acoes acao : unidade.acoes) {
+        for (Acao acao : unidade.acoes) {
             if (acao.trimestre.equalsIgnoreCase("Terceiro")) {
                 System.out.println(acao.toString().toLowerCase());
                 System.out.println("-------------------------");
@@ -51,7 +51,7 @@ public class Printer {
     }
 
     public void imprimirAcoes2017(UnidadeAdministrativa unidade) {
-        Acoes acoes = new Acoes();
+        Acao acoes = new Acao();
 
         int quantidadeAcoes2017 = acoes.contarAcoes2017(unidade);
 
