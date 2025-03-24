@@ -51,7 +51,7 @@ public class Printer {
     }
 
     public void imprimirAcoes2017(UnidadeAdministrativa unidade) {
-        Acoes acoes = new Acoes();  // Criamos uma instância de Acoes para chamar o método
+        Acoes acoes = new Acoes();
 
         int quantidadeAcoes2017 = acoes.contarAcoes2017(unidade);
 
