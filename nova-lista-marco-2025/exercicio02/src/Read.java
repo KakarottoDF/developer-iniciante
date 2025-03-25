@@ -62,28 +62,8 @@ public class Read {
         Acao acoes = new Acao();
         acoes.descricao = setString("Informe a descrição desta ação: ");
         acoes.mes = setInt("Informe o mês desta ação em números: ", "O mês tem que ser entre 1 até 12", 1, 12);
-        setTrimestre(acoes, acoes.mes);
         acoes.ano = setInt("Informe o ano desta ação: ", "O ano não pode ser menor que 2015 e nem maior que 2020", 2015, 2020);
-        acoes.acaoPrioritaria = setBoolean("Esta é uma ação prioritária? [S]Sim [N]Não: ", "Digite somente [S]SIm ou [N]Não", "S", "N");
 
-        return acoes;
-    }
-
-    public Acao setTrimestre(Acao acoes, int mes){
-        switch(mes){
-            case 1, 2, 3:
-                acoes.trimestre = "Primeiro";
-                break;
-            case 4, 5, 6:
-                acoes.trimestre = "Segundo";
-                break;
-            case 7, 8, 9:
-                acoes.trimestre = "Terceiro";
-                break;
-            case 10, 11, 12:
-                acoes.trimestre = "Quarto";
-                break;
-        }
         return acoes;
     }
 
@@ -99,7 +79,6 @@ public class Read {
             (UnidadeAdministrativa unidade){
         int quantidadeDeAcoes = setInt("Quantas ações tem essa unidade administrativa? ");
 
-        unidade.quantidadeDeAcoes = quantidadeDeAcoes;
         unidade.acoes = new Acao[quantidadeDeAcoes];
 
         for (int i = 0; i < unidade.acoes.length; i++) {

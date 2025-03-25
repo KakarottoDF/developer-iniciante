@@ -2,7 +2,6 @@ public class Acao {
     String descricao;
     int mes;
     int ano;
-    boolean acaoPrioritaria;
 
     //ação
 
@@ -10,11 +9,21 @@ public class Acao {
         return (ano == 2015 || ano == 2016);
     }
 
-    public String getTrimestre(){
+    public int getTrimestre(){
         // fazer o retorno com número
         //fazer um método
-        switch(mes){
-            case 1, 2, 3:
+        return switch (this.mes) {
+            case 1, 2, 3 -> 1;
+            case 4, 5, 6 -> 2;
+            case 7, 8, 9 -> 3;
+            case 10, 11, 12 -> 4;
+            default -> 0;
+        };
+    }
+
+    public String getNomeTrimestre(){
+        switch (getTrimestre()) {
+            case 1, 2, 3 :
                 return "Primeiro";
             case 4, 5, 6:
                 return "Segundo";
@@ -22,21 +31,19 @@ public class Acao {
                 return "Terceiro";
             case 10, 11, 12:
                 return "Quarto";
+            default:
+                return "Trimestre não informado!";
+            }
         }
-        return "";
-    }
-
 
     public String toString(){
         String acoes =
                 "Descrição: " + this.descricao +
-                "\nPreço da franquia: " + this.mes +
-                "\nDia de expiração: " + this.ano +
-                "\nA ação é prioritária: " + (isAcaoPrioritaria() ? "Sim" : "Não") +
-                "\nTrimestre: " + getTrimestre();
+                        "\nPreço da franquia: " + this.mes +
+                        "\nDia de expiração: " + this.ano +
+                        "\nA ação é prioritária: " + (isAcaoPrioritaria() ? "Sim" : "Não") +
+                        "\nTrimestre: " + getNomeTrimestre();
 
         return acoes;
     }
-
-
 }
