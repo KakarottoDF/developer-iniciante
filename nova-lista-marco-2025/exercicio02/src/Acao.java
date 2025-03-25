@@ -23,13 +23,13 @@ public class Acao {
 
     public String getNomeTrimestre(){
         switch (getTrimestre()) {
-            case 1, 2, 3 :
+            case 1:
                 return "Primeiro";
-            case 4, 5, 6:
+            case 2:
                 return "Segundo";
-            case 7, 8, 9:
+            case 3:
                 return "Terceiro";
-            case 10, 11, 12:
+            case 4:
                 return "Quarto";
             default:
                 return "Trimestre não informado!";

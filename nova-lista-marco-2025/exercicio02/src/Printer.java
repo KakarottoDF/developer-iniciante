@@ -35,25 +35,21 @@ public class Printer {
     }
 
     public void imprimirAcoesTerceiroTrimestre(UnidadeAdministrativa unidade) {
-        boolean encontrouTerceiroTrimestre = false;
+        Acao[] acoesPorTrimestre = unidade.findBySemestre();
 
-        System.out.println("ações do terceiro trimestre da unidade administrativa: " + unidade.nome.toLowerCase());
-
-        for (Acao acao : unidade.acoes) {
-            if (acao.getNomeTrimestre().equalsIgnoreCase("Terceiro")) {
+        if (acoesPorTrimestre.length == 0) {
+            System.out.println("Nenhuma ação do trimestre desejado registrada.");
+        } else {
+            System.out.println("Ações do trimestre " + unidade.TRIMESTRE_DESEJADO + " da unidade administrativa: " + unidade.nome.toLowerCase());
+            for (Acao acao : acoesPorTrimestre) {
                 System.out.println(acao.toString().toLowerCase());
                 System.out.println("-------------------------");
-                encontrouTerceiroTrimestre = true;
             }
-        }
-
-        if (!encontrouTerceiroTrimestre) {
-            System.out.println("Nenhuma ação do terceiro trimestre registrada.");
         }
     }
 
     public void imprimirAcoes2017(UnidadeAdministrativa unidade) {
 
-        System.out.println("quantidade de ações que serão executadas em 2017: " + unidade.quantidadeAcoesPrioritarias(unidade));
+        System.out.println("quantidade de ações que serão executadas em 2017: " + unidade.quantidadeAcoesPorAno());
     }
 }
