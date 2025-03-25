@@ -34,7 +34,7 @@ public class UnidadeAdministrativa {
         return count;
     }
 
-    private Acao[] preencherAcoesPorTrimestre(int quantidade) {
+    private Acao[] filtrarAcoesPorTrimestre(int quantidade) {
         Acao[] acoesTrimestreFinal = new Acao[quantidade];
         int index = 0;
 
@@ -49,7 +49,7 @@ public class UnidadeAdministrativa {
 
     public Acao[] findByTrimestre() {
         int quantidadeAcoes = contarAcoesPorTrimestre();
-        return preencherAcoesPorTrimestre(quantidadeAcoes);
+        return filtrarAcoesPorTrimestre(quantidadeAcoes);
     }
 }
 
