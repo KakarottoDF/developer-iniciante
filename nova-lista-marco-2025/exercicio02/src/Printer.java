@@ -35,7 +35,7 @@ public class Printer {
     }
 
     public void imprimirAcoesTerceiroTrimestre(UnidadeAdministrativa unidade) {
-        Acao[] acoesPorTrimestre = unidade.findBySemestre();
+        Acao[] acoesPorTrimestre = unidade.findByTrimestre();
 
         if (acoesPorTrimestre.length == 0) {
             System.out.println("Nenhuma ação do trimestre desejado registrada.");

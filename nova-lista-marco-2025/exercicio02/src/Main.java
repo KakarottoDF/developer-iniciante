@@ -3,7 +3,7 @@ public class Main {
         Read read = new Read();
         Printer printer = new Printer();
 
-        UnidadeAdministrativa unidades = read.setUnidadeAdministrativa();
+        UnidadeAdministrativa unidades = read.preencherUnidadeAdministrativa();
 
 
         printer.imprimirEmpresas(unidades);

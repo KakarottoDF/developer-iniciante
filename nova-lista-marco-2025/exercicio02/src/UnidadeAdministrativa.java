@@ -2,6 +2,7 @@ public class UnidadeAdministrativa {
     Acao[] acoes;
     String nome;
     public final int TRIMESTRE_DESEJADO = 3;
+    public final int ANO_DESEJADO = 2017;
 
     //criar métodos de regras de negócios
     //findBySemestre
@@ -16,16 +17,16 @@ public class UnidadeAdministrativa {
     public int quantidadeAcoesPorAno() {
         int count = 0;
         for (Acao acao : this.acoes) {
-            if (acao.ano == 2017) {
+            if (acao.ano == ANO_DESEJADO) {
                 count++;
             }
         }
         return count;
     }
 
-    private int contarAcoesPorSemestre() {
+    private int contarAcoesPorTrimestre() {
         int count = 0;
-        for (Acao acao : acoes) {
+        for (Acao acao : this.acoes) {
             if (acao.getTrimestre() == TRIMESTRE_DESEJADO) {
                 count++;
             }
@@ -33,7 +34,7 @@ public class UnidadeAdministrativa {
         return count;
     }
 
-    private Acao[] preencherAcoesPorSemestre(int quantidade) {
+    private Acao[] preencherAcoesPorTrimestre(int quantidade) {
         Acao[] acoesTrimestreFinal = new Acao[quantidade];
         int index = 0;
 
@@ -46,9 +47,9 @@ public class UnidadeAdministrativa {
         return acoesTrimestreFinal;
     }
 
-    public Acao[] findBySemestre() {
-        int quantidadeAcoes = contarAcoesPorSemestre();
-        return preencherAcoesPorSemestre(quantidadeAcoes);
+    public Acao[] findByTrimestre() {
+        int quantidadeAcoes = contarAcoesPorTrimestre();
+        return preencherAcoesPorTrimestre(quantidadeAcoes);
     }
 }
 

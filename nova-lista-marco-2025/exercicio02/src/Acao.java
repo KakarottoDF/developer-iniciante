@@ -3,15 +3,12 @@ public class Acao {
     int mes;
     int ano;
 
-    //ação
-
     public boolean isAcaoPrioritaria(){
         return (ano == 2015 || ano == 2016);
     }
 
     public int getTrimestre(){
-        // fazer o retorno com número
-        //fazer um método
+
         return switch (this.mes) {
             case 1, 2, 3 -> 1;
             case 4, 5, 6 -> 2;

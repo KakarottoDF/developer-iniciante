@@ -31,34 +31,7 @@ public class Read {
         return valor;
     }
 
-    public boolean setBoolean(){
-        return new Scanner(System.in).nextBoolean();
-    }
-
-    public boolean setBoolean(String msg){
-        System.out.print(msg);
-        return setBoolean();
-    }
-
-    public boolean setBoolean(String msg, String msgError, String sim, String nao){
-        String escolha;
-        boolean retornoEscolha = true;
-        do {
-            escolha = setString(msg);
-            if(!escolha.equalsIgnoreCase(sim) && !escolha.equalsIgnoreCase(nao)){
-                System.out.println(msgError);
-            } else {
-                if(escolha.equalsIgnoreCase(sim)){
-                    retornoEscolha = true;
-                } else {
-                    retornoEscolha = false;
-                }
-            }
-        } while (!escolha.equalsIgnoreCase(sim) && !escolha.equalsIgnoreCase(nao));
-        return retornoEscolha;
-    }
-
-    public Acao setAcoes(){
+    public Acao preencherAcoes(){
         Acao acoes = new Acao();
         acoes.descricao = setString("Informe a descrição desta ação: ");
         acoes.mes = setInt("Informe o mês desta ação em números: ", "O mês tem que ser entre 1 até 12", 1, 12);
@@ -67,22 +40,22 @@ public class Read {
         return acoes;
     }
 
-    public UnidadeAdministrativa setUnidadeAdministrativa(){
+    public UnidadeAdministrativa preencherUnidadeAdministrativa(){
         UnidadeAdministrativa unidade = new UnidadeAdministrativa();
 
         unidade.nome = setString("Informe o nome da unidade administrativa: ");
 
-        return setUnidadeAdministrativa(unidade);
+        return preencherUnidadeAdministrativa(unidade);
     }
 
-    public UnidadeAdministrativa setUnidadeAdministrativa
+    public UnidadeAdministrativa preencherUnidadeAdministrativa
             (UnidadeAdministrativa unidade){
         int quantidadeDeAcoes = setInt("Quantas ações tem essa unidade administrativa? ");
 
         unidade.acoes = new Acao[quantidadeDeAcoes];
 
         for (int i = 0; i < unidade.acoes.length; i++) {
-            unidade.acoes[i] = setAcoes();
+            unidade.acoes[i] = preencherAcoes();
         }
 
         return unidade;
