@@ -26,7 +26,7 @@ public class Main {
                     Printer.impimirCustoPlacasSemMLP(gerenciarPlacas);
                     break;
                 default:
-                    System.out.println("Opção inválida, tente novamente.");
+                    System.out.println("Opção inválida, tente novamente. ");
             }
 
             resposta = Reader.lerString("\nDeseja fazer outra operação? [S]Sim [N]Não", "Digite[S]Sim [N]Não", "S", "N");
