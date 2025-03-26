@@ -10,6 +10,18 @@ public class Reader{
         return lerString();
     }
 
+    public static String lerString(String msg, String msgError, String entrada, String saida){
+        String leitor;
+
+        do{
+            leitor = lerString(msg);
+            if(!leitor.equals(entrada) || !leitor.equals(saida)){
+                System.out.println(msgError);
+            }
+        }while(!leitor.equals(entrada) && !leitor.equals(saida));
+        return leitor;
+    }
+
     public static boolean lerBoolean(){
         return new Scanner(System.in).nextBoolean();
     }
@@ -49,6 +61,18 @@ public class Reader{
         return lerInt();
     }
 
+    public static int lerInt(String msg, String msgError, int min, int max){
+        int leitor;
+
+        do{
+            leitor = lerInt(msg);
+            if(leitor < min || leitor > max) {
+                System.out.println(msgError);
+            }
+        }while(leitor < min || leitor > max);
+        return leitor;
+    }
+
     public static double lerDouble(){
         return new Scanner(System.in).nextDouble();
     }
@@ -58,46 +82,38 @@ public class Reader{
         return lerDouble();
     }
 
-    public Placas[] permitirCadastroIndeterminado() {
-        Placas[] listaDasPlacas = new Placas[1];
-        int contador = 0;
+    public GerenciarPlacas preencherPlacas(GerenciarPlacas gerenciarPlacas){
+        int quantidadeDePlacas = 10;
+        int contadorPlacas = 0;
+        boolean flag;
 
-        while(true) {
-            if (contador == listaDasPlacas.length) {
-                Placas[] placasTemporarias = new Placas[listaDasPlacas.length * 2];
+        gerenciarPlacas.placas = new Placas[quantidadeDePlacas];
+        do {
+            Placas novaPlaca = new Placas();
+            do {
+                novaPlaca.codigoFabricante = lerString("Informe o número do fabricante: ");
+            }while(novaPlaca.isCodigoFaricante() || gerenciarPlacas.placasRepetidas(novaPlaca));
+            novaPlaca.qtdPinosDigitais = lerInt("Informe a quantidade de pinos digitais da placa: ");
+            novaPlaca.sinaisMLP = lerBoolean("Essa placa tem sinal MLP? [S]Sim [N]Não", "Digite somente: [S]Sim [N]Não", "S", "N");
+            novaPlaca.qtdEntradasAnalogicas = lerInt("Informe a quantidade de entradas analógicas da placa: ");
+            novaPlaca.precoBase = lerDouble("Qual é o preço base dessa placa? R$ ");
 
-                for (int i = 0; i < listaDasPlacas.length; i++) {
-                    placasTemporarias[i] = listaDasPlacas[i];
+            if (contadorPlacas == gerenciarPlacas.placas.length) {
+                Placas[] novoArray = new Placas[gerenciarPlacas.placas.length * 2];
+
+                for (int i = 0; i < gerenciarPlacas.placas.length; i++) {
+                    novoArray[i] = gerenciarPlacas.placas[i];
                 }
 
-                listaDasPlacas = placasTemporarias;
+                gerenciarPlacas.placas = novoArray;
             }
 
-            return listaDasPlacas;
-        }
-    }
+            gerenciarPlacas.placas[contadorPlacas] = novaPlaca;
+            contadorPlacas++;
 
-    public Placas[] preencherPlacas() {
-        Placas[] placasList = permitirCadastroIndeterminado();
-
-        boolean resposta;
-
-        while (true) {
-            Placas placa = new Placas();
-
-            placa.codigoFabricante = lerString("Digite o código do fabricante da placa:");
-            placa.qtdPinosDigitais = lerInt("Digite a quantidade de pinos digitais:");
-            placa.sinaisMLP = lerBoolean("A placa possui sinais MLP? [S]Sim [N]Não:", "Digite [S]Sim [N]Não", "S", "N");
-            placa.qtdEntradasAnalogicas = lerInt("Digite a quantidade de entradas analógicas:");
-            placa.precoBase = lerDouble("Digite o preço base da placa:");
-
-            resposta = lerBoolean("Deseja cadastrar outra placa? [S]Sim [N]Não: ", "Digite [S]Sim [N]Não", "S", "N");
-
-            if (resposta == false) {
-                break;
-            }
-        }
-        return placasList;
+            flag = lerBoolean("Deseja cadastrar outra placa? [S]Sim [N]Não ", "Digite somente [S]Sim [N]Não", "S", "N");
+        }while(flag);
+        return gerenciarPlacas;
     }
 
 }
