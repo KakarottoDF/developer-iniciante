@@ -3,6 +3,10 @@ public class GerenciarPlacas {
     final double PLACA_COM_SINAL_MLP = 0.50;
     final double ENTRADAS_ANALOGICAS = 3;
     final double QUANTIFICADOR_PRECO = 3;
+    /*
+    Quantificador criado para placas com mais de 3 entradas analógicas custam o triplo do preço
+    neste momento.
+     */
 
     public Placas[] findPlacas(){
         return this.placas;
