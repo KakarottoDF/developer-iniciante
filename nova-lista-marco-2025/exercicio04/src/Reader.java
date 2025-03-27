@@ -90,9 +90,11 @@ public class Reader{
         gerenciarPlacas.placas = new Placas[quantidadeDePlacas];
         do {
             Placas novaPlaca = new Placas();
+
             do {
                 novaPlaca.codigoFabricante = lerString("Informe o número do fabricante: ");
             }while(novaPlaca.isCodigoFaricante() || gerenciarPlacas.placasRepetidas(novaPlaca));
+
             novaPlaca.qtdPinosDigitais = lerInt("Informe a quantidade de pinos digitais da placa: ");
             novaPlaca.sinaisMLP = lerBoolean("Essa placa tem sinal MLP? [S]Sim [N]Não", "Digite somente: [S]Sim [N]Não", "S", "N");
             novaPlaca.qtdEntradasAnalogicas = lerInt("Informe a quantidade de entradas analógicas da placa: ");
