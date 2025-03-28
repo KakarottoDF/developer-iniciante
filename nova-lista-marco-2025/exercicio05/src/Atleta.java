@@ -3,6 +3,7 @@ public class Atleta{
     private String nome;
     private double tempoDeProva;
     private int idade;
+    private boolean atletaDeElite;
     private GerenciarAtleta gerenciador;
 
     public Atleta(GerenciarAtleta gerenciador) {
@@ -13,7 +14,7 @@ public class Atleta{
     }
 
     public boolean isElite(){
-        return tempoDeProva < 5;
+        return getTempoDeProva() < 5;
     }
 
     public int getInscricao(){
@@ -21,11 +22,7 @@ public class Atleta{
     }
 
     public void setInscricao(int inscricao){
-        if (gerenciador != null && gerenciador.validarNumeroDeIncricao(inscricao)) {
-            System.out.println("Número de inscrição já cadastrado!");
-        } else {
             this.inscricao = inscricao;
-        }
     }
 
     public String getNome() {
@@ -52,12 +49,23 @@ public class Atleta{
         this.idade = idade;
     }
 
+    public boolean getAtletaDeElite(){
+        return atletaDeElite;
+    }
+
+    public void setAtletaDeElite(boolean atletaDeElite){
+        if (isElite()){
+            this.atletaDeElite = atletaDeElite;
+        }
+    }
+
     @Override
     public String toString() {
         return "Atleta Ironman 70.3" +
                 "\nInscrição: " + getInscricao() +
                 "\nNome: '" + getNome() + '\'' +
                 "\nTempo de Prova: " + getTempoDeProva() +
-                "\nIdade: " + getIdade();
+                "\nIdade: " + getIdade() +
+                "\nO Atleta é de Elite? " + (getAtletaDeElite() ? "Sim" : "Não");
     }
 }

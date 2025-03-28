@@ -29,16 +29,21 @@ public class Reader{
         return lerDouble();
     }
 
-    private void preencherInscricao(Atleta novoAtleta) {
+    private void preencherInscricao(Atleta novoAtleta, GerenciarAtleta gerenciarAtletas) {
         boolean inscricaoValida = false;
+        int inscricao;
 
-        while (!inscricaoValida) {
-            int inscricao = lerInt("Digite o número de inscrição do atleta: ");
-            novoAtleta.setInscricao(inscricao);
-            if (novoAtleta.getInscricao() != 0) {
+        do {
+
+            inscricao = lerInt("Digite o número de inscrição do atleta: ");
+
+            if (gerenciarAtletas.validarNumeroDeIncricao(inscricao)) {
+                System.out.println("Número de inscrição já cadastrado! Tente novamente.");
+            } else {
+                novoAtleta.setInscricao(inscricao);
                 inscricaoValida = true;
             }
-        }
+        } while (!inscricaoValida);
     }
 
     public void preencherAtletas(GerenciarAtleta gerenciarAtletas) {
@@ -49,11 +54,12 @@ public class Reader{
         for (int i = 0; i < quantidadeDeAtletas; i++) {
             Atleta novoAtleta = new Atleta(gerenciarAtletas);
 
-            preencherInscricao(novoAtleta);
+            preencherInscricao(novoAtleta, gerenciarAtletas);
 
             novoAtleta.setNome(lerString("Digite o nome do atleta: "));
             novoAtleta.setIdade(lerInt("Digite a idade do atleta: "));
             novoAtleta.setTempoDeProva(lerDouble("Digite o tempo de prova do atleta: "));
+            novoAtleta.setAtletaDeElite(novoAtleta.isElite());
 
             adicionarAtleta(gerenciarAtletas, novoAtleta);
         }
@@ -63,6 +69,7 @@ public class Reader{
         for (int i = 0; i < gerenciarAtletas.atletas.length; i++) {
             if (gerenciarAtletas.atletas[i] == null) {
                 gerenciarAtletas.atletas[i] = novoAtleta;
+                return;
             }
         }
     }

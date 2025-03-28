@@ -6,8 +6,8 @@ public class GerenciarAtleta{
     }
 
     public boolean validarNumeroDeIncricao(int inscricao) {
-        for (int i = 0; i < this.atletas.length; i++) {
-            if (this.atletas[i] != null && this.atletas[i].getInscricao() == inscricao) {
+        for (Atleta atleta : this.atletas) {
+            if (atleta != null && atleta.getInscricao() == inscricao) {
                 return true;
             }
         }
