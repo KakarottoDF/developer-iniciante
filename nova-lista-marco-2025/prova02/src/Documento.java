@@ -1,4 +1,4 @@
-public class Documentos{
+public class Documento {
     private String extensao;
     private int tamanhoEmBytes;
     private String nomeDoArquivo;

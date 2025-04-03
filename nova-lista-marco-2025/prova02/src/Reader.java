@@ -10,6 +10,17 @@ public class Reader{
         return lerInt();
     }
 
+    public static int lerInt(String msg, String msgError, int min, int max){
+        int entrada;
+        do {
+            entrada = lerInt(msg);
+            if (entrada < min || entrada > max) {
+                System.out.println(msgError);
+            }
+        }while(entrada < min || entrada > max);
+        return entrada;
+    }
+
     public static String lerString(){
         return new Scanner(System.in).nextLine().trim().toUpperCase();
     }
