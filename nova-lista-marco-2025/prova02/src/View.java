@@ -14,6 +14,8 @@ public class View {
         Pasta pasta = new Pasta();
         boolean continuar = true;
 
+        pasta.setAno(Reader.lerInt("Informe o ano da pasta: "));
+
         while(continuar){
             pasta.adicionar(cadastrarDocumento());
             int controlarSaida = Reader.lerInt("Deseja sair do sistema? [1]Sim [2]Não: ", "Digite somente 1 ou 2", 1, 2);

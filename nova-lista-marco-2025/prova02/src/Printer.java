@@ -1,6 +1,7 @@
 public class Printer{
     public static void print(Pasta pasta){
-        System.out.println("----- PASTAS E DOCUMENTOS -----");
+        System.out.println("----- PASTA -----");
+        System.out.println("Ano: " + pasta.getAno());
         Documento[] documentos = pasta.getDocumentos();
         print(documentos);
     }
