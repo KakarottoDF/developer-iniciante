@@ -29,4 +29,24 @@ public class Reader{
         System.out.println(msg);
         return lerString();
     }
+
+    public static boolean lerBoolean(){
+        return new Scanner(System.in).nextBoolean();
+    }
+
+    public static boolean lerBoolean(String msg){
+        System.out.println(msg);
+        return lerBoolean();
+    }
+
+    public static boolean lerBoolean(String msg, String msgError, int entrada, int saida) {
+        int escolha;
+        do {
+            escolha = lerInt(msg);
+            if (escolha != entrada && escolha != saida) {
+                System.out.println(msgError);
+            }
+        } while (escolha != entrada && escolha != saida);
+        return escolha == entrada ? false : true;
+    }
 }

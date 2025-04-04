@@ -16,13 +16,13 @@ public class View {
 
         pasta.setAno(Reader.lerInt("Informe o ano da pasta: "));
 
-        while(continuar){
+        do{
             pasta.adicionar(cadastrarDocumento());
-            int controlarSaida = Reader.lerInt("Deseja sair do sistema? [1]Sim [2]Não: ", "Digite somente 1 ou 2", 1, 2);
-            if(controlarSaida == 1){
+            int controlarSaida = Reader.lerInt("Deseja cadastrar outro documento? [1]Sim [2]Não: ", "Digite somente 1 ou 2", 1, 2);
+            if(controlarSaida == 2){
                 continuar = false;
             }
-        }
+        }while(continuar);
         return pasta;
     }
 }

@@ -27,12 +27,25 @@ public class Pasta {
     public void adicionar(Documento documento){
         Documento[] novosDocumentos = new Documento[documentos.length +1];
 
-        for (int i = 0; i < documentos.length; i++) {
-            novosDocumentos[i] = documentos[i];
+        int i = 0;
+        for(Documento doc : documentos){
+            novosDocumentos[i++] = doc;
         }
+
+        /*for (int i = 0; i < documentos.length; i++) {
+            novosDocumentos[i] = documentos[i];
+        }*/
 
         novosDocumentos[novosDocumentos.length -1] = documento;
         setDocumentos(novosDocumentos);
+    }
+
+    public static int calcularTamanhoTotal(Pasta pasta) {
+        int total = 0;
+        for (Documento doc : pasta.getDocumentos()) {
+            total += doc.getTamanhoEmBytes();
+        }
+        return total;
     }
 
     @Override
