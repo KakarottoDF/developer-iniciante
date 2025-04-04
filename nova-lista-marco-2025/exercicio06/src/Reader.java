@@ -19,4 +19,24 @@ public class Reader {
         System.out.println(msg);
         return lerString();
     }
+
+    public static boolean lerBoolean(){
+        return new Scanner(System.in).nextBoolean();
+    }
+
+    public static boolean lerBoolean(String msg){
+        System.out.println(msg);
+        return lerBoolean();
+    }
+
+    public static boolean lerBoolean(String msg, String msgError, String yes, String no){
+        String escolha;
+        do{
+            escolha = lerString(msg);
+            if(escolha.equalsIgnoreCase(yes) && escolha.equalsIgnoreCase(no)){
+                System.out.println(msgError);
+            }
+        }while(escolha.equalsIgnoreCase(yes) && escolha.equalsIgnoreCase(no));
+        return false;
+    }
 }

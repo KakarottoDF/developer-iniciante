@@ -17,4 +17,20 @@ public class UnidadeAdministrativa{
     public void setAcoes(Acao[] acoes) {
         this.acoes = acoes;
     }
+
+    public UnidadeAdministrativa(){
+        this.acoes = new Acao[0];
+    }
+
+    public void adicionar(Acao acao){
+        Acao[] novasAcoes = new Acao[acoes.length +1];
+        int i = 0;
+
+        for(Acao ac : acoes){
+            novasAcoes[i++] = ac;
+        }
+
+        novasAcoes[novasAcoes.length -1] = acao;
+        setAcoes(novasAcoes);
+    }
 }

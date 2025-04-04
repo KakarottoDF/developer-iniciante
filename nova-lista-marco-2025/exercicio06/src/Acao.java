@@ -44,4 +44,13 @@ public class Acao{
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    @Override
+    public String toString() {
+        return "Acao{" +
+                "descricao='" + getDescricao() + '\'' +
+                ", mes=" + getMes() +
+                ", ano=" + getAno() +
+                '}';
+    }
 }
