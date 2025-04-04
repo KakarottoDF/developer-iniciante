@@ -3,5 +3,7 @@ public class Main {
         UnidadeAdministrativa unidadeAdministrativa = new UnidadeAdministrativa();
 
         boolean sair;
+
+        View.cadastrar(unidadeAdministrativa);
     }
 }

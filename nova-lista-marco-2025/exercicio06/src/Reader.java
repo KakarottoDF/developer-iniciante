@@ -33,10 +33,13 @@ public class Reader {
         String escolha;
         do{
             escolha = lerString(msg);
-            if(escolha.equalsIgnoreCase(yes) && escolha.equalsIgnoreCase(no)){
+            if(escolha.equalsIgnoreCase(yes)) {
+                return true;
+            } else if(escolha.equalsIgnoreCase(no)) {
+                return false;
+            } else {
                 System.out.println(msgError);
             }
-        }while(escolha.equalsIgnoreCase(yes) && escolha.equalsIgnoreCase(no));
-        return false;
+        } while(true);
     }
 }
