@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class UnidadeAdministrativa{
     private String nome;
     Acao[] acoes;
@@ -32,5 +34,11 @@ public class UnidadeAdministrativa{
 
         novasAcoes[novasAcoes.length -1] = acao;
         setAcoes(novasAcoes);
+    }
+
+    @Override
+    public String toString() {
+        return "UnidadeAdministrativa:\n" + getNome() +
+                "\nAções:" + Arrays.toString(acoes);
     }
 }

@@ -3,8 +3,8 @@ public class Acao{
     private int mes;
     private int ano;
 
-    public static boolean isPrioritaria(int mes){
-        if(mes == 2015 || mes == 2016){
+    public static boolean isPrioritaria(int ano){
+        if(ano == 2015 || ano == 2016){
             return true;
         }else{
             return false;
@@ -19,6 +19,18 @@ public class Acao{
             case 10, 11, 12 -> "Quarto";
             default -> "Trimestre inválido";
         };
+    }
+
+    public static int quantidadeAcoes(UnidadeAdministrativa unidade) {
+        int qtdAcoes = 0;
+
+        for (Acao acao : unidade.acoes) {
+            if (acao.getAno() == 2017) {
+                qtdAcoes++;
+            }
+        }
+
+        return qtdAcoes;
     }
 
     public String getDescricao() {
@@ -47,10 +59,10 @@ public class Acao{
 
     @Override
     public String toString() {
-        return "Acao{" +
-                "descricao='" + getDescricao() + '\'' +
-                ", mes=" + getMes() +
-                ", ano=" + getAno() +
-                '}';
+        return  "\nDescrição:" + getDescricao() +
+                "\nMês: " + getMes() +
+                "\nAno: " + getAno() +
+                "\nÉ prioritária? " + (isPrioritaria(getAno()) ? "Sim" : "Não") +
+                "\nTrimestre da Ação: " + findQuarterAction(getMes());
     }
 }

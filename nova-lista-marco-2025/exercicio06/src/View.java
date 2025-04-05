@@ -4,7 +4,7 @@ public class View{
         Acao acao = new Acao();
 
         acao.setDescricao(Reader.lerString("Informa a descrição da ação: "));
-        acao.setMes(Reader.lerInt("Informe o mês da ação: "));
+        acao.setMes(Reader.lerInt("Informe o mês da ação: ", "Mês informado inválido. Digite um mês válido: ", 1, 12));
         acao.setAno(Reader.lerInt("Informe o ano da ação: "));
 
         return acao;

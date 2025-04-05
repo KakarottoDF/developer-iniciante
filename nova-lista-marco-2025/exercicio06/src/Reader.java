@@ -11,6 +11,17 @@ public class Reader {
         return lerInt();
     }
 
+    public static int lerInt(String msg, String msgError, int inicio, int fim){
+        int escolha;
+        do{
+            escolha = lerInt(msg);
+            if(escolha < inicio || escolha > fim) {
+                System.out.println(msgError);
+            }
+        } while(escolha < inicio || escolha > fim);
+        return escolha;
+    }
+
     public static String lerString(){
         return new Scanner(System.in).nextLine().trim().toUpperCase();
     }
