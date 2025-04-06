@@ -6,5 +6,7 @@ public class Main {
         View.cadastrar(fifa);
         Printer.imprimirJogadores(fifa);
         Printer.imprimirArtilheiro(fifa);
+        Printer.imprimirJogadores(fifa, "Mediana");
+        Printer.imprimirMediaGolsMaioresDeIdade(fifa);
     }
 }

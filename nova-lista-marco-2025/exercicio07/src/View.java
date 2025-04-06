@@ -24,5 +24,14 @@ public class View {
         return fifa;
     }
 
+    public static String artilheiro(Jogador[] jogadores) {
+        Jogador artilheiro = jogadores[0];
+        for (Jogador jog : jogadores) {
+            if (jog.getQuantidadeDeGols() > artilheiro.getQuantidadeDeGols()) {
+                artilheiro = jog;
+            }
+        }
+        return artilheiro.getNome();
+    }
 
 }

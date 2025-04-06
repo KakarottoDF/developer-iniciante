@@ -21,6 +21,31 @@ public class Fifa {
         setGastoJogadores(totalGastos());
     }
 
+    public int totalGolsMaioresDeIdade() {
+        int totalGols = 0;
+        for (Jogador jogador : jogadores) {
+            if (jogador.getIdade() > 18) {
+                totalGols += jogador.getQuantidadeDeGols();
+            }
+        }
+        return totalGols;
+    }
+
+    public double mediaGolsMaioresDeIdade() {
+        int totalGols = totalGolsMaioresDeIdade();
+        int contador = 0;
+        double media;
+
+        for (Jogador jogador : jogadores) {
+            if (jogador.getIdade() > 18) {
+                contador++;
+            }
+        }
+        media = totalGols / contador;
+
+        return media;
+    }
+
     public double totalGastos(){
         double gastoFinal = 0.0;
 
