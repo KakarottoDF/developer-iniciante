@@ -18,6 +18,16 @@ public class Fifa {
 
         novosJogadores[novosJogadores.length -1] = jogador;
         setJogadores(novosJogadores);
+        setGastoJogadores(totalGastos());
+    }
+
+    public double totalGastos(){
+        double gastoFinal = 0.0;
+
+        for(Jogador jog : jogadores){
+            gastoFinal += jog.getRemuneracao();
+        }
+        return gastoFinal;
     }
 
     public Jogador[] getJogadores() {
@@ -40,6 +50,6 @@ public class Fifa {
     public String toString() {
         return "Lista Fifa:" +
                 Arrays.toString(jogadores) +
-                "Gasto com Jogadores: R$ " + getGastoJogadores();
+                "\n\nGasto total com Jogadores: R$ " + getGastoJogadores();
     }
 }

@@ -5,6 +5,16 @@ public class Jogador{
     private String paisDeOrigem;
     private double remuneracao;
 
+    public static String artilheiro(Jogador[] jogadores) {
+        Jogador artilheiro = jogadores[0];
+        for (Jogador jog : jogadores) {
+            if (jog.getQuantidadeDeGols() > artilheiro.getQuantidadeDeGols()) {
+                artilheiro = jog;
+            }
+        }
+        return artilheiro.getNome();
+    }
+
     public static String qualificacaoJogador(int qtdGols){
         if(qtdGols < 15){
             return "Fraco";
@@ -77,7 +87,7 @@ public class Jogador{
 
     @Override
     public String toString() {
-        return "Jogador:" +
+        return "\nJogador:" +
                 "\nNome: " + getNome() +
                 "\nIdade: " + getIdade() +
                 "\nQuantidade de Gols: " + getQuantidadeDeGols() +

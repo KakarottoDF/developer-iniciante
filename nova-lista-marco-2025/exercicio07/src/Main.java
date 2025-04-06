@@ -5,5 +5,6 @@ public class Main {
 
         View.cadastrar(fifa);
         Printer.imprimirJogadores(fifa);
+        Printer.imprimirArtilheiro(fifa);
     }
 }
