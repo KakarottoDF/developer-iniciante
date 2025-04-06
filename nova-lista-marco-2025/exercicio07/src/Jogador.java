@@ -43,6 +43,11 @@ public class Jogador{
         return gasto;
     }
 
+    public String getPrimeiroNome() {
+        String[] primeiroNome = getNome().split(" ");
+        return primeiroNome[0];
+    }
+
 
     public String getNome() {
         return nome;
@@ -88,7 +93,7 @@ public class Jogador{
     @Override
     public String toString() {
         return "\nJogador:" +
-                "\nNome: " + getNome() +
+                "\nNome: " + getPrimeiroNome() +
                 "\nIdade: " + getIdade() +
                 "\nQuantidade de Gols: " + getQuantidadeDeGols() +
                 "\nPaís de Origem: " + getPaisDeOrigem() +
