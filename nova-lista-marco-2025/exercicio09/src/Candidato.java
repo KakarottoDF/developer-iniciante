@@ -2,17 +2,19 @@ public class Candidato{
     private String nome;
     private int numeroFiliacao;
     private String tipoCandidatura;
+    private boolean reeleito;
     private double verba;
 
-    public Candidato(String nome, int numeroFiliacao, String tipoCandidatura, double verba) {
+    /*public Candidato(String nome, int numeroFiliacao, String tipoCandidatura, boolean reeleito, double verba) {
         this.nome = nome;
         this.numeroFiliacao = numeroFiliacao;
         this.tipoCandidatura = tipoCandidatura;
+        this.reeleito = reeleito;
         this.verba = verba;
-    }
+    }*/
 
     private static String tipoCandidatura(){
-        int escolha = Reader.lerInt("Informe o tipo de candidatura: \n[1]Deputado Federal\n[2]Deputado Distrital\n[3]Senador", "\nEscolha somente uma das opções.\n", 1, 3);0
+        int escolha = Reader.lerInt("Informe o tipo de candidatura: \n[1]Deputado Federal\n[2]Deputado Distrital\n[3]Senador", "\nEscolha somente uma das opções.\n", 1, 3);
 
         return switch (escolha) {
             case 1 -> "Deputado Federal";
@@ -22,21 +24,8 @@ public class Candidato{
         };
     }
 
-    private static boolean isReeleito(){
-
-    }
-
-    /*nome, numero de filiação, se a candidatura é para deputado federal,
-    distrital ou senador. Cada candidato tem direito a uma verba de campanha de acordo com o
-    seu tipo de candidatura. Se o candidato almejar candidatura para deputado distrital a verba
-    destinada a ele é de R$ 170.000,00 caso almeje deputado federal R$ 250.000,00 e por fim
-    caso almeje senador R$ 350.000,00. Outra característica de candidato é se ele já foi ou não
-    reeleito, caso ele já tenha sido reeleito a verba de campanha será dobrada.
-    Sabe-se que serão informados um número fixo de candidatos, pergunte ao usuário a
-    quantidade e receba os dados dos mesmo.*/
-
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -44,7 +33,7 @@ public class Candidato{
     }
 
     public int getNumeroFiliacao() {
-        return numeroFiliacao;
+        return this.numeroFiliacao;
     }
 
     public void setNumeroFiliacao(int numeroFiliacao) {
@@ -52,18 +41,49 @@ public class Candidato{
     }
 
     public String getTipoCandidatura() {
-        return tipoCandidatura;
+        return this.tipoCandidatura;
     }
 
-    public void setTipoCandidatura(String tipoCandidatura) {
-        this.tipoCandidatura = tipoCandidatura;
+    public void setTipoCandidatura(int escolha) {
+        switch (escolha) {
+            case 1:
+                this.tipoCandidatura = "Deputado Federal";
+                break;
+            case 2:
+                this.tipoCandidatura = "Deputado Distrital";
+                break;
+            case 3:
+                this.tipoCandidatura = "Senador";
+                break;
+            default:
+                this.tipoCandidatura = "Opção Inválida!";
+        }
+    }
+
+    public boolean getReeleito(){
+        return this.reeleito;
+    }
+
+    public void setReeleito(boolean reeleito) {
+        this.reeleito = reeleito;
     }
 
     public double getVerba() {
-        return verba;
+        return this.verba;
     }
 
     public void setVerba(double verba) {
         this.verba = verba;
+    }
+
+    @Override
+    public String toString() {
+        return "Candidato{" +
+                "nome='" + getNome() + '\'' +
+                ", numeroFiliacao=" + getNumeroFiliacao() +
+                ", tipoCandidatura='" + getTipoCandidatura() + '\'' +
+                ", reeleito=" + (getReeleito() ? "Sim" : "Não") +
+                ", verba=" + getVerba() +
+                '}';
     }
 }
