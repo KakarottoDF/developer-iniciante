@@ -6,11 +6,11 @@ public class Candidato {
     private double verba;
 
     public Candidato(String nome, int numeroFiliacao, int tipoCandidatura, boolean reeleito, double verba) {
-        this.nome = nome;
-        this.numeroFiliacao = numeroFiliacao;
+        setNome(nome);
+        setNumeroFiliacao(numeroFiliacao);
         setTipoCandidatura(tipoCandidatura);
-        this.reeleito = reeleito;
-        this.verba = verba;
+        setReeleito(reeleito);
+        setVerba(verba);
     }
 
     public String getNome() {

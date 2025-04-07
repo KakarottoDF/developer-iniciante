@@ -18,7 +18,7 @@ public class Eleicao {
     @Override
     public String toString() {
         return "Eleicao{" +
-                "candidatos=" + candidatos +
+                "candidatos=" + getCandidatos() +
                 '}';
     }
 }
