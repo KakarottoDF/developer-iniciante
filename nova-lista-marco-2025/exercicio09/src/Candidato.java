@@ -1,27 +1,16 @@
-public class Candidato{
+public class Candidato {
     private String nome;
     private int numeroFiliacao;
     private String tipoCandidatura;
     private boolean reeleito;
     private double verba;
 
-    /*public Candidato(String nome, int numeroFiliacao, String tipoCandidatura, boolean reeleito, double verba) {
+    public Candidato(String nome, int numeroFiliacao, int tipoCandidatura, boolean reeleito, double verba) {
         this.nome = nome;
         this.numeroFiliacao = numeroFiliacao;
-        this.tipoCandidatura = tipoCandidatura;
+        setTipoCandidatura(tipoCandidatura);
         this.reeleito = reeleito;
         this.verba = verba;
-    }*/
-
-    private static String tipoCandidatura(){
-        int escolha = Reader.lerInt("Informe o tipo de candidatura: \n[1]Deputado Federal\n[2]Deputado Distrital\n[3]Senador", "\nEscolha somente uma das opções.\n", 1, 3);
-
-        return switch (escolha) {
-            case 1 -> "Deputado Federal";
-            case 2 -> "Deputado Distrital";
-            case 3 -> "Senador";
-            default -> "Opção Inválida!";
-        };
     }
 
     public String getNome() {
@@ -45,22 +34,15 @@ public class Candidato{
     }
 
     public void setTipoCandidatura(int escolha) {
-        switch (escolha) {
-            case 1:
-                this.tipoCandidatura = "Deputado Federal";
-                break;
-            case 2:
-                this.tipoCandidatura = "Deputado Distrital";
-                break;
-            case 3:
-                this.tipoCandidatura = "Senador";
-                break;
-            default:
-                this.tipoCandidatura = "Opção Inválida!";
-        }
+        this.tipoCandidatura = switch (escolha) {
+            case 1 -> "Deputado Federal";
+            case 2 -> "Deputado Distrital";
+            case 3 -> "Senador";
+            default -> "Opção Inválida!";
+        };
     }
 
-    public boolean getReeleito(){
+    public boolean getReeleito() {
         return this.reeleito;
     }
 
