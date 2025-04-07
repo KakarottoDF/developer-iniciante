@@ -17,8 +17,7 @@ public class Eleicao {
 
     @Override
     public String toString() {
-        return "Eleicao{" +
-                "candidatos=" + getCandidatos() +
-                '}';
+        return "Eleicões 2025\n" +
+                "Candidatos:\n" + getCandidatos();
     }
 }

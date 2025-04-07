@@ -13,6 +13,31 @@ public class Candidato {
         setVerba(verba);
     }
 
+    public double totalGastos(Eleicao eleicao){
+        double gastoGeral = 0.0;
+        for (Candidato candidato : eleicao.getCandidatos()) {
+            gastoGeral += candidato.getVerba();
+            }
+        return gastoGeral;
+    }
+
+    public double totalGastos(Eleicao eleicao, boolean incluirReeleitos) {
+        double gastoGeral = 0.0;
+        for (Candidato candidato : eleicao.getCandidatos()) {
+            if (incluirReeleitos || (!candidato.getReeleito() &&
+                    (candidato.getTipoCandidatura().equalsIgnoreCase("Deputado Federal") ||
+                            candidato.getTipoCandidatura().equalsIgnoreCase("Deputado Distrital")))) {
+                gastoGeral += candidato.getVerba();
+            }
+        }
+        return gastoGeral;
+    }
+
+    public double mediaGastos(Eleicao eleicao){
+
+        return totalGastos(eleicao) / eleicao.getCandidatos().size();
+    }
+
     public String getNome() {
         return this.nome;
     }
@@ -60,12 +85,11 @@ public class Candidato {
 
     @Override
     public String toString() {
-        return "Candidato{" +
-                "nome='" + getNome() + '\'' +
-                ", numeroFiliacao=" + getNumeroFiliacao() +
-                ", tipoCandidatura='" + getTipoCandidatura() + '\'' +
-                ", reeleito=" + (getReeleito() ? "Sim" : "Não") +
-                ", verba=" + getVerba() +
-                '}';
+        return "Candidato:" +
+                "\nNome: '" + getNome() +
+                "\nNúmero de Filiação: " + getNumeroFiliacao() +
+                "\nTipo de Candidatura: " + getTipoCandidatura() +
+                "\nFoi reeleito? " + (getReeleito() ? "Sim" : "Não") +
+                "\nVerba R$" + getVerba();
     }
 }

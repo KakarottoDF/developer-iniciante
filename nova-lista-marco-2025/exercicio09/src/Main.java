@@ -5,5 +5,7 @@ public class Main {
         View.cadastrar(eleicao);
         Printer.imprimirCandidatos(eleicao);
         Printer.imprimirCandidatosEleitos(eleicao);
+        Printer.imprimirGastosNaoReeleitos(eleicao);
+        Printer.imprimirMediaCustos(eleicao);
     }
 }

@@ -12,4 +12,21 @@ public class Printer {
             }
         }
     }
+
+    public static void imprimirGastosNaoReeleitos(Eleicao eleicao){
+        double gastoNaoReeleitos = eleicao.getCandidatos().get(0).totalGastos(eleicao, false);
+        System.out.println("O total de gastos dos candidatos que não foram reeleitos é de R$ " + gastoNaoReeleitos);
+    }
+
+    public static void imprimirGastos(Eleicao eleicao){
+        /*Candidato candidatoFake = eleicao.getCandidatos().get(0);
+        System.out.println("A média de custos dos candidatos é de R$ " + candidatoFake.mediaGastos(eleicao));*/
+        System.out.println("A média de custos dos candidatos é de R$ " + eleicao.getCandidatos().get(0).totalGastos(eleicao));
+    }
+
+    public static void imprimirMediaCustos(Eleicao eleicao){
+        /*Candidato candidatoFake = eleicao.getCandidatos().get(0);
+        System.out.println("A média de custos dos candidatos é de R$ " + candidatoFake.mediaGastos(eleicao));*/
+        System.out.println("A média de custos dos candidatos é de R$ " + eleicao.getCandidatos().get(0).mediaGastos(eleicao));
+    }
 }
