@@ -21,7 +21,7 @@ public class Printer {
     public static void imprimirGastos(Eleicao eleicao){
         /*Candidato candidatoFake = eleicao.getCandidatos().get(0);
         System.out.println("A média de custos dos candidatos é de R$ " + candidatoFake.mediaGastos(eleicao));*/
-        System.out.println("A média de custos dos candidatos é de R$ " + eleicao.getCandidatos().get(0).totalGastos(eleicao));
+        System.out.println("O total de gastos dos candidatos é de R$ " + eleicao.getCandidatos().get(0).totalGastos(eleicao));
     }
 
     public static void imprimirCandidatoTiririca(Eleicao eleicao){

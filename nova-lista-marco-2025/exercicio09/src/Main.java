@@ -6,6 +6,7 @@ public class Main {
         Printer.imprimirCandidatos(eleicao);
         Printer.imprimirCandidatosEleitos(eleicao);
         Printer.imprimirGastosNaoReeleitos(eleicao);
+        Printer.imprimirGastos(eleicao);
         Printer.imprimirCandidatoTiririca(eleicao);
         Printer.imprimirMediaCustos(eleicao);
     }
