@@ -5,6 +5,19 @@ public class Acao {
     private boolean acaoPrioritaria;
     private String trimestre;
 
+    public static String trimestreDaAcao(int mes){
+        Acao acao = new Acao();
+        mes = acao.getMes();
+
+        return switch (mes) {
+            case 1, 2, 3 -> "Primeiro";
+            case 4, 5, 6 -> "Segundo";
+            case 7, 8, 9 -> "Terceiro";
+            case 10, 11, 12 -> "Quarto";
+            default -> "ERRO";
+        };
+    }
+
     public String getDescricao() {
         return descricao;
     }
@@ -51,5 +64,16 @@ public class Acao {
 
     public void setTrimestre(String trimestre) {
         this.trimestre = trimestre;
+    }
+
+    @Override
+    public String toString() {
+        return "Acao{" +
+                "descricao='" + getDescricao() + '\'' +
+                ", mes=" + getMes() +
+                ", ano=" + getAno() +
+                ", acaoPrioritaria=" + isAcaoPrioritaria() +
+                ", trimestre='" + getTrimestre() + '\'' +
+                '}';
     }
 }

@@ -11,4 +11,10 @@ public class Administracao {
         return acao;
     }
 
+    @Override
+    public String toString() {
+        return "Administracao{" +
+                "acao=" + getAcao() +
+                '}';
+    }
 }
