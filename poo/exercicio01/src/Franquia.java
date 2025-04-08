@@ -4,6 +4,19 @@ public class Franquia {
     private double preco;
     private String nome;
 
+    public static double precoTotal(Anatel anatel){
+        double total = 0.0;
+
+        for(Franquia franquia : anatel.getFranquia()){
+            total += franquia.getPreco();
+        }
+        return total;
+    }
+
+    public static double media(Anatel anatel){
+        return precoTotal(anatel) / anatel.getFranquia().size();
+    }
+
     public int getQuantidadeDeGB() {
         return this.quantidadeDeGB;
     }
@@ -38,10 +51,10 @@ public class Franquia {
 
     @Override
     public String toString() {
-        return "Franquias:" +
-                "\nQuantidade de GB: " + getQuantidadeDeGB() +
-                "\nDia de Expiração: " + getDiaDeExpiracao() +
-                "\nPreco R$: " + getPreco() +
-                "\nNome da Franquia: " + getNome();
+        return "\nFranquia:" +
+               "\nNome da Franquia: " + getNome() +
+               "\nQuantidade de GB: " + getQuantidadeDeGB() +
+               "\nDia de Expiração: " + getDiaDeExpiracao() +
+               "\nPreco R$: " + getPreco();
     }
 }

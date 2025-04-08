@@ -12,7 +12,7 @@ public class Eleicao {
     }
 
     public void adicionar(Candidato candidato){
-        candidatos.add(candidato);
+        getCandidatos().add(candidato);
     }
 
     @Override

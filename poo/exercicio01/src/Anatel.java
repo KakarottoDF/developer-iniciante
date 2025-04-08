@@ -1,19 +1,23 @@
 import java.util.ArrayList;
 
 public class Anatel {
-    private ArrayList<Franquia> franquias;
+    private ArrayList<Franquia> franquia;
 
-    public ArrayList<Franquia> getFranquias() {
-        return this.franquias;
+    public Anatel(){
+        this.franquia = new ArrayList<>();
+    }
+
+    public ArrayList<Franquia> getFranquia() {
+        return this.franquia;
     }
 
     public void adicionar(Franquia franquia){
-        this.franquias.add(franquia);
+        getFranquia().add(franquia);
     }
 
     @Override
     public String toString() {
         return "Anatel:" +
-                "\nSistema de Controle de Franquias\n" + getFranquias();
+                "\nSistema de Controle de Franquias\n" + getFranquia();
     }
 }

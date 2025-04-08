@@ -36,7 +36,7 @@ public class Reader {
     }
 
     public static String lerString(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerString();
     }
 
@@ -45,7 +45,7 @@ public class Reader {
     }
 
     public static boolean lerBoolean(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerBoolean();
     }
 
