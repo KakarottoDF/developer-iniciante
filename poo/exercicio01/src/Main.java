@@ -4,5 +4,9 @@ public class Main {
 
         View.cadastrar(anatel);
         Printer.imprimirFranquias(anatel);
+        Printer.imprimirFranquiaMaisBarata(anatel);
+        Printer.imprimirQtdFranquias(anatel);
+        Printer.imprimirQtdGigas(anatel);
+        Printer.imprimirMedia(anatel);
     }
 }
