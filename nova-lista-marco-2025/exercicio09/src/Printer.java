@@ -24,6 +24,15 @@ public class Printer {
         System.out.println("A média de custos dos candidatos é de R$ " + eleicao.getCandidatos().get(0).totalGastos(eleicao));
     }
 
+    public static void imprimirCandidatoTiririca(Eleicao eleicao){
+        System.out.println("Candidatos que se chamam Tiririca:");
+        for (Candidato candidato : eleicao.getCandidatos()) {
+            if (candidato.getNome().equalsIgnoreCase("Tiririca")) {
+                System.out.println(candidato);
+            }
+        }
+    }
+
     public static void imprimirMediaCustos(Eleicao eleicao){
         /*Candidato candidatoFake = eleicao.getCandidatos().get(0);
         System.out.println("A média de custos dos candidatos é de R$ " + candidatoFake.mediaGastos(eleicao));*/

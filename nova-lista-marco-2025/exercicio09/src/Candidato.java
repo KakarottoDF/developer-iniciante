@@ -86,7 +86,7 @@ public class Candidato {
     @Override
     public String toString() {
         return "Candidato:" +
-                "\nNome: '" + getNome() +
+                "\nNome: " + getNome() +
                 "\nNúmero de Filiação: " + getNumeroFiliacao() +
                 "\nTipo de Candidatura: " + getTipoCandidatura() +
                 "\nFoi reeleito? " + (getReeleito() ? "Sim" : "Não") +
