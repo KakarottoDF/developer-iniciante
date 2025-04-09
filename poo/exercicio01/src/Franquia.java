@@ -4,7 +4,9 @@ public class Franquia {
     private double preco;
     private String nome;
 
-    /*public static double precoTotal(Anatel anatel){
+    /*
+    ISSO AQUI TÁ ERRADO PARA UM CARALEOOOOOOO
+    public static double precoTotal(Anatel anatel){
         double total = 0.0;
 
         for(Franquia franquia : anatel.getFranquia()){
