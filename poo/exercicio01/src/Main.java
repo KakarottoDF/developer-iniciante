@@ -1,4 +1,7 @@
 public class Main {
+    public static final String NOME_FRANQUIA = "VIVO";
+    public static final int QTD_GIGA = 2;
+
     public static void main(String[] args) {
         Anatel anatel = new Anatel();
 
