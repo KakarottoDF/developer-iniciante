@@ -10,13 +10,12 @@ public class View{
         return franquia;
     }
 
-    public static Anatel cadastrar(Anatel anatel){
+    public static void cadastrar(Anatel anatel){
         boolean continuar = true;
 
         while(continuar){
             anatel.adicionar(cadastrarFranquia());
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
-        return anatel;
     }
 }
