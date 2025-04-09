@@ -4,7 +4,7 @@ public class View {
 
         acao.setDescricao(Reader.lerString("Informe a descrição desta ação: "));
         acao.setMes(Reader.lerInt("Informe o mês desta ação: "));
-        acao.setAno(Reader.lerInt("Informe o ano desta ação: "));
+        acao.setAno(Reader.lerInt("Informe o ano desta ação: ", "Informe um ano entre 2015 e 2020", 2015, 2020));
 
         return acao;
     }

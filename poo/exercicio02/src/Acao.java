@@ -57,16 +57,12 @@ public class Acao {
         this.ano = ano;
     }
 
-
-
     @Override
     public String toString() {
-        return "Acao{" +
-                "descricao='" + getDescricao() + '\'' +
-                ", mes=" + getMes() +
-                ", ano=" + getAno() +
-                ", acaoPrioritaria=" + (isAcaoPrioritaria() ? "Sim" : "Não") +
-                ", trimestre='" + getNomeTrimestre() + '\'' +
-                '}';
+        return  "Descrição: " + getDescricao() +
+                "\nMês: " + getMes() +
+                "\nAno: " + getAno() +
+                "\nA ação é prioritária? " + (isAcaoPrioritaria() ? "Sim" : "Não") +
+                "\nTrimestre: " + getNomeTrimestre();
     }
 }
