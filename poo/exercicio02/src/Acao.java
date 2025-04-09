@@ -2,20 +2,35 @@ public class Acao {
     private String descricao;
     private int mes;
     private int ano;
-    private boolean acaoPrioritaria;
-    private String trimestre;
 
-    public static String trimestreDaAcao(int mes){
-        Acao acao = new Acao();
-        mes = acao.getMes();
+    public boolean isAcaoPrioritaria(){
+        return (getAno() == 2015 || getAno() == 2016);
+    }
 
-        return switch (mes) {
-            case 1, 2, 3 -> "Primeiro";
-            case 4, 5, 6 -> "Segundo";
-            case 7, 8, 9 -> "Terceiro";
-            case 10, 11, 12 -> "Quarto";
-            default -> "ERRO";
+    public int getTrimestre(){
+
+        return switch (this.mes) {
+            case 1, 2, 3 -> 1;
+            case 4, 5, 6 -> 2;
+            case 7, 8, 9 -> 3;
+            case 10, 11, 12 -> 4;
+            default -> 0;
         };
+    }
+
+    public String getNomeTrimestre(){
+        switch (getTrimestre()) {
+            case 1:
+                return "Primeiro";
+            case 2:
+                return "Segundo";
+            case 3:
+                return "Terceiro";
+            case 4:
+                return "Quarto";
+            default:
+                return "Trimestre não informado!";
+        }
     }
 
     public String getDescricao() {
@@ -42,29 +57,7 @@ public class Acao {
         this.ano = ano;
     }
 
-    public boolean isAcaoPrioritaria() {
-        return acaoPrioritaria;
-    }
 
-    public void setAcaoPrioritaria(boolean acaoPrioritaria) {
-        if(getAno() < 2017){
-            this.acaoPrioritaria = false;
-        }else {
-            if (getAno() > 2014 && getAno() < 2017) {
-                this.acaoPrioritaria = true;
-            }else{
-                this.acaoPrioritaria = acaoPrioritaria;
-            }
-        }
-    }
-
-    public String getTrimestre() {
-        return trimestre;
-    }
-
-    public void setTrimestre(String trimestre) {
-        this.trimestre = trimestre;
-    }
 
     @Override
     public String toString() {
@@ -72,8 +65,8 @@ public class Acao {
                 "descricao='" + getDescricao() + '\'' +
                 ", mes=" + getMes() +
                 ", ano=" + getAno() +
-                ", acaoPrioritaria=" + isAcaoPrioritaria() +
-                ", trimestre='" + getTrimestre() + '\'' +
+                ", acaoPrioritaria=" + (isAcaoPrioritaria() ? "Sim" : "Não") +
+                ", trimestre='" + getNomeTrimestre() + '\'' +
                 '}';
     }
 }
