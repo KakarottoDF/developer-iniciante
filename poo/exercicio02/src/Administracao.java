@@ -3,8 +3,6 @@ import java.util.ArrayList;
 public class Administracao {
     private ArrayList<Acao> acao;
     String nome;
-    public final int TRIMESTRE_DESEJADO = 3;
-    public final int ANO_DESEJADO = 2017;
 
     public Administracao(){
         this.acao = new ArrayList<>();
@@ -29,8 +27,8 @@ public class Administracao {
     @Override
     public String toString() {
         return "Administracao{" +
+                "Nome='" + getNome() +
                 "acao=" + getAcao() +
-                ", nome='" + getNome() +
                 '}';
     }
 }
