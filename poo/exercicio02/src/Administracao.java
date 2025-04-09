@@ -9,8 +9,10 @@ public class Administracao {
             int trimestre = acoes.getTrimestre();
             if (semestre == 1 && (trimestre == 1 || trimestre == 2)) {
                 System.out.println(acoes);
-            } else if (semestre == 2 && (trimestre == 3 || trimestre == 4)) {
-                System.out.println(acoes);
+            } else {
+                if (semestre == 2 && (trimestre == 3 || trimestre == 4)) {
+                    System.out.println(acoes);
+                }
             }
         }
     }
