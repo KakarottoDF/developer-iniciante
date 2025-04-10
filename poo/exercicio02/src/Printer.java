@@ -14,7 +14,7 @@ public class Printer {
     }
 
     public static void imprimirAcoesPorAno(Administracao administracao){
-        System.out.println("AÇÕES PARA O " + Main.ANO_DESEJADO + "º Ano?\n\n".toLowerCase());
+        System.out.println("AÇÕES PARA O " + Main.ANO_DESEJADO + "º Ano:\n\n".toLowerCase());
         administracao.findByAno(Main.ANO_DESEJADO);
     }
 
