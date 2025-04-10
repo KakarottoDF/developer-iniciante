@@ -4,17 +4,17 @@ public class Printer {
     }
 
     public static void imprimirAcoesPrioritarias(Administracao administracao){
-        System.out.println("AÇÕES PRIORITÁRIAS:\n\n".toLowerCase());
+        System.out.println("\nações prioritárias:\n");
         administracao.findByPrioridade(true);
     }
 
     public static void imprimirAcoesPorTrimestre(Administracao administracao){
-        System.out.println("AÇÕES PARA O " + Main.TRIMESTRE_DESEJADO + "º Trimestre:\n\n".toLowerCase());
+        System.out.println("\nações para o " + Main.TRIMESTRE_DESEJADO + "º trimestre:\n");
         administracao.findByTrimestre(Main.TRIMESTRE_DESEJADO);
     }
 
     public static void imprimirAcoesPorAno(Administracao administracao){
-        System.out.println("AÇÕES PARA O " + Main.ANO_DESEJADO + "º Ano:\n\n".toLowerCase());
+        System.out.println("\nações para " + Main.ANO_DESEJADO);
         administracao.findByAno(Main.ANO_DESEJADO);
     }
 

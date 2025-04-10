@@ -13,7 +13,7 @@ public class Administracao {
             }
         }
         if (!encontrou) {
-            System.out.println("Nenhuma ação encontrada para o trimestre " + trimestre);
+            System.out.println("nenhuma ação encontrada para o trimestre " + trimestre);
         }
     }
 

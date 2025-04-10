@@ -21,15 +21,15 @@ public class Acao {
     public String getNomeTrimestre(){
         switch (getTrimestre()) {
             case 1:
-                return "Primeiro";
+                return "primeiro";
             case 2:
-                return "Segundo";
+                return "segundo";
             case 3:
-                return "Terceiro";
+                return "terceiro";
             case 4:
-                return "Quarto";
+                return "quarto";
             default:
-                return "Trimestre não informado!";
+                return "trimestre não informado!";
         }
     }
 
@@ -62,7 +62,7 @@ public class Acao {
         return  "descrição: " + getDescricao() +
                 "\nmês: " + getMes() +
                 "\nano: " + getAno() +
-                "\na ação é prioritária? " + (isAcaoPrioritaria() ? "Sim" : "Não") +
+                "\na ação é prioritária? " + (isAcaoPrioritaria() ? "sim" : "não") +
                 "\ntrimestre: " + getNomeTrimestre();
     }
 }
