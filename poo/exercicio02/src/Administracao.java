@@ -4,16 +4,16 @@ public class Administracao {
     private ArrayList<Acao> acao;
     String nome;
 
-    public void findBySemestre(int semestre) {
+    public void findByTrimestre(int trimestre) {
+        boolean encontrou = false;
         for (Acao acoes : acao) {
-            int trimestre = acoes.getTrimestre();
-            if (semestre == 1 && (trimestre == 1 || trimestre == 2)) {
+            if (acoes.getTrimestre() == trimestre) {
                 System.out.println(acoes);
-            } else {
-                if (semestre == 2 && (trimestre == 3 || trimestre == 4)) {
-                    System.out.println(acoes);
-                }
+                encontrou = true;
             }
+        }
+        if (!encontrou) {
+            System.out.println("Nenhuma ação encontrada para o trimestre " + trimestre);
         }
     }
 

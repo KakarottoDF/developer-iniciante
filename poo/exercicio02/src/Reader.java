@@ -21,17 +21,8 @@ public class Reader {
         return escolha;
     }
 
-    public static double lerDouble(){
-        return new Scanner(System.in).nextDouble();
-    }
-
-    public static double lerDouble(String msg){
-        System.out.print(msg);
-        return lerDouble();
-    }
-
     public static String lerString(){
-        return new Scanner(System.in).nextLine().trim().toUpperCase();
+        return new Scanner(System.in).nextLine().trim().toLowerCase();
     }
 
     public static String lerString(String msg){
