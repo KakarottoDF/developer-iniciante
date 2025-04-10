@@ -55,8 +55,8 @@ public class Administracao {
 
     @Override
     public String toString() {
-        return "Unidade Administrativa:" +
-                "\nNome: " + getNome() +
-                "\nAÇÕES:\n" + getAcao();
+        return "unidade administrativa:" +
+                "\nnome: " + getNome() +
+                "\nações:\n" + getAcao();
     }
 }

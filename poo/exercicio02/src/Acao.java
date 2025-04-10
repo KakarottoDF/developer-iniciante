@@ -59,10 +59,10 @@ public class Acao {
 
     @Override
     public String toString() {
-        return  "Descrição: " + getDescricao() +
-                "\nMês: " + getMes() +
-                "\nAno: " + getAno() +
-                "\nA ação é prioritária? " + (isAcaoPrioritaria() ? "Sim" : "Não") +
-                "\nTrimestre: " + getNomeTrimestre();
+        return  "descrição: " + getDescricao() +
+                "\nmês: " + getMes() +
+                "\nano: " + getAno() +
+                "\na ação é prioritária? " + (isAcaoPrioritaria() ? "Sim" : "Não") +
+                "\ntrimestre: " + getNomeTrimestre();
     }
 }

@@ -7,6 +7,7 @@ public class Main {
 
         View.cadastrar(administracao);
         Printer.imprimirAcoes(administracao);
+        Printer.imprimirAcoesPrioritarias(administracao);
         Printer.imprimirAcoesPorTrimestre(administracao);
         Printer.imprimirAcoesPorAno(administracao);
     }
