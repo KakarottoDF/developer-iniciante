@@ -55,7 +55,7 @@ public class Placa {
 
     @Override
     public String toString() {
-        return "Placa:" +
+        return "\nPlaca:" +
                 "\nCódigo do Fabricante:" + getCodigoFabricante() +
                 "\nQuantidade de Pinos Digitais: " + getQuantidadeDePinosDigitais() +
                 "\nTem Sinal MLP? " + (isSinalMLP() ? "Sim" : "Não") +

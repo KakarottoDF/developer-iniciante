@@ -19,8 +19,10 @@ public class Printer {
         if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else{
+            System.out.println("Lista de placas com sinal MLP:\n");
+
             for(Placa placa : arduino.getPlaca()){
-                if(placa.isSinalMLP()){
+                if(placa != null && placa.isSinalMLP()){
                     System.out.println(arduino.getPlaca());
                 }
             }
