@@ -2,10 +2,11 @@ import java.util.ArrayList;
 
 public class Arduino{
 
-    private ArrayList<Placa> placa;
+    public final String VERSAO_ARDUINO = "DIECIMILA";
     public final double ACRESCIMO_MLP = 0.50;
     public final int LIMITE_ENTRADAS_ANALOGICAS = 3;
     public final int QUANTIFICADOR_PRECO = 3;
+    private ArrayList<Placa> placa;
 
     public Arduino(){
         this.placa = new ArrayList<>();
@@ -59,8 +60,7 @@ public class Arduino{
 
     @Override
     public String toString() {
-        return "Arduino{" +
-                "placa=" + getPlaca() +
-                '}';
+        return "Arduino: " +
+                VERSAO_ARDUINO + getPlaca();
     }
 }

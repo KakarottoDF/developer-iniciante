@@ -1,5 +1,9 @@
 public class Printer {
     public static void imprimirPlacas(Arduino arduino){
-        System.out.println(arduino.getPlaca());
+        if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
+            System.out.println("Não existem placas cadastradas");
+        }else{
+            System.out.println(arduino.getPlaca());
+        }
     }
 }

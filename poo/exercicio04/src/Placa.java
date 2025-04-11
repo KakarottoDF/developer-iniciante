@@ -55,12 +55,11 @@ public class Placa {
 
     @Override
     public String toString() {
-        return "Placa{" +
-                "codigo='" + getCodigoFabricante() + '\'' +
-                ", pinosDigitais=" + getQuantidadeDePinosDigitais() +
-                ", sinalMLP=" + (isSinalMLP() ? "Sim" : "Não") +
-                ", entradaAnalogica=" + getQuantidadeDeEntradasAnalogicas() +
-                ", precoBase=" + getPrecoBase() +
-                '}';
+        return "Placa:" +
+                "\nCódigo do Fabricante:" + getCodigoFabricante() +
+                "\nQuantidade de Pinos Digitais: " + getQuantidadeDePinosDigitais() +
+                "\nTem Sinal MLP? " + (isSinalMLP() ? "Sim" : "Não") +
+                "\nQuantidade de Entradas Analógicas: " + getQuantidadeDeEntradasAnalogicas() +
+                "\nPreço Base R$ " + getPrecoBase();
     }
 }
