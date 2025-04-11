@@ -6,4 +6,32 @@ public class Printer {
             System.out.println(arduino.getPlaca());
         }
     }
+
+    public static void imprimirCustoTotalComAsPlacas(Arduino arduino){
+        if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
+            System.out.println("Não existem placas cadastradas");
+        }else {
+            System.out.println("O custo total com as placas é de R$ " + arduino.custoTotalPlacas());
+        }
+    }
+
+    public static void imprimirPlacasQueProduzemSinalMLP(Arduino arduino){
+        if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
+            System.out.println("Não existem placas cadastradas");
+        }else{
+            for(Placa placa : arduino.getPlaca()){
+                if(placa.isSinalMLP()){
+                    System.out.println(arduino.getPlaca());
+                }
+            }
+        }
+    }
+
+    public static void imprimirCustoDePlacasSemSinalMLP(Arduino arduino){
+        if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
+            System.out.println("Não existem placas cadastradas");
+        }else {
+            System.out.println("O custo total com as placas que não produzem sinal MLP é de R$ " + arduino.custoPlacasQueNaoProduzemSinalMLP());
+        }
+    }
 }
