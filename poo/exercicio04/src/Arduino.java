@@ -3,6 +3,9 @@ import java.util.ArrayList;
 public class Arduino{
 
     private ArrayList<Placa> placa;
+    public final double ACRESCIMO_MLP = 0.50;
+    public final int LIMITE_ENTRADAS_ANALOGICAS = 3;
+    public final int QUANTIFICADOR_PRECO = 3;
 
     public Arduino(){
         this.placa = new ArrayList<>();
@@ -14,6 +17,34 @@ public class Arduino{
 
     public void adicionar(Placa placa){
         getPlaca().add(placa);
+    }
+
+    public double custoTotalPlacas(){
+        double precoTotal = 0;
+
+        for(Placa placa : getPlaca()){
+            if(placa.isSinalMLP()){
+                precoTotal += placa.getPrecoBase() + (placa.getQuantidadeDePinosDigitais() * ACRESCIMO_MLP);
+            }else{
+                if(placa.getQuantidadeDeEntradasAnalogicas() > QUANTIFICADOR_PRECO){
+                    precoTotal += placa.getPrecoBase() * LIMITE_ENTRADAS_ANALOGICAS;
+                }else{
+                    precoTotal += placa.getPrecoBase();
+                }
+            }
+        }
+        return precoTotal;
+    }
+
+    public double custoPlacasQueNaoProduzemSinalMLP(){
+        double precoTotal = 0;
+
+        for(Placa placa : getPlaca()){
+            if(!placa.isSinalMLP()){
+                precoTotal += placa.getPrecoBase();
+            }
+        }
+        return precoTotal;
     }
 
     public boolean placasRepetidas(Placa novaPlaca) {

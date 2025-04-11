@@ -22,4 +22,24 @@ public class View {
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
+
+    public static int menu(){
+        int entrada;
+
+        System.out.println("""
+                Escolha uma opção\
+                
+                [1]Cadastrar Placas\
+                
+                [2]Apresentar todas as placas\
+                
+                [3]Custo total com as placas\
+                
+                [4]Todas as placas que produzem sinal MLP\
+                
+                [5]Custo das placas que não produzem sinal MLP""");
+        entrada = Reader.lerInt("Faça a sua escolha: ", "Opção inválida! Escolha um número entre 1 e 5", 1, 5);
+
+        return entrada;
+    }
 }
