@@ -16,12 +16,15 @@ public class View{
     }
 
     public static Item cadastraItem(){
-        Item item = new Item();
+        int tipo;
+
+        tipo = Reader.lerInt("Informe o tipo do item [1]TECNOLOGIA [2]OUTROS: ", "Digite somente: [1]TECNOLOGIA [2]OUTROS", 1, 2);
+
+        Item item = new Item(tipo);
 
         item.setDescricao(Reader.lerString("Informe a descrição deste item: "));
         item.setCodigo(Reader.lerString("Informe o código: "));
         item.setPreco(Reader.lerDouble("Informe o preço R$ "));
-        item.setTipo(Reader.lerInt("Informe o tipo [1]TECNOLOGIA [2]OUTROS: ", "Digite somente: [1]TECNOLOGIA [2]OUTROS", 1, 2));
 
         return item;
     }

@@ -2,7 +2,11 @@ public class Item{
     private String descricao;
     private String codigo;
     private double preco;
-    private int tipo; //(TECNOLOGIA OU OUTROS)
+    private final int TIPO; //(TECNOLOGIA OU OUTROS)
+
+    public Item(int tipo){
+        this.TIPO = tipo;
+    }
 
     public String getDescricao() {
         return this.descricao;
@@ -29,11 +33,7 @@ public class Item{
     }
 
     public int getTipo() {
-        return this.tipo;
-    }
-
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+        return this.TIPO;
     }
 
     @Override

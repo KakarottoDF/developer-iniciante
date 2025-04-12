@@ -13,4 +13,8 @@ public class Printer {
             }
         }
     }
+
+    public static void imprimirQuantidadeItensTecnologia(GerenciadorLaboratorio gerenciadorLaboratorio){
+        System.out.println("A quantidade de itens de TECNOLOGIA é de " + gerenciadorLaboratorio.contarTipo(1));
+    }
 }

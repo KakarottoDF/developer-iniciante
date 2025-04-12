@@ -5,5 +5,6 @@ public class Main {
         View.cadastrar(gerenciadorLaboratorio);
         Printer.imprimirLaboratorios(gerenciadorLaboratorio);
         Printer.imprimirLaboratoriosSomenteAnalistas(gerenciadorLaboratorio);
+        Printer.imprimirQuantidadeItensTecnologia(gerenciadorLaboratorio);
     }
 }
