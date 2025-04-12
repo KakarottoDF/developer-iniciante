@@ -5,7 +5,7 @@ public class View {
         do {
             codigo = Reader.lerString("Informe o código do fabricante: ");
 
-            if (Placa.codigoEhInvalido(codigo)) {
+            if (Arduino.codigoEhInvalido(codigo)) {
                 System.out.println("Você tem que digitar o código do fabricante!");
                 continue;
             }

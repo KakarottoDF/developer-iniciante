@@ -9,10 +9,6 @@ public class Placa {
         this.CODIGO_FABRICANTE = codigoFabricante;
     }
 
-    public static boolean codigoEhInvalido(String codigo) {
-        return codigo == null || codigo.trim().isEmpty();
-    }
-
     public String getCodigoFabricante() {
         return this.CODIGO_FABRICANTE;
     }

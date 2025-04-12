@@ -57,6 +57,10 @@ public class Arduino{
         return false;
     }
 
+    public static boolean codigoEhInvalido(String codigo) {
+        return codigo == null || codigo.trim().isEmpty();
+    }
+
     @Override
     public String toString() {
         return "Arduino: " +
