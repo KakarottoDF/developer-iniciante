@@ -6,5 +6,6 @@ public class Main {
         Printer.imprimirLaboratorios(gerenciadorLaboratorio);
         Printer.imprimirLaboratoriosSomenteAnalistas(gerenciadorLaboratorio);
         Printer.imprimirQuantidadeItensTecnologia(gerenciadorLaboratorio);
+        Printer.imprimirCustoTotalDosLaboratorios(gerenciadorLaboratorio);
     }
 }

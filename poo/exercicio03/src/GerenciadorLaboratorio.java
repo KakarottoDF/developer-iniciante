@@ -6,12 +6,25 @@ public class GerenciadorLaboratorio{
     public int contarTipo(int tipo){
         int contador = 0;
         for(Laboratorio laboratorio : getLaboratorios()){
-                for(Item item : laboratorio.getItens() )
-                    if(item.getTipo() == tipo){
+                for(Item item : laboratorio.getItens()) {
+                    if (item.getTipo() == tipo) {
                         contador++;
                     }
+                }
             }
         return contador;
+    }
+
+    public double custoTotalLaboratorios(){
+        double custoTotal = 0;
+
+        for(Laboratorio laboratorio : getLaboratorios()) {
+            for (Item item : laboratorio.getItens()) {
+                custoTotal += item.getPreco();
+            }
+        }
+
+        return custoTotal;
     }
 
     public GerenciadorLaboratorio(){

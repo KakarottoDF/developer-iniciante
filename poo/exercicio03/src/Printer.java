@@ -17,4 +17,8 @@ public class Printer {
     public static void imprimirQuantidadeItensTecnologia(GerenciadorLaboratorio gerenciadorLaboratorio){
         System.out.println("A quantidade de itens de TECNOLOGIA é de " + gerenciadorLaboratorio.contarTipo(1));
     }
+
+    public static void imprimirCustoTotalDosLaboratorios(GerenciadorLaboratorio gerenciadorLaboratorio){
+        System.out.println("O custo total dos laboratórios é de R$ " + gerenciadorLaboratorio.custoTotalLaboratorios());
+    }
 }
