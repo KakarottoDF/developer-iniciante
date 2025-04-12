@@ -1,7 +1,7 @@
 public class ResponsavelTecnico{
     private int matricula;
     private String nome;
-    private String cargo; //(TECNICO OU ANALISTA)
+    private int cargo; //(TECNICO OU ANALISTA)
 
     public int getMatricula() {
         return this.matricula;
@@ -19,11 +19,11 @@ public class ResponsavelTecnico{
         this.nome = nome;
     }
 
-    public String getCargo() {
+    public int getCargo() {
         return this.cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(int cargo) {
         this.cargo = cargo;
     }
 
@@ -32,7 +32,7 @@ public class ResponsavelTecnico{
         return "ResponsavelTecnico{" +
                 "matricula=" + getMatricula() +
                 ", nome='" + getNome() + '\'' +
-                ", cargo='" + getCargo() + '\'' +
+                ", cargo='" + (getCargo() == 1 ? "TÉCNICO" : "ANALISTA") + '\'' +
                 '}';
     }
 }

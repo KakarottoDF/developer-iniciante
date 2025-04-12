@@ -39,6 +39,17 @@ public class Reader{
         return lerString();
     }
 
+    public static String lerString(String msg, String msgError, String opcao1, String opcao2){
+        String escolha;
+        do{
+            escolha = lerString(msg);
+            if(!escolha.equalsIgnoreCase(opcao1) || !escolha.equalsIgnoreCase(opcao2)) {
+                System.out.println(msgError);
+            }
+        } while(!escolha.equalsIgnoreCase(opcao1) || !escolha.equalsIgnoreCase(opcao2));
+        return escolha;
+    }
+
     public static boolean lerBoolean(){
         return new Scanner(System.in).nextBoolean();
     }
