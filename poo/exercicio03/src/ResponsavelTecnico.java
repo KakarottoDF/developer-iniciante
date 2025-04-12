@@ -29,10 +29,9 @@ public class ResponsavelTecnico{
 
     @Override
     public String toString() {
-        return "ResponsavelTecnico{" +
-                "matricula=" + getMatricula() +
-                ", nome='" + getNome() + '\'' +
-                ", cargo='" + (getCargo() == 1 ? "TÉCNICO" : "ANALISTA") + '\'' +
-                '}';
+        return "\nResponsável Técnico deste Laboratório:" +
+                "\nMatrícula: " + getMatricula() +
+                "\nNome: " + getNome() +
+                "\nCargo: " + (getCargo() == 1 ? "TÉCNICO" : "ANALISTA") + "\n";
     }
 }

@@ -38,11 +38,10 @@ public class Item{
 
     @Override
     public String toString() {
-        return "Item{" +
-                "descricao='" + getDescricao() + '\'' +
-                ", codigo='" + getCodigo() + '\'' +
-                ", preco=" + getPreco() +
-                ", tipo='" + getTipo() + '\'' +
-                '}';
+        return "\nItens deste Laboratório: " +
+                "\nDescrição: " + getDescricao() +
+                "\nCódigo: " + getCodigo() +
+                "\nPreço: " + getPreco() +
+                "\nTipo: " + getTipo() + "\n";
     }
 }

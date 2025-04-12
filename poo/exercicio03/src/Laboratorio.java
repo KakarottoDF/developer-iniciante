@@ -41,10 +41,9 @@ public class Laboratorio{
 
     @Override
     public String toString() {
-        return "Laboratorio{" +
-                "local='" + getLocal() + '\'' +
-                ", responsaveisTecnicos=" + getResponsaveisTecnicos() +
-                ", itens=" + getItens() +
-                '}';
+        return "\n=== GERENCIADOR DE LABORATÓRIOS ===" +
+                "\nLOCAL: " + getLocal() +
+                "\nResponsáveis Técnicos: " + getResponsaveisTecnicos() +
+                "\nItens do Laboratório: " + getItens() + "\n";
     }
 }
