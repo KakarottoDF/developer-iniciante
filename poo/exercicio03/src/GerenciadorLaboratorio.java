@@ -3,6 +3,18 @@ import java.util.ArrayList;
 public class GerenciadorLaboratorio{
     private ArrayList<Laboratorio> laboratorios;
 
+    public int contarTipo(){
+        int contador = 0;
+        for(Laboratorio laboratorio : getLaboratorios()){
+            for(Item item : laboratorio.getItens()) {
+                if (item.getTipo() > 0) {
+                    contador++;
+                }
+            }
+        }
+        return contador;
+    }
+
     public int contarTipo(int tipo){
         int contador = 0;
         for(Laboratorio laboratorio : getLaboratorios()){
