@@ -1,12 +1,12 @@
 public class Placa {
-    private String codigoFabricante;
+    private final String CODIGO_FABRICANTE;
     private int quantidadeDePinosDigitais;
     private boolean sinalMLP;
     private int quantidadeDeEntradasAnalogicas;
     private double precoBase;
 
     public Placa(String codigoFabricante) {
-        this.codigoFabricante = codigoFabricante;
+        this.CODIGO_FABRICANTE = codigoFabricante;
     }
 
     public static boolean codigoEhInvalido(String codigo) {
@@ -14,7 +14,7 @@ public class Placa {
     }
 
     public String getCodigoFabricante() {
-        return this.codigoFabricante;
+        return this.CODIGO_FABRICANTE;
     }
 
     public int getQuantidadeDePinosDigitais() {
