@@ -3,7 +3,7 @@ public class Printer {
         if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else{
-            System.out.println(arduino.getPlaca());
+            System.out.println(arduino);
         }
     }
 
@@ -23,7 +23,7 @@ public class Printer {
 
             for(Placa placa : arduino.getPlaca()){
                 if(placa != null && placa.isSinalMLP()){
-                    System.out.println(arduino.getPlaca());
+                    System.out.println(placa);
                 }
             }
         }

@@ -5,24 +5,20 @@ public class Placa {
     private int quantidadeDeEntradasAnalogicas;
     private double precoBase;
 
-    public boolean isCodigoFabricante(){
-        if(getCodigoFabricante() == null || getCodigoFabricante().isEmpty()){
-            System.out.println("Você tem que digitar o código do fabricante!");
-            return true;
-        }
-        return false;
-    }
-
-    public String getCodigoFabricante() {
-        return codigoFabricante;
-    }
-
-    public void setCodigoFabricante(String codigoFabricante) {
+    public Placa(String codigoFabricante) {
         this.codigoFabricante = codigoFabricante;
     }
 
+    public static boolean codigoEhInvalido(String codigo) {
+        return codigo == null || codigo.trim().isEmpty();
+    }
+
+    public String getCodigoFabricante() {
+        return this.codigoFabricante;
+    }
+
     public int getQuantidadeDePinosDigitais() {
-        return quantidadeDePinosDigitais;
+        return this.quantidadeDePinosDigitais;
     }
 
     public void setQuantidadeDePinosDigitais(int quantidadeDePinosDigitais) {
@@ -30,7 +26,7 @@ public class Placa {
     }
 
     public boolean isSinalMLP() {
-        return sinalMLP;
+        return this.sinalMLP;
     }
 
     public void setSinalMLP(boolean sinalMLP) {
@@ -38,7 +34,7 @@ public class Placa {
     }
 
     public int getQuantidadeDeEntradasAnalogicas() {
-        return quantidadeDeEntradasAnalogicas;
+        return this.quantidadeDeEntradasAnalogicas;
     }
 
     public void setQuantidadeDeEntradasAnalogicas(int quantidadeDeEntradasAnalogicas) {
@@ -46,7 +42,7 @@ public class Placa {
     }
 
     public double getPrecoBase() {
-        return precoBase;
+        return this.precoBase;
     }
 
     public void setPrecoBase(double precoBase) {

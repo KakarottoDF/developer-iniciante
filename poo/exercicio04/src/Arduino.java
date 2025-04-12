@@ -48,10 +48,9 @@ public class Arduino{
         return precoTotal;
     }
 
-    public boolean placasRepetidas(Placa novaPlaca) {
+    public boolean placasRepetidas(String novoCodigo) {
         for (Placa placa : getPlaca()) {
-            if (placa.getCodigoFabricante().equalsIgnoreCase(novaPlaca.getCodigoFabricante())) {
-                System.out.println("Placa já cadastrada.");
+            if (placa.getCodigoFabricante().equalsIgnoreCase(novoCodigo)) {
                 return true;
             }
         }
@@ -61,6 +60,6 @@ public class Arduino{
     @Override
     public String toString() {
         return "Arduino: " +
-                VERSAO_ARDUINO + getPlaca();
+                VERSAO_ARDUINO + "\n" + getPlaca();
     }
 }

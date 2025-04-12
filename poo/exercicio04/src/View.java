@@ -1,10 +1,23 @@
 public class View {
-    public static Placa cadastrarDicimila(Arduino arduino) {
-        Placa placas = new Placa();
+    public static Placa cadastrarPlaca(Arduino arduino) {
 
-        do{
-            placas.setCodigoFabricante(Reader.lerString("Informe o código do fabricante: "));
-        }while(placas.isCodigoFabricante() || arduino.placasRepetidas(placas));
+        String codigo;
+        do {
+            codigo = Reader.lerString("Informe o código do fabricante: ");
+
+            if (Placa.codigoEhInvalido(codigo)) {
+                System.out.println("Você tem que digitar o código do fabricante!");
+                continue;
+            }
+
+            if (arduino.placasRepetidas(codigo)) {
+                System.out.println("Placa já cadastrada.");
+                codigo = null;
+            }
+
+        } while (codigo == null);
+
+        Placa placas = new Placa(codigo);
 
         placas.setQuantidadeDePinosDigitais(Reader.lerInt("Informe a quantidade de pinos digitais: "));
         placas.setSinalMLP(Reader.lerBoolean("Essa placa tem sinal MLP? [S]Sim [N]Não: ", "Digite somente [S]Sim ou [N]Não", "S", "N"));
@@ -18,7 +31,7 @@ public class View {
         boolean continuar = true;
 
         while(continuar){
-            arduino.adicionar(cadastrarDicimila(arduino));
+            arduino.adicionar(cadastrarPlaca(arduino));
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
