@@ -1,5 +1,5 @@
 public class Printer {
-    public static void imprimirPlacas(Arduino arduino){
+    public static void imprimirPlacas(ControleDePlaca arduino){
         if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else{
@@ -7,7 +7,7 @@ public class Printer {
         }
     }
 
-    public static void imprimirCustoTotalComAsPlacas(Arduino arduino){
+    public static void imprimirCustoTotalComAsPlacas(ControleDePlaca arduino){
         if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else {
@@ -15,7 +15,7 @@ public class Printer {
         }
     }
 
-    public static void imprimirPlacasQueProduzemSinalMLP(Arduino arduino){
+    public static void imprimirPlacasQueProduzemSinalMLP(ControleDePlaca arduino){
         if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else{
@@ -29,11 +29,11 @@ public class Printer {
         }
     }
 
-    public static void imprimirCustoDePlacasSemSinalMLP(Arduino arduino){
-        if(arduino.getPlaca() == null || arduino.getPlaca().isEmpty()){
+    public static void imprimirCustoDePlacasSemSinalMLP(ControleDePlaca controleDePlaca){
+        if(controleDePlaca.getPlaca() == null || controleDePlaca.getPlaca().isEmpty()){
             System.out.println("Não existem placas cadastradas");
         }else {
-            System.out.println("O custo total com as placas que não produzem sinal MLP é de R$ " + arduino.custoPlacasQueNaoProduzemSinalMLP());
+            System.out.println("O custo total com as placas que não produzem sinal MLP é de R$ " + controleDePlaca.custoPlacasQueNaoProduzemSinalMLP());
         }
     }
 }

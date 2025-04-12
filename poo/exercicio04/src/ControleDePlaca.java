@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Arduino{
+public class ControleDePlaca {
 
     public final String VERSAO_ARDUINO = "DIECIMILA";
     public final double ACRESCIMO_MLP = 0.50;
@@ -8,7 +8,7 @@ public class Arduino{
     public final int QUANTIFICADOR_PRECO = 3;
     private ArrayList<Placa> placa;
 
-    public Arduino(){
+    public ControleDePlaca(){
         this.placa = new ArrayList<>();
     }
 

@@ -1,11 +1,11 @@
 public class View {
-    public static Placa cadastrarPlaca(Arduino arduino) {
+    public static Placa cadastrarPlaca(ControleDePlaca arduino) {
 
         String codigo;
         do {
             codigo = Reader.lerString("Informe o código do fabricante: ");
 
-            if (Arduino.codigoEhInvalido(codigo)) {
+            if (ControleDePlaca.codigoEhInvalido(codigo)) {
                 System.out.println("Você tem que digitar o código do fabricante!");
                 continue;
             }
@@ -27,11 +27,11 @@ public class View {
         return placas;
     }
 
-    public static void cadastrar(Arduino arduino){
+    public static void cadastrar(ControleDePlaca controleDePlaca){
         boolean continuar = true;
 
         while(continuar){
-            arduino.adicionar(cadastrarPlaca(arduino));
+            controleDePlaca.adicionar(cadastrarPlaca(controleDePlaca));
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
