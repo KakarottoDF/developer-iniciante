@@ -42,6 +42,6 @@ public class Item{
                 "\nDescrição: " + getDescricao() +
                 "\nCódigo: " + getCodigo() +
                 "\nPreço: " + getPreco() +
-                "\nTipo: " + getTipo() + "\n";
+                "\nTipo: " + (getTipo() == 1 ? "TECNOLOGIA" : "OUTROS") + "\n";
     }
 }
