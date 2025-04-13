@@ -21,4 +21,17 @@ public class Printer {
     public static void imprimirCustoTotalDosLaboratorios(GerenciadorLaboratorio gerenciadorLaboratorio){
         System.out.println("O custo total dos laboratórios é de R$ " + gerenciadorLaboratorio.custoTotalLaboratorios());
     }
+
+    public static void imprimirLocalidadeEQuantitivoDeItens(GerenciadorLaboratorio gerenciadorLaboratorio) {
+        System.out.println("----- LISTA DE LOCALIDADE DOS LABORATÓRIOS -----");
+
+        for (Laboratorio laboratorio : gerenciadorLaboratorio.getLaboratorios()) {
+            String local = laboratorio.getLocal();
+
+            if (local != null) {
+                System.out.println("Local: " + local);
+                System.out.println("A quantidade de itens neste laboratório é de " + laboratorio.contarItensByLaboratorio());
+            }
+        }
+    }
 }
