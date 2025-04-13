@@ -56,6 +56,7 @@ public class Atleta{
                 "numeroDeInscricao=" + getNumeroDeInscricao() +
                 ", nome='" + getNome() + '\'' +
                 ", tempoDeProva=" + getTempoDeProva() +
+                "Atleta de Elite? " + (isElite() ? "Sim" : "Não") +
                 ", idade=" + getIdade() +
                 '}';
     }
