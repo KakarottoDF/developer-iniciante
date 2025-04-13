@@ -30,7 +30,7 @@ public class Printer {
 
             if (local != null) {
                 System.out.println("Local: " + local);
-                System.out.println("A quantidade de itens neste laboratório é de " + laboratorio.contarItensByLaboratorio());
+                System.out.println("A quantidade de itens neste laboratório é de " + laboratorio.contarItensByLaboratorio(laboratorio.getLocal()));
             }
         }
     }

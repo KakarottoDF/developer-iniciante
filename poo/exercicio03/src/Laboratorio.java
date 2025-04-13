@@ -5,10 +5,10 @@ public class Laboratorio{
     private ArrayList<ResponsavelTecnico> responsaveisTecnicos;
     private ArrayList<Item> itens;
 
-    public int contarItensByLaboratorio(){
+    public int contarItensByLaboratorio(String nomeLaboratorio){
         int contador = 0;
         for (Item item : getItens()) {
-            if (item.getTipo() > 0) {
+            if (getLocal().equalsIgnoreCase(nomeLaboratorio) && item.getTipo() > 0) {
                 contador++;
             }
         }
