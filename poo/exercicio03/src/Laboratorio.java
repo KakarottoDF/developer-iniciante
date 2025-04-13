@@ -5,7 +5,14 @@ public class Laboratorio{
     private ArrayList<ResponsavelTecnico> responsaveisTecnicos;
     private ArrayList<Item> itens;
 
-    public int contarItensByLaboratorio(String nomeLaboratorio){
+    public int contarItensByLaboratorio(String nomeLaboratorio) {
+        if (this.local.equalsIgnoreCase(nomeLaboratorio)) {
+            return getItens().size();
+        }
+        return 0;
+    }
+
+    /*public int contarItensByLaboratorio(String nomeLaboratorio){
         int contador = 0;
         for (Item item : getItens()) {
             if (getLocal().equalsIgnoreCase(nomeLaboratorio) && item.getTipo() > 0) {
@@ -13,7 +20,7 @@ public class Laboratorio{
             }
         }
         return contador;
-    }
+    }*/
 
     public Laboratorio(){
         this.responsaveisTecnicos = new ArrayList<>();
