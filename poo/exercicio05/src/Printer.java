@@ -13,6 +13,6 @@ public class Printer{
     }
 
     public static void imprimirMelhorAtletaDaCompeticao(Triatlo triatlo){
-        System.out.println("\n\nMELHOR ATLETA DA COMPETIÇÃO: " + triatlo.melhorAtletaDaCompeticao());
+        System.out.println("\nMELHOR ATLETA DA COMPETIÇÃO: " + triatlo.melhorAtletaDaCompeticao());
     }
 }
