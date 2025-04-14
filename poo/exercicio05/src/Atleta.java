@@ -52,6 +52,6 @@ public class Atleta{
                 "\nNOME: " + getNome() +
                 "\nTEMPO DE PROVA: " + getTempoDeProva() +
                 "\nATLETA DE ELITE? " + (isElite() ? "Sim" : "Não") +
-                "\nIDADE: " + getIdade();
+                "\nIDADE: " + getIdade() + "\n";
     }
 }
