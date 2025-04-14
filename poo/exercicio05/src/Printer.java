@@ -7,7 +7,7 @@ public class Printer{
         System.out.println("------- LISTA ATLETAS DE ELITE -------");
         for(Atleta atleta : triatlo.getAtleta()){
             if(atleta.isElite()){
-                System.out.println(atleta.getNome());
+                System.out.println("NOME: " + atleta.getNome());
             }
         }
     }
