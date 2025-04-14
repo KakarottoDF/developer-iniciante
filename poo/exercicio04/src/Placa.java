@@ -9,7 +9,7 @@ public class Placa {
         this.CODIGO_FABRICANTE = codigoFabricante;
     }
 
-    public String getCodigoFabricante() {
+    public String getCODIGO_FABRICANTE() {
         return this.CODIGO_FABRICANTE;
     }
 
@@ -48,7 +48,7 @@ public class Placa {
     @Override
     public String toString() {
         return "\nPlaca:" +
-                "\nCódigo do Fabricante:" + getCodigoFabricante() +
+                "\nCódigo do Fabricante:" + getCODIGO_FABRICANTE() +
                 "\nQuantidade de Pinos Digitais: " + getQuantidadeDePinosDigitais() +
                 "\nTem Sinal MLP? " + (isSinalMLP() ? "Sim" : "Não") +
                 "\nQuantidade de Entradas Analógicas: " + getQuantidadeDeEntradasAnalogicas() +

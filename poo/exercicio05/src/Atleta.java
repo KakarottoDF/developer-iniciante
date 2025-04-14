@@ -5,18 +5,13 @@ public class Atleta{
     private int idade;
 
     public Atleta(int numeroDeInscricao, String nome) {
-        this.numeroDeInscricao = numeroDeInscricao;
-        this.nome = nome;
+        setNumeroDeInscricao(numeroDeInscricao);
+        setNome(nome);
     }
 
     public boolean isElite(){
         return getTempoDeProva() < 5;
     }
-
-    /*numero de inscrição (que deve ser único), nome, tempo de prova (em horas
-    completas), idade e se o atleta é elite. Ele será considerado elite se o tempo de prova for
-    menor que 5 horas. Para a construção de um atleta é obrigatório o nome e numero da
-    inscrição.*/
 
     public int getNumeroDeInscricao() {
         return numeroDeInscricao;
@@ -35,7 +30,7 @@ public class Atleta{
     }
 
     public int getTempoDeProva() {
-        return tempoDeProva;
+        return this.tempoDeProva;
     }
 
     public void setTempoDeProva(int tempoDeProva) {
@@ -43,7 +38,7 @@ public class Atleta{
     }
 
     public int getIdade() {
-        return idade;
+        return this.idade;
     }
 
     public void setIdade(int idade) {
