@@ -11,4 +11,8 @@ public class Printer{
             }
         }
     }
+
+    public static void imprimirMelhorAtletaDaCompeticao(Triatlo triatlo){
+        System.out.println("Melhor atleta da competição: " + triatlo.melhorAtletaDaCompeticao());
+    }
 }

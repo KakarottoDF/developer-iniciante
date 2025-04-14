@@ -15,6 +15,19 @@ public class Triatlo{
         getAtleta().add(atleta);
     }
 
+    public String melhorAtletaDaCompeticao(){
+        String nome = "";
+        int tempoProva = Integer.MAX_VALUE;
+        for(Atleta atleta : getAtleta()){
+            if(atleta.getTempoDeProva() < tempoProva){
+                nome = atleta.getNome();
+                tempoProva = atleta.getTempoDeProva();
+            }
+        }
+
+        return nome;
+    }
+
     public boolean informacaoRepetida(int num){
         for(Atleta atleta : getAtleta()){
             if(atleta.getNumeroDeInscricao() == num){
