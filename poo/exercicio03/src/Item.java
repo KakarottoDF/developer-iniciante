@@ -32,7 +32,7 @@ public class Item{
         this.preco = preco;
     }
 
-    public int getTipo() {
+    public int getTIPO() {
         return this.TIPO;
     }
 
@@ -42,6 +42,6 @@ public class Item{
                 "\nDescrição: " + getDescricao() +
                 "\nCódigo: " + getCodigo() +
                 "\nPreço: " + getPreco() +
-                "\nTipo: " + (getTipo() == 1 ? "TECNOLOGIA" : "OUTROS") + "\n";
+                "\nTipo: " + (getTIPO() == 1 ? "TECNOLOGIA" : "OUTROS") + "\n";
     }
 }

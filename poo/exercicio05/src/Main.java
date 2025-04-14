@@ -4,5 +4,6 @@ public class Main {
 
         View.cadastrar(triatlo);
         Printer.imprimirAtletas(triatlo);
+        Printer.imprimirAtletaDeElite(triatlo);
     }
 }

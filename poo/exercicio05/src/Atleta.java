@@ -47,12 +47,11 @@ public class Atleta{
 
     @Override
     public String toString() {
-        return "Atleta{" +
-                "numeroDeInscricao=" + getNumeroDeInscricao() +
-                ", nome='" + getNome() + '\'' +
-                ", tempoDeProva=" + getTempoDeProva() +
-                "Atleta de Elite? " + (isElite() ? "Sim" : "Não") +
-                ", idade=" + getIdade() +
-                '}';
+        return "\nATLETA:" +
+                "\nNÚMERO DE INSCRIÇÃO: " + getNumeroDeInscricao() +
+                "\nNOME: " + getNome() +
+                "\nTEMPO DE PROVA: " + getTempoDeProva() +
+                "\nATLETA DE ELITE? " + (isElite() ? "Sim" : "Não") +
+                "\nIDADE: " + getIdade();
     }
 }

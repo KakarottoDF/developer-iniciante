@@ -50,8 +50,7 @@ public class Triatlo{
 
     @Override
     public String toString() {
-        return "Triatlo{" +
-                "atleta=" + getAtleta() +
-                '}';
+        return "\nIRONMAN 70.3" +
+                "\n---------- LISTA DE ATLETAS ----------" + getAtleta();
     }
 }
