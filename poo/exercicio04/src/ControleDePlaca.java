@@ -50,7 +50,7 @@ public class ControleDePlaca {
 
     public boolean placasRepetidas(String novoCodigo) {
         for (Placa placa : getPlaca()) {
-            if (placa.getCodigoFabricante().equalsIgnoreCase(novoCodigo)) {
+            if (placa.getCODIGO_FABRICANTE().equalsIgnoreCase(novoCodigo)) {
                 return true;
             }
         }
