@@ -10,7 +10,7 @@ public class Atleta{
     }
 
     public boolean isElite(){
-        return getTempoDeProva() < 5;
+        return getTempoDeProva() > 0 && getTempoDeProva() < 5;
     }
 
     public int getNumeroDeInscricao() {
@@ -34,7 +34,17 @@ public class Atleta{
     }
 
     public void setTempoDeProva(int tempoDeProva) {
-        this.tempoDeProva = tempoDeProva;
+        if(tempoDeProva > 8){
+            System.out.println("O TEMPO MÁXIMO DE PROVA É DE 8 HORAS. ATLETA DESCLASSIFICADO!");
+            this.tempoDeProva = 0;
+        }else{
+            if(tempoDeProva <= 0){
+                System.out.println("ATLETA NÃO PARTICIPOU DA PROVA!");
+                this.tempoDeProva = 0;
+            }else{
+                this.tempoDeProva = tempoDeProva;
+            }
+        }
     }
 
     public int getIdade() {

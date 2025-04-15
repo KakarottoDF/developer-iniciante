@@ -7,5 +7,6 @@ public class Main {
         Printer.imprimirAtletaDeElite(triatlo);
         Printer.imprimirMelhorAtletaDaCompeticao(triatlo);
         Printer.imprimirAtltasDaCategoria(triatlo);
+        Printer.imprimirMediaDeTempoDosAtletas(triatlo);
     }
 }

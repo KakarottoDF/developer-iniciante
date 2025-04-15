@@ -16,6 +16,32 @@ public class Triatlo{
         getAtleta().add(atleta);
     }
 
+    public double somarAtletasDesclassificados(){
+        double atletasDesclassificados = 0;
+
+        for(Atleta atleta : getAtleta()){
+            if(atleta.getTempoDeProva() > 8 || atleta.getTempoDeProva() <=0){
+                atletasDesclassificados++;
+            }
+
+        }
+        return atletasDesclassificados;
+    }
+
+    public double somarTempoDosAtletas(){
+        double resultado = 0;
+
+        for(Atleta atleta : getAtleta()){
+            resultado += atleta.getTempoDeProva();
+        }
+
+        return resultado;
+    }
+
+    public double mediaTempoDosAtletas(){
+        return somarTempoDosAtletas() / (getAtleta().size() - somarAtletasDesclassificados());
+    }
+
     public void procurarAtletasDeCategoriaDeBase(){
         for(Atleta atleta : getAtleta()){
             if(atleta.getIdade() >= CATEGORIA_BASE && atleta.getIdade() <= (CATEGORIA_BASE + 4)){

@@ -20,4 +20,8 @@ public class Printer{
         System.out.println("\nATLETAS DA CATEGORIA DE 30 A 34 ANOS:");
         triatlo.procurarAtletasDeCategoriaDeBase();
     }
+
+    public static void imprimirMediaDeTempoDosAtletas(Triatlo triatlo){
+        System.out.println("A média de tempo de todos os atletas é de " + triatlo.mediaTempoDosAtletas());
+    }
 }
