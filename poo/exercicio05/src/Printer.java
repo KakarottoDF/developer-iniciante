@@ -15,4 +15,9 @@ public class Printer{
     public static void imprimirMelhorAtletaDaCompeticao(Triatlo triatlo){
         System.out.println("\nMELHOR ATLETA DA COMPETIÇÃO: " + triatlo.melhorAtletaDaCompeticao());
     }
+
+    public static void imprimirAtltasDaCategoria(Triatlo triatlo){
+        System.out.println("\nATLETAS DA CATEGORIA DE 30 A 34 ANOS:");
+        triatlo.procurarAtletasDeCategoriaDeBase();
+    }
 }
