@@ -18,7 +18,11 @@ public class Printer{
 
     public static void imprimirAtltasDaCategoria(Triatlo triatlo){
         System.out.println("\nATLETAS DA CATEGORIA DE 30 A 34 ANOS:");
-        triatlo.procurarAtletasDeCategoriaDeBase();
+        boolean encontrou = triatlo.procurarAtletasDeCategoriaDeBase();
+
+        if (!encontrou) {
+            System.out.println("Não houve atletas entre " + Triatlo.CATEGORIA_BASE + " e " + (Triatlo.CATEGORIA_BASE + 4) + " anos.");
+        }
     }
 
     public static void imprimirMediaDeTempoDosAtletas(Triatlo triatlo){

@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Triatlo{
     private ArrayList<Atleta> atleta;
-    private final int CATEGORIA_BASE = 30;
+    public static final int CATEGORIA_BASE = 30;
 
     public Triatlo() {
         this.atleta = new ArrayList<>();
@@ -42,12 +42,15 @@ public class Triatlo{
         return somarTempoDosAtletas() / (getAtleta().size() - somarAtletasDesclassificados());
     }
 
-    public void procurarAtletasDeCategoriaDeBase(){
+    public boolean procurarAtletasDeCategoriaDeBase(){
+        boolean encontrou = false;
         for(Atleta atleta : getAtleta()){
             if(atleta.getIdade() >= CATEGORIA_BASE && atleta.getIdade() <= (CATEGORIA_BASE + 4)){
                 System.out.println(atleta);
+                encontrou = true;
                 }
             }
+        return encontrou;
     }
 
     public String melhorAtletaDaCompeticao(){
