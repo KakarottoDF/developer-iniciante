@@ -22,6 +22,7 @@ public class Usuario{
 
         for (int i = 0; i < frase.length(); i++) {
             c = frase.charAt(i);
+            //Percorre o for e retorna o caractere da posição i
             if (c == 'A') {
                 contador++;
             }
