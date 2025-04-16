@@ -17,7 +17,6 @@ public class Administrativo extends Funcionario{
     public String toString() {
         return "Administrativo{" +
                 "dependentes=" + getDependentes() +
-                ", administrativo=" + getAdministrativo() +
                 '}';
     }
 }

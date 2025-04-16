@@ -17,7 +17,6 @@ public class Professor extends Funcionario{
     public String toString() {
         return "Professor{" +
                 "titulacao='" + getTitulacao() + '\'' +
-                ", professor=" + getProfessor() +
                 '}';
     }
 }
