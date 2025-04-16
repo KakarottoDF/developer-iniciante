@@ -10,8 +10,6 @@ public class Administrativo extends Funcionario{
     }
 
     public double getContribuicaoSindical(){
-        int resultado = 0;
-
-        return resultado;
+        return getSalario() * 0.01;
     }
 }

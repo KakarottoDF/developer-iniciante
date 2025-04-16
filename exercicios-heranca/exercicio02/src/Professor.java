@@ -10,8 +10,6 @@ public class Professor extends Funcionario{
     }
 
     public double getImpostoRenda(){
-        double resultado = 0;
-
-        return resultado;
+        return getSalario() * 0.23;
     }
 }
