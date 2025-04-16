@@ -8,4 +8,10 @@ public class Administrativo extends Funcionario{
     public void setDependentes(int dependentes) {
         this.dependentes = dependentes;
     }
+
+    public double getContribuicaoSindical(){
+        int resultado = 0;
+
+        return resultado;
+    }
 }

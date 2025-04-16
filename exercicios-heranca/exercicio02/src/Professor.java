@@ -8,4 +8,10 @@ public class Professor extends Funcionario{
     public void setTitulacao(String titulacao) {
         this.titulacao = titulacao;
     }
+
+    public double getImpostoRenda(){
+        double resultado = 0;
+
+        return resultado;
+    }
 }
