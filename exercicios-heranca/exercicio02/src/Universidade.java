@@ -28,4 +28,13 @@ public class Universidade {
         getProfessor().add(professor);
         getAdministrativo().add(administrativo);
     }
+
+    @Override
+    public String toString() {
+        return "Universidade{" +
+                "funcionario=" + getFuncionario() +
+                ", professor=" + getProfessor() +
+                ", administrativo=" + getAdministrativo() +
+                '}';
+    }
 }
