@@ -12,4 +12,12 @@ public class Administrativo extends Funcionario{
     public double getContribuicaoSindical(){
         return getSalario() * 0.01;
     }
+
+    @Override
+    public String toString() {
+        return "Administrativo{" +
+                "dependentes=" + getDependentes() +
+                ", administrativo=" + getAdministrativo() +
+                '}';
+    }
 }

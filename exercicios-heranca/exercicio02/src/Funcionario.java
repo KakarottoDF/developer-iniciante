@@ -1,7 +1,11 @@
+import java.util.ArrayList;
+
 public class Funcionario {
     private String nome;
     private String cpf;
     private double salario;
+    ArrayList<Professor> professor;
+    ArrayList<Administrativo> administrativo;
 
     public Funcionario(String nome, String cpf, double salario) {
         this.nome = nome;
@@ -10,7 +14,21 @@ public class Funcionario {
     }
 
     public Funcionario(){
+        this.professor = new ArrayList<>();
+        this.administrativo = new ArrayList<>();
+    }
 
+    public ArrayList<Professor> getProfessor() {
+        return this.professor;
+    }
+
+    public ArrayList<Administrativo> getAdministrativo() {
+        return this.administrativo;
+    }
+
+    public void adicionar(Professor professor, Administrativo administrativo){
+        getProfessor().add(professor);
+        getAdministrativo().add(administrativo);
     }
 
     public String getNome() {
@@ -35,5 +53,16 @@ public class Funcionario {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", salario=" + salario +
+                ", professor=" + professor +
+                ", administrativo=" + administrativo +
+                '}';
     }
 }

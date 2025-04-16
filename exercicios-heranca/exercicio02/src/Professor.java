@@ -12,4 +12,12 @@ public class Professor extends Funcionario{
     public double getImpostoRenda(){
         return getSalario() * 0.23;
     }
+
+    @Override
+    public String toString() {
+        return "Professor{" +
+                "titulacao='" + getTitulacao() + '\'' +
+                ", professor=" + getProfessor() +
+                '}';
+    }
 }
