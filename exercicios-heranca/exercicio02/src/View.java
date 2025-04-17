@@ -2,7 +2,7 @@ public class View{
     public static Funcionario cadastrarFuncionario(){
         Funcionario funcionario = new Funcionario();
 
-        funcionario.setNome(Reader.lerString());
+        funcionario.setNome(Reader.lerString("Informe o nome do funcionário: "));
 
         return funcionario;
     }
@@ -10,7 +10,7 @@ public class View{
     public static Professor cadastrarProfessor(){
         Professor professor = new Professor();
 
-        professor.setCpf(Reader.lerString());
+        professor.setCpf(Reader.lerString(""));
 
         return professor;
     }
