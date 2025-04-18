@@ -9,18 +9,18 @@ public class View{
         return funcionario;
     }
 
-    public static Professor cadastrarProfessor(){
+    public static Professor cadastrarProfessor(Funcionario funcionario){
         Professor professor = new Professor();
 
-        professor.setTitulacao(Reader.lerString("Informe a titulação do professor " + professor.getNome() + ": "));
+        professor.setTitulacao(Reader.lerString("Informe a titulação do professor " + funcionario.getNome() + ": "));
 
         return professor;
     }
 
-    public static Administrativo cadastrarAdministrativo(){
+    public static Administrativo cadastrarAdministrativo(Funcionario funcionario){
         Administrativo administrativo = new Administrativo();
 
-        administrativo.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor " + administrativo.getNome() + ": "));
+        administrativo.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor " + funcionario.getNome() + ": "));
 
         return administrativo;
     }
@@ -37,10 +37,10 @@ public class View{
             escolha = Reader.lerInt("Esse funcionário é Diretor ou é Professor? [1]Diretor [2]Professor", "Escolha somente: [1]Diretor ou [2]Professor", 1, 2);
 
             if (escolha == 1) {
-                Administrativo administrativo = cadastrarAdministrativo();
+                Administrativo administrativo = cadastrarAdministrativo(funcionario);
                 universidade.adicionar(funcionario, administrativo);
             } else {
-                Professor professor = cadastrarProfessor();
+                Professor professor = cadastrarProfessor(funcionario);
                 universidade.adicionar(funcionario, professor);
                 {
 
