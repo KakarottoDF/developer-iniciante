@@ -18,6 +18,6 @@ public class Diretor extends Funcionario{
         return "\nDIRETOR " + getNome() + ": " +
                 "\nCPF: " + getCpf() +
                 "\nSALÁRIO BRUTO R$ " + getSalario() +
-                "\nQUANTIDADE DE DEPENDENTES: " + getDependentes() + (getDependentes() > 0 ? "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getContribuicaoSindical() : "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getSalario());
+                "\nQUANTIDADE DE DEPENDENTES: " + getDependentes() + (getDependentes() > 0 ? "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getContribuicaoSindical() : "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getSalario()) + "\n ";
     }
 }

@@ -44,6 +44,6 @@ public class Funcionario {
         return "\nFUNCIONÁRIO: " +
                 "\nNOME: " + getNome() +
                 "\nCPF: " + getCpf() +
-                "\nSALÁRIO BRUTO R$ " + getSalario() + "\n";
+                "\nSALÁRIO BRUTO R$ " + getSalario() + "\n ";
     }
 }

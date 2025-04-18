@@ -22,6 +22,6 @@ public class Professor extends Funcionario{
         return "\nProfessor " + getNome() + ": " +
                 "\nCPF: " + getCpf() +
                 "\nSALÁRIO BRUTO R$ " + getSalario() +
-                "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de " + formatter.format(getImpostoRenda()));
+                "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de " + formatter.format(getImpostoRenda())) + "\n ";
     }
 }
