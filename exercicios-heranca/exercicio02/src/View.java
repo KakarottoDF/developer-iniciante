@@ -1,22 +1,21 @@
 public class View{
     private static Diretor cadastrarDiretor() {
-        Diretor diretor = new Diretor();
 
-        diretor.setNome(Reader.lerString("Informe o nome do Diretor: "));
-        diretor.setCpf(Reader.lerString("Informe o CPF do Diretor: "));
-        diretor.setSalario(Reader.lerDouble("Informe o salário do Diretor: R$ "));
-        diretor.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor: "));
+        String nome = Reader.lerString("Informe o nome do Diretor: ");
+        String cpf = Reader.lerString("Informe o CPF do Diretor: ");
+        double salario = Reader.lerDouble("Informe o salário do Diretor: R$ ");
+        int dependentes = Reader.lerInt("Informe a quantidade de dependentes do Diretor: ");
 
-        return diretor;
+        return new Diretor(nome, cpf, salario, dependentes);
     }
 
     private static Professor cadastrarProfessor() {
-        Professor professor = new Professor();
+        String nome = Reader.lerString("Informe o nome do Diretor: ");
+        String cpf = Reader.lerString("Informe o CPF do Diretor: ");
+        double salario = Reader.lerDouble("Informe o salário do Diretor: R$ ");
+        String titulacao = Reader.lerString("Informe a titulação do Professor: ");
 
-        professor.setNome(Reader.lerString("Informe o nome do Professor: "));
-        professor.setCpf(Reader.lerString("Informe o CPF do Professor: "));
-        professor.setSalario(Reader.lerDouble("Informe o salário do Professor: R$ "));
-        professor.setTitulacao(Reader.lerString("Informe a titulação do Professor: "));
+        Professor professor = new Professor(nome, cpf, salario, titulacao);
 
         return professor;
     }

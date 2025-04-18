@@ -4,6 +4,11 @@ import java.util.Locale;
 public class Professor extends Funcionario{
     private String titulacao;
 
+    public Professor(String nome, String cpf, double salario, String titulacao) {
+        super(nome, cpf, salario);
+        setTitulacao(titulacao);
+    }
+
     public String getTitulacao() {
         return this.titulacao;
     }
@@ -13,7 +18,7 @@ public class Professor extends Funcionario{
     }
 
     public double getImpostoRenda(){
-        return getSalario() - (getSalario() * 0.23);
+        return getSalario() * 0.23;
     }
 
     @Override

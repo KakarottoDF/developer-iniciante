@@ -5,14 +5,10 @@ public class Funcionario extends Universidade{
     private String cpf;
     private double salario;
 
-
     public Funcionario(String nome, String cpf, double salario) {
         setNome(nome);
         setCpf(cpf);
         setSalario(salario);
-    }
-
-    public Funcionario(){
     }
 
     public String getNome() {
