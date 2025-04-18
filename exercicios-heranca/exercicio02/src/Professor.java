@@ -23,10 +23,10 @@ public class Professor extends Funcionario{
 
     @Override
     public String toString() {
-        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        NumberFormat conversao = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
         return "\nProfessor " + getNome() + ": " +
                 "\nCPF: " + getCpf() +
                 "\nSALÁRIO BRUTO R$ " + getSalario() +
-                "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de " + formatter.format(getImpostoRenda())) + "\n ";
+                "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de " + conversao.format(getImpostoRenda())) + "\n ";
     }
 }
