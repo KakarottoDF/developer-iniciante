@@ -3,5 +3,6 @@ public class Main {
         Universidade universidade = new Universidade();
 
         View.cadastrar(universidade);
+        Printer.imprimirFuncionarios(universidade);
     }
 }

@@ -3,6 +3,8 @@ public class View{
         Funcionario funcionario = new Funcionario();
 
         funcionario.setNome(Reader.lerString("Informe o nome do funcionário: "));
+        funcionario.setCpf(Reader.lerString("Informe o CPF do funcionário: "));
+        funcionario.setSalario(Reader.lerDouble("Informe o salário do funcionário: R$ "));
 
         return funcionario;
     }
@@ -10,7 +12,7 @@ public class View{
     public static Professor cadastrarProfessor(){
         Professor professor = new Professor();
 
-        professor.setCpf(Reader.lerString(""));
+        professor.setTitulacao(Reader.lerString("Informe a titulação do professor " + professor.getNome() + ": "));
 
         return professor;
     }
@@ -18,7 +20,7 @@ public class View{
     public static Administrativo cadastrarAdministrativo(){
         Administrativo administrativo = new Administrativo();
 
-        administrativo.setDependentes(Reader.lerInt());
+        administrativo.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor " + administrativo.getNome() + ": "));
 
         return administrativo;
     }
