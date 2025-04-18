@@ -10,12 +10,14 @@ public class Administrativo extends Funcionario{
     }
 
     public double getContribuicaoSindical(){
-        return getSalario() + (getSalario() * 0.01);
+        return getSalario() - (getSalario() * 0.01);
     }
 
     @Override
     public String toString() {
-        return "\nDiretor " + getNome() + ": " +
-                "\nQuantidade de Dependentes: " + getDependentes() + (getDependentes() > 0 ? "\nO salário deste Diretor é de R$ " + getContribuicaoSindical() : "\nO salário deste Diretor é de R$ " + getSalario());
+        return "\nDIRETOR " + getNome() + ": " +
+                "\nCPF: " + getCpf() +
+                "\nSALÁRIO BRUTO R$ " + getSalario() +
+                "\nQUANTIDADE DE DEPENDENTES: " + getDependentes() + (getDependentes() > 0 ? "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getContribuicaoSindical() : "\nO SALÁRIO DESTE DIRETOR É DE R$ " + getSalario());
     }
 }

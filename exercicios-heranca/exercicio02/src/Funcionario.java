@@ -41,9 +41,9 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario: " +
-                "Nome: " + getNome() +
-                "CPF: " + getCpf() +
-                "Salário R$ " + getSalario();
+        return "\nFUNCIONÁRIO: " +
+                "\nNOME: " + getNome() +
+                "\nCPF: " + getCpf() +
+                "\nSALÁRIO BRUTO R$ " + getSalario();
     }
 }

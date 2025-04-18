@@ -24,14 +24,14 @@ public class Universidade {
         return this.administrativo;
     }
 
-    public void adicionar(Funcionario funcionario, Professor professor){
+    public void adicionarFuncionario(Funcionario funcionario){
         getFuncionario().add(funcionario);
-        getProfessor().add(professor);
-    }
 
-    public void adicionar(Funcionario funcionario, Administrativo administrativo){
-        getFuncionario().add(funcionario);
-        getAdministrativo().add(administrativo);
+        if (funcionario instanceof Professor) {
+            getProfessor().add((Professor) funcionario);
+        } else if (funcionario instanceof Administrativo) {
+            getAdministrativo().add((Administrativo) funcionario);
+        }
     }
 
     public String getNome() {
@@ -44,11 +44,8 @@ public class Universidade {
 
     @Override
     public String toString() {
-        return "Universidade{" +
-                "nome='" + getNome() + '\'' +
-                ", funcionario=" + getFuncionario() +
-                ", professor=" + getProfessor() +
-                ", administrativo=" + getAdministrativo() +
-                '}';
+        return "UNIVERSIDADE:" +
+                "\n" + getNome() +
+                "\nFUNCIONÁRIO: " + getFuncionario();
     }
 }

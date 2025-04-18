@@ -13,13 +13,15 @@ public class Professor extends Funcionario{
     }
 
     public double getImpostoRenda(){
-        return getSalario() + (getSalario() * 0.23);
+        return getSalario() - (getSalario() * 0.23);
     }
 
     @Override
     public String toString() {
         NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
         return "\nProfessor " + getNome() + ": " +
+                "\nCPF: " + getCpf() +
+                "\nSALÁRIO BRUTO R$ " + getSalario() +
                 "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de " + formatter.format(getImpostoRenda()));
     }
 }
