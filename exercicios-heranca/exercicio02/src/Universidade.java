@@ -24,9 +24,13 @@ public class Universidade {
         return this.administrativo;
     }
 
-    public void adicionar(Funcionario funcionario, Professor professor, Administrativo administrativo){
+    public void adicionar(Funcionario funcionario, Professor professor){
         getFuncionario().add(funcionario);
         getProfessor().add(professor);
+    }
+
+    public void adicionar(Funcionario funcionario, Administrativo administrativo){
+        getFuncionario().add(funcionario);
         getAdministrativo().add(administrativo);
     }
 
