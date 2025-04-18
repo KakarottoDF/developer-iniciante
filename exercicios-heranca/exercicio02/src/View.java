@@ -21,7 +21,7 @@ public class View{
         return professor;
     }
 
-    public static void cadastrar(Universidade universidade) {
+    public static void cadastroGeral(Universidade universidade) {
         boolean continuar = true;
 
         universidade.setNome(Reader.lerString("Informe o nome desta Universidade: "));
