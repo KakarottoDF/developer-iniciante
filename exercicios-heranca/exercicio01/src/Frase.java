@@ -1,7 +1,7 @@
-public class Usuario{
+public class Frase {
     private String frase;
 
-    public Usuario(String nome){
+    public Frase(String nome){
         setFrase(nome);
     }
 
@@ -13,17 +13,18 @@ public class Usuario{
         this.frase = frase;
     }
 
-    public int contarLetraA(){
+    public int contarLetraA(char letra){
         int contador = 0;
         char c;
         String frase;
 
         frase = getFrase().toUpperCase();
+        letra = Character.toUpperCase(letra);
 
         for (int i = 0; i < frase.length(); i++) {
             c = frase.charAt(i);
             //Percorre o for e retorna o caractere da posição i
-            if (c == 'A') {
+            if (c == letra) {
                 contador++;
             }
         }
@@ -41,20 +42,17 @@ public class Usuario{
         return frase.length();
     }
 
-    public String qualificacaoDaFrase(){
-        String resposta;
+    public Tamanho qualificacaoDaFrase(){
 
         if(quantidadeDeCaracteres() < 10){
-            resposta = "PEQUENA";
+            return Tamanho.PEQUENA;
         }else{
             if(quantidadeDeCaracteres() > 9 && quantidadeDeCaracteres() < 29){
-                resposta = "MEDIA";
+                return Tamanho.MEDIA;
             }else{
-                resposta = "GRANDE";
+                return Tamanho.GRANDE;
             }
         }
-
-        return resposta;
     }
 
     public int quantidadeDePalavras(){
