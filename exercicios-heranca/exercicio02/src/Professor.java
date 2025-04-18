@@ -1,3 +1,6 @@
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Professor extends Funcionario{
     private String titulacao;
 
@@ -10,13 +13,13 @@ public class Professor extends Funcionario{
     }
 
     public double getImpostoRenda(){
-        return getSalario() * 0.23;
+        return getSalario() + (getSalario() * 0.23);
     }
 
     @Override
     public String toString() {
-        return "Professor{" +
-                "titulacao='" + getTitulacao() + '\'' +
-                '}';
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
+        return "\nProfessor " + getNome() + ": " +
+                "\nTitulação: " + getTitulacao() + (getTitulacao().isEmpty() ? "" : "\nO salário deste professor é de R$ " + formatter.format(getImpostoRenda()));
     }
 }
