@@ -36,14 +36,14 @@ public class View{
         while(continuar) {
             Funcionario funcionario = cadastrarFuncionario();
 
-            escolha = Reader.lerInt("Esse funcionário é Diretor ou é Professor? [1]Diretor [2]Professor", "Escolha somente: [1]Diretor ou [2]Professor", 1, 2);
+            escolha = Reader.lerInt("Esse funcionário é Diretor ou é Professor? [1]Diretor [2]Professor", "Escolha somente: [1]Diretor ou [2]Professor: ", 1, 2);
 
             if (escolha == 1) {
                 Administrativo administrativo = cadastrarAdministrativo(funcionario);
-                universidade.adicionar(funcionario, administrativo);
+                universidade.adicionar(administrativo, administrativo);
             } else {
                 Professor professor = cadastrarProfessor(funcionario);
-                universidade.adicionar(funcionario, professor);
+                universidade.adicionar(professor, professor);
                 {
 
                     continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
