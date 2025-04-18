@@ -7,9 +7,9 @@ public class Funcionario extends Universidade{
 
 
     public Funcionario(String nome, String cpf, double salario) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.salario = salario;
+        setNome(nome);
+        setCpf(cpf);
+        setSalario(salario);
     }
 
     public Funcionario(){
