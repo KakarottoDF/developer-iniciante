@@ -1,4 +1,4 @@
-public class Administrativo extends Funcionario{
+public class Diretor extends Funcionario{
     private int dependentes;
 
     public int getDependentes() {

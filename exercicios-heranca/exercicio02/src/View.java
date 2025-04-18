@@ -1,5 +1,3 @@
-import javax.management.ObjectInstance;
-
 public class View{
     public static void cadastrar(Universidade universidade) {
         boolean continuar = true;
@@ -14,14 +12,14 @@ public class View{
             );
 
             if (escolha == 1) {
-                Administrativo administrativo = new Administrativo();
+                Diretor diretor = new Diretor();
 
-                administrativo.setNome(Reader.lerString("Informe o nome do Diretor: "));
-                administrativo.setCpf(Reader.lerString("Informe o CPF do Diretor: "));
-                administrativo.setSalario(Reader.lerDouble("Informe o salário do Diretor: R$ "));
-                administrativo.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor: "));
+                diretor.setNome(Reader.lerString("Informe o nome do Diretor: "));
+                diretor.setCpf(Reader.lerString("Informe o CPF do Diretor: "));
+                diretor.setSalario(Reader.lerDouble("Informe o salário do Diretor: R$ "));
+                diretor.setDependentes(Reader.lerInt("Informe a quantidade de dependentes do Diretor: "));
 
-                universidade.adicionarFuncionario(administrativo);
+                universidade.adicionarFuncionario(diretor);
             } else {
                 Professor professor = new Professor();
 
