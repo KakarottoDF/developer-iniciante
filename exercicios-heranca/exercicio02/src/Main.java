@@ -4,5 +4,6 @@ public class Main {
 
         View.cadastrar(universidade);
         Printer.imprimirFuncionarios(universidade);
+        Printer.imprimirProfessor(universidade);
     }
 }
