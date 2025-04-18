@@ -10,9 +10,9 @@ public class View{
     }
 
     private static Professor cadastrarProfessor() {
-        String nome = Reader.lerString("Informe o nome do Diretor: ");
-        String cpf = Reader.lerString("Informe o CPF do Diretor: ");
-        double salario = Reader.lerDouble("Informe o salário do Diretor: R$ ");
+        String nome = Reader.lerString("Informe o nome do Professor: ");
+        String cpf = Reader.lerString("Informe o CPF do Professor: ");
+        double salario = Reader.lerDouble("Informe o salário do Professor: R$ ");
         String titulacao = Reader.lerString("Informe a titulação do Professor: ");
 
         Professor professor = new Professor(nome, cpf, salario, titulacao);
