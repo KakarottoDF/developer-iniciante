@@ -13,7 +13,7 @@ public class View {
 
         System.out.println("Escolha a figura:");
         System.out.println("1 - Triângulo Retângulo");
-        System.out.println("2 - Retângulo");
+        System.out.println("2 - Triângulo");
 
         int opcao = Reader.lerInt("Digite a opção: ", "Opção inválida. Tente novamente.", 1, 2);
 

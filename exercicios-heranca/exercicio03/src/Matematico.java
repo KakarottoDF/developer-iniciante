@@ -7,6 +7,10 @@ public class Matematico{
         setAltura(altura);
     }
 
+    public double calcularArea() {
+        return getBase() * getAltura();
+    }
+
     public double getBase() {
         return this.base;
     }

@@ -3,6 +3,7 @@ public class TrianguloRetangulo extends Matematico{
         super(base, altura);
     }
 
+    @Override
     public double calcularArea() {
         return (getBase() * getAltura()) / 2;
     }
