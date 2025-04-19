@@ -6,7 +6,7 @@ public class Triangulo extends Matematico{
     @Override
     public String toString() {
         return super.toString() +
-                "\nÁREA: " + calcularArea();
+                "\nÁREA DO TRIÂNGULO: " + calcularArea();
     }
 
 }

@@ -15,7 +15,7 @@ public class TrianguloRetangulo extends Matematico{
     @Override
     public String toString() {
         return super.toString() +
-                "\nÁREA: " + calcularArea() +
+                "\nÁREA DO TRIÂNGULO RETÂNGULO: " + calcularArea() +
                 "\nHIPOTENUSA: " + calcularHipotenusa();
     }
 
