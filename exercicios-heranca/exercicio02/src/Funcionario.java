@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class Funcionario extends Universidade{
+public class Funcionario extends Escola {
     private String nome;
     private String cpf;
     private double salario;

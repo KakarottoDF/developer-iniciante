@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        Universidade universidade = new Universidade();
+        Escola escola = new Escola();
 
-        View.cadastroGeral(universidade);
-        Printer.imprimirFuncionarios(universidade);
-        Printer.imprimirProfessor(universidade);
+        View.cadastroGeral(escola);
+        Printer.imprimirFuncionarios(escola);
+        Printer.imprimirProfessor(escola);
     }
 }

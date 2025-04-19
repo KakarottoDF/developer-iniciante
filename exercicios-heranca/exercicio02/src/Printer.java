@@ -1,11 +1,11 @@
 public class Printer {
-    public static void imprimirFuncionarios(Universidade universidade){
-        System.out.println("------- LISTA DE FUNCIONÁRIOS DA UNIVERSIDADE -------");
-        System.out.println(universidade);
+    public static void imprimirFuncionarios(Escola escola){
+        System.out.println("------- LISTA DE FUNCIONÁRIOS DA ESCOLA -------");
+        System.out.println(escola);
     }
 
-    public static void imprimirProfessor(Universidade universidade){
+    public static void imprimirProfessor(Escola escola){
         System.out.println("------- LISTA DE PROFESSORES -------");
-        System.out.println(universidade.getProfessor());
+        System.out.println(escola.getProfessor());
     }
 }

@@ -20,10 +20,10 @@ public class View{
         return professor;
     }
 
-    public static void cadastroGeral(Universidade universidade) {
+    public static void cadastroGeral(Escola escola) {
         boolean continuar = true;
 
-        universidade.setNome(Reader.lerString("Informe o nome desta Universidade: "));
+        escola.setNome(Reader.lerString("Informe o nome desta Universidade: "));
 
         while (continuar) {
             int escolha = Reader.lerInt(
@@ -33,7 +33,7 @@ public class View{
             );
 
             Funcionario funcionario = (escolha == 1) ? cadastrarDiretor() : cadastrarProfessor();
-            universidade.adicionarFuncionario(funcionario);
+            escola.adicionarFuncionario(funcionario);
 
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim ou [N]Não", "S", "N");
         }

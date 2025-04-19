@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
-public class Universidade {
+public class Escola {
     private String nome;
     ArrayList<Funcionario> funcionario;
     ArrayList<Professor> professor;
     ArrayList<Diretor> diretor;
 
-    public Universidade(){
+    public Escola(){
         this.funcionario = new ArrayList<>();
         this.professor = new ArrayList<>();
         this.diretor = new ArrayList<>();
@@ -44,7 +44,7 @@ public class Universidade {
 
     @Override
     public String toString() {
-        return "UNIVERSIDADE:" +
+        return "ESCOLA:" +
                 "\n" + getNome() +
                 "\nFUNCIONÁRIO: " + getFuncionario();
     }
