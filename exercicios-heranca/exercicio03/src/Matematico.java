@@ -26,4 +26,11 @@ public class Matematico{
     public void setAltura(double altura) {
         this.altura = altura;
     }
+
+    @Override
+    public String toString() {
+        return "INFORMAÇÕES INICIAIS:" +
+                "\nBASE: " + getBase() +
+                "\nALTURA: " + getAltura();
+    }
 }
