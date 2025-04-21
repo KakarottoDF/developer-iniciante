@@ -1,4 +1,4 @@
-public class Pessoa {
+public class Pessoa extends Familia {
     private String nome;
     private int codigoInteiro;
     private double salario;
@@ -11,9 +11,17 @@ public class Pessoa {
         setClasseSocial(classeSocial());
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Pessoa pessoa = (Pessoa) obj;
+        return getCodigoInteiro() == pessoa.getCodigoInteiro();
+    }
+
     public ClasseSocial classeSocial() {
         for (ClasseSocial cs : ClasseSocial.values()) {
-            if (this.salario > cs.getRendaMinima()) {
+            if (getSalario() > cs.getRendaMinima()) {
                 return cs;
             }
         }
@@ -85,10 +93,10 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "PESSOA:" +
-                "\nNOME: " + getNome() +
+        return  "\nNOME: " + getNome() +
                 "\nCÓDIGO: " + getCodigoInteiro() +
                 "\nSALÁRIO R$ " + getSalario() +
-                "\nCLASSE SOCIAL: " + (getClasseSocial() != null ? getClasseSocial() : "NÃO CLASSIFICADO");
+                "\nCLASSE SOCIAL: " + (getClasseSocial() != null ? getClasseSocial() : "NÃO CLASSIFICADO") +
+                "\n";
     }
 }
