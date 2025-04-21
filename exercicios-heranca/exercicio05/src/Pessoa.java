@@ -13,7 +13,7 @@ public class Pessoa extends Familia {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj){
+        if (this/*.getPessoa()*/ == obj){
             return true;
         }else{
             if (obj == null || getClass() != obj.getClass()) {
