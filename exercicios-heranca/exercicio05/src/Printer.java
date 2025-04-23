@@ -1,6 +1,6 @@
 public class Printer{
-    public static void imprimirPessoa(Familia familia){
-        System.out.println(familia);
+    public static void imprimirPessoa(UsuarioSistema usuarioSistema){
+        System.out.println(usuarioSistema);
     }
 
 }

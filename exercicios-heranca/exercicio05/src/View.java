@@ -1,5 +1,5 @@
 public class View{
-    public static Pessoa cadastrarPessoa(Familia familia) {
+    public static Pessoa cadastrarPessoa(/*UsuarioSistema usuarioSistema*/) {
         /*int codigo;
         do {
             codigo = Reader.lerInt("Informe o código dessa pessoa: ");
@@ -15,13 +15,13 @@ public class View{
         );
     }
 
-    public static void cadastrar(Familia familia){
+    public static void cadastrar(UsuarioSistema usuarioSistema){
         boolean continuar = true;
 
-        familia.setNome(Reader.lerString("Informe o nome da Família: "));
+        usuarioSistema.setNome(Reader.lerString("Informe o nome da Família: "));
 
         while(continuar){
-            familia.adicionar(cadastrarPessoa(familia));
+            usuarioSistema.adicionar(cadastrarPessoa(/*cadastro*/));
 
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }

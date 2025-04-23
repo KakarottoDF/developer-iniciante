@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Familia {
+public class UsuarioSistema {
     String nome;
     ArrayList<Pessoa> pessoa;
 
-    public Familia() {
+    public UsuarioSistema() {
         this.pessoa = new ArrayList<>();
     }
 

@@ -1,10 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        Familia familia = new Familia();
+        UsuarioSistema usuarioSistema = new UsuarioSistema();
 
-        View.cadastrar(familia);
+        View.cadastrar(usuarioSistema);
 
-        Printer.imprimirPessoa(familia);
+        Printer.imprimirPessoa(usuarioSistema);
 
     }
 }
