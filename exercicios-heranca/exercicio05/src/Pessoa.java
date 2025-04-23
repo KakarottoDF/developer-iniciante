@@ -1,4 +1,4 @@
-public class Pessoa extends Familia {
+public class Pessoa {
     private String nome;
     private int codigoInteiro;
     private double salario;
@@ -13,7 +13,7 @@ public class Pessoa extends Familia {
 
     @Override
     public boolean equals(Object obj) {
-        if (this/*.getPessoa()*/ == obj){
+        if (this == obj){
             return true;
         }else{
             if (obj == null || getClass() != obj.getClass()) {

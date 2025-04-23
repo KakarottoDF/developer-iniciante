@@ -20,6 +20,15 @@ public class Familia {
         }
     }
 
+    /*public boolean codigoExiste(int codigo) {
+        for (Pessoa p : pessoa) {
+            if (p.getCodigoInteiro() == codigo) {
+                return true;
+            }
+        }
+        return false;
+    }*/
+
     public String getNome() {
         return nome;
     }
