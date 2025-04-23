@@ -3,7 +3,7 @@ public class View{
         return new Pessoa(
                 Reader.lerString("Informe o nome dessa pessoa: "),
                 Reader.lerInt("Informe o código dessa pessoa: "),
-                Reader.lerDouble("Informe1 a renda mensal dessa pessoa: R$ ")
+                Reader.lerDouble("Informe a renda mensal dessa pessoa: R$ ")
         );
     }
 
