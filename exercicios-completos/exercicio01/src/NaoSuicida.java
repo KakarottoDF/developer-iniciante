@@ -13,4 +13,9 @@ public class NaoSuicida extends Terrorista{
     public void setPaisDeOrigem(String paisDeOrigem) {
         this.paisDeOrigem = paisDeOrigem;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", País de Origem: " + getPaisDeOrigem();
+    }
 }

@@ -13,4 +13,9 @@ public class Suicida extends Terrorista{
     public void setReligiao(String religiao) {
         this.religiao = religiao;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Religião: " + getReligiao();
+    }
 }
