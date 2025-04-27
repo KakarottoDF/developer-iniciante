@@ -18,12 +18,16 @@ public class Veiculo {
         this.carros = new ArrayList<>();
     }
 
-    public void adicionar(Carro carro){
-            getCarros().add(carro);
-    }
-
     public ArrayList<Carro> getCarros() {
         return this.carros;
+    }
+
+    public void adicionar(Carro carro){
+        if (!getCarros().contains(carro)) {
+            getCarros().add(carro);
+        }else{
+            System.out.println("Já existe um carro com essa placa. Cadastro ignorado.");
+        }
     }
 
     public String getNome() {

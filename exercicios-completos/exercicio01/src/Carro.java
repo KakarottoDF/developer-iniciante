@@ -4,6 +4,12 @@ public class Carro extends Veiculo{
     }
 
     @Override
+    public boolean equals(Object obj) {
+        Carro carro = (Carro) obj;
+        return getPlaca().equals(carro.getPlaca());
+    }
+
+    @Override
     public String toString() {
         return "\nCARRO:" +
                 "\nNOME: " + getNome() +
