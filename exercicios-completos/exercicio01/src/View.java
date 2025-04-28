@@ -1,11 +1,19 @@
 public class View {
-    public static Carro cadastrarCarro(){
+    public static Carro cadastrarCarro(Veiculo veiculo){
+
+        String placa;
+        do {
+            placa = Reader.lerString("Informe a placa deste carro: ");
+            if(veiculo.placaExiste(placa)){
+                System.out.println("A placa já existe, digite outra.");
+            }
+        }while(veiculo.placaExiste(placa));
 
         return new Carro(
                 Reader.lerString("Informe o nome deste carro: "),
                 Reader.lerString("Informe a marca deste carro: "),
                 Reader.lerInt("Informe a quantidade de cavalos deste carro: "),
-                Reader.lerString("Informe a placa deste carro: ")
+                placa
         );
     }
 
@@ -13,7 +21,7 @@ public class View {
         boolean continuar = true;
 
         while(continuar){
-            veiculo.adicionar(cadastrarCarro());
+            veiculo.adicionar(cadastrarCarro(veiculo));
 
             continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }

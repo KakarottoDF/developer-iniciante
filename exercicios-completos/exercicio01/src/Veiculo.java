@@ -62,6 +62,11 @@ public class Veiculo {
         this.placa = placa;
     }
 
+    public boolean placaExiste(String placa) {
+        Carro novoCarro = new Carro("", "", 0, placa);
+        return getCarros().contains(novoCarro);
+    }
+
     @Override
     public String toString() {
         return "VEÍCULOS CADASTRADOS" +
