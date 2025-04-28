@@ -23,11 +23,7 @@ public class Veiculo {
     }
 
     public void adicionar(Carro carro){
-        if (!getCarros().contains(carro)) {
-            getCarros().add(carro);
-        }else{
-            System.out.println("Já existe um carro com essa placa. Cadastro ignorado.");
-        }
+        getCarros().add(carro);
     }
 
     public String getNome() {
