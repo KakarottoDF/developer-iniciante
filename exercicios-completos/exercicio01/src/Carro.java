@@ -6,7 +6,7 @@ public class Carro extends Veiculo{
     @Override
     public boolean equals(Object obj) {
         Carro carro = (Carro) obj;
-        return getPlaca().equals(carro.getPlaca());
+        return getPlaca().equals(carro.getPlaca()) /*&& getNome().equals(carro.getNome())*/;
     }
 
     @Override
