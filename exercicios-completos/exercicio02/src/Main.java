@@ -7,6 +7,8 @@ public class Main {
 
         View.cadastrar(gerenciadorDePessoas);
 
+        Printer.imprimirProfessores(gerenciadorDePessoas);
+
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
