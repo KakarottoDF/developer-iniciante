@@ -25,10 +25,17 @@ public class Professor extends Pessoa{
     }
 
     @Override
+    public boolean equals(Object obj){
+        Professor professor = (Professor) obj;
+        return getMatricula().equals(professor.getMatricula());
+    }
+
+    @Override
     public String toString() {
         return "Professor{" +
-                "titulacao='" + getTitulacao() + '\'' +
-                ", salario=" + getSalario() +
-                '}';
+                "\nNome: " + getNome() +
+                "\nMatrícula: " + getMatricula() +
+                "\nTitulação: " + getTitulacao() +
+                "\nSalário: R$ " + getSalario();
     }
 }
