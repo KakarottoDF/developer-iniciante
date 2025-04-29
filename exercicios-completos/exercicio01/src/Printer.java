@@ -7,7 +7,7 @@ public class Printer {
 
     public static void imprimirVeiculosGM(Veiculo veiculo) {
         System.out.println("\n--- VEÍCULOS DA " + veiculo.getMARCA_CARRO() + " ---");
-        for (Carro carro : veiculo.getCarrosGM()) {
+        for (Carro carro : veiculo.getMarcaDeCarros()) {
             System.out.println(carro);
         }
     }
@@ -20,6 +20,6 @@ public class Printer {
     }
 
     public static void imprimirQuantidadeDePlacas(Veiculo veiculo) {
-        System.out.println("\n--- QUANTIDADE DE PLACAS QUE COMEÇAM COM " + veiculo.getINICIO_PLACA() + " : " + veiculo.getQtdCarrosComPlaca());
+        System.out.println("\n--- QUANTIDADE DE PLACAS QUE COMEÇAM COM " + veiculo.getINICIO_PLACA() + " : " + veiculo.getQtdCarrosComPlacaEspecifica());
     }
 }

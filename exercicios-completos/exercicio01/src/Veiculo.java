@@ -30,7 +30,7 @@ public class Veiculo {
         getCarros().add(carro);
     }
 
-    public ArrayList<Carro> getCarrosGM() {
+    public ArrayList<Carro> getMarcaDeCarros() {
         ArrayList<Carro> resultado = new ArrayList<>();
         for (Carro carro : getCarros()) {
             if (carro.getMarca().equalsIgnoreCase(getMARCA_CARRO())) {
@@ -50,7 +50,7 @@ public class Veiculo {
         return resultado;
     }
 
-    public int getQtdCarrosComPlaca() {
+    public int getQtdCarrosComPlacaEspecifica() {
         int contador = 0;
         for (Carro carro : getCarros()) {
             if (carro.getPlaca().startsWith(getINICIO_PLACA())) {
