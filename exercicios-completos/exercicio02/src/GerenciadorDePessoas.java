@@ -16,7 +16,7 @@ public class GerenciadorDePessoas{
     }
 
     public boolean matriculaExiste(String matricula){
-        Professor novoProfessor = new Professor("", matricula, Titulacao.valueOf(""), 0);
+        Professor novoProfessor = new Professor("", matricula, Titulacao.DOUTORADO, 0);
         return getProfessores().contains(novoProfessor);
     }
 
