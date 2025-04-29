@@ -23,7 +23,7 @@ public class View {
         while(continuar){
             veiculo.adicionar(cadastrarCarro(veiculo));
 
-            continuar = Reader.lerBoolean("Deseja continuar? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+            continuar = Reader.lerBoolean("Deseja continuar com o cadastro? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
 }
