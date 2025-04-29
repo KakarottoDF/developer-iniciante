@@ -18,16 +18,32 @@ public class Main {
                     View.cadastrar(veiculo);
                     break;
                 case 2:
-                    Printer.imprimirVeiculos(veiculo);
+                    if(veiculo.getCarros().isEmpty()){
+                        System.out.println("Não existe veículo cadastrado.");
+                    }else {
+                        Printer.imprimirVeiculos(veiculo);
+                    }
                     break;
                 case 3:
-                    Printer.imprimirVeiculosGM(veiculo);
+                    if(veiculo.getCarros().isEmpty() || veiculo.getMarcaDeCarros().isEmpty()){
+                        System.out.println("Não existe veículo cadastrado ou não tem nenhum veículo da " + veiculo.getMARCA_CARRO());
+                    }else{
+                        Printer.imprimirVeiculosGM(veiculo);
+                    }
                     break;
                 case 4:
-                    Printer.imprimirVeiculosComMaisDeCemCavalos(veiculo);
+                    if(veiculo.getCarros().isEmpty() || veiculo.getCarrosAcimaDe100Cavalos().isEmpty()) {
+                        System.out.println("Não existe veículo cadastrado ou não existem carros acima de " + veiculo.getQTD_CAVALOS() + " cavalos.");
+                    }else {
+                        Printer.imprimirVeiculosComMaisDeCemCavalos(veiculo);
+                    }
                     break;
                 case 5:
-                    Printer.imprimirQuantidadeDePlacas(veiculo);
+                    if(veiculo.getCarros().isEmpty() || veiculo.getQtdCarrosComPlacaEspecifica() == 0) {
+                        System.out.println("Não existe veículo cadastrado ou não existem carros com a pla de início " + veiculo.getINICIO_PLACA() + ".");
+                    }else {
+                        Printer.imprimirQuantidadeDePlacas(veiculo);
+                    }
                     break;
                 default:
                     System.out.println("ERRO INESPERADO.");

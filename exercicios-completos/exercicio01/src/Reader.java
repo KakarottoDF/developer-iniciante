@@ -43,10 +43,10 @@ public class Reader{
         String escolha;
         do{
             escolha = lerString(msg);
-            if(!escolha.equalsIgnoreCase(opcao1) || !escolha.equalsIgnoreCase(opcao2)) {
+            if(!escolha.equalsIgnoreCase(opcao1) && !escolha.equalsIgnoreCase(opcao2)){
                 System.out.println(msgError);
             }
-        } while(!escolha.equalsIgnoreCase(opcao1) || !escolha.equalsIgnoreCase(opcao2));
+        } while(!escolha.equalsIgnoreCase(opcao1) && !escolha.equalsIgnoreCase(opcao2));
         return escolha;
     }
 
