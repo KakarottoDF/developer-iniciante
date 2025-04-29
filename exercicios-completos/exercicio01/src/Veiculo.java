@@ -30,36 +30,6 @@ public class Veiculo {
         getCarros().add(carro);
     }
 
-    public ArrayList<Carro> getMarcaDeCarros() {
-        ArrayList<Carro> resultado = new ArrayList<>();
-        for (Carro carro : getCarros()) {
-            if (carro.getMarca().equalsIgnoreCase(getMARCA_CARRO())) {
-                resultado.add(carro);
-            }
-        }
-        return resultado;
-    }
-
-    public ArrayList<Carro> getCarrosAcimaDe100Cavalos() {
-        ArrayList<Carro> resultado = new ArrayList<>();
-        for (Carro carro : getCarros()) {
-            if (carro.getCavalos() > getQTD_CAVALOS()) {
-                resultado.add(carro);
-            }
-        }
-        return resultado;
-    }
-
-    public int getQtdCarrosComPlacaEspecifica() {
-        int contador = 0;
-        for (Carro carro : getCarros()) {
-            if (carro.getPlaca().startsWith(getINICIO_PLACA())) {
-                contador++;
-            }
-        }
-        return contador;
-    }
-
     public String getNome() {
         return this.nome;
     }
@@ -107,6 +77,36 @@ public class Veiculo {
     public boolean placaExiste(String placa) {
         Carro novoCarro = new Carro("", "", 0, placa);
         return getCarros().contains(novoCarro);
+    }
+
+    public ArrayList<Carro> getMarcaDeCarros() {
+        ArrayList<Carro> resultado = new ArrayList<>();
+        for (Carro carro : getCarros()) {
+            if (carro.getMarca().equalsIgnoreCase(getMARCA_CARRO())) {
+                resultado.add(carro);
+            }
+        }
+        return resultado;
+    }
+
+    public ArrayList<Carro> getCarrosAcimaDe100Cavalos() {
+        ArrayList<Carro> resultado = new ArrayList<>();
+        for (Carro carro : getCarros()) {
+            if (carro.getCavalos() > getQTD_CAVALOS()) {
+                resultado.add(carro);
+            }
+        }
+        return resultado;
+    }
+
+    public int getQtdCarrosComPlacaEspecifica() {
+        int contador = 0;
+        for (Carro carro : getCarros()) {
+            if (carro.getPlaca().startsWith(getINICIO_PLACA())) {
+                contador++;
+            }
+        }
+        return contador;
     }
 
     @Override
