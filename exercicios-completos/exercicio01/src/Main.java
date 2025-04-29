@@ -10,11 +10,7 @@ public class Main {
 
 
         do {
-            System.out.println("[1]Cadastro");
-            System.out.println("[2]Imprimir todos os carros");
-            System.out.println("[3]Imprimir carros da GM");
-            System.out.println("[4]Imprimir carros com mais de 100 cavalos");
-            System.out.println("[5]Imprimir quantidade de carros que começam com JIB");
+            Printer.menu(veiculo);
             opcao = Reader.lerInt("Escolha uma das opções:", "Digite um número somente de 1 a 5", 1, 5);
 
             switch(opcao){
@@ -37,8 +33,8 @@ public class Main {
                     System.out.println("ERRO INESPERADO.");
                     break;
             }
-            escolha = Reader.lerBoolean("Deseja encerrar o programa? [S]Sim [N]Não", "Escolha somente [S]Sim [N]Não", "S", "N");
-        }while(escolha);
+            escolha = Reader.lerBoolean("Deseja encerrar o programa? [S]Sim [N]Não: ", "Escolha somente [S]Sim [N]Não: ", "S", "N");
+        }while(!escolha);
 
     }
 }

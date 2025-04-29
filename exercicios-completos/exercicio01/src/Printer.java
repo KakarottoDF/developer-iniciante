@@ -22,4 +22,12 @@ public class Printer {
     public static void imprimirQuantidadeDePlacas(Veiculo veiculo) {
         System.out.println("\n--- QUANTIDADE DE PLACAS QUE COMEÇAM COM " + veiculo.getINICIO_PLACA() + " : " + veiculo.getQtdCarrosComPlacaEspecifica());
     }
+
+    public static void menu(Veiculo veiculo){
+        System.out.println("[1]Cadastro");
+        System.out.println("[2]Imprimir todos os carros");
+        System.out.println("[3]Imprimir carros da " + veiculo.getMARCA_CARRO());
+        System.out.println("[4]Imprimir carros com mais de " + veiculo.getQTD_CAVALOS() + " cavalos");
+        System.out.println("[5]Imprimir quantidade de carros que começam com " + veiculo.getINICIO_PLACA());
+    }
 }
