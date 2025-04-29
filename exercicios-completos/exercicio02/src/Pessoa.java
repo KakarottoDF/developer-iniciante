@@ -2,6 +2,11 @@ public class Pessoa {
     private String nome;
     private String matricula;
 
+    public Pessoa(String nome, String matricula) {
+        setNome(nome);
+        setMatricula(matricula);
+    }
+
     public String getNome() {
         return this.nome;
     }
@@ -16,5 +21,13 @@ public class Pessoa {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + getNome() + '\'' +
+                ", matricula='" + getMatricula() + '\'' +
+                '}';
     }
 }
