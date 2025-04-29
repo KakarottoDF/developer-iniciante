@@ -7,6 +7,10 @@ public class Veiculo {
     private String placa;
     ArrayList<Carro> carros;
 
+    private final String MARCA_CARRO = "GM";
+    private final String INICIO_PLACA = "JIB";
+    private final int QTD_CAVALOS = 100;
+
     public Veiculo(String nome, String marca, int cavalos, String placa) {
         setNome(nome);
         setMarca(marca);
@@ -24,6 +28,36 @@ public class Veiculo {
 
     public void adicionar(Carro carro){
         getCarros().add(carro);
+    }
+
+    public ArrayList<Carro> getCarrosGM() {
+        ArrayList<Carro> resultado = new ArrayList<>();
+        for (Carro carro : getCarros()) {
+            if (carro.getMarca().equalsIgnoreCase(getMARCA_CARRO())) {
+                resultado.add(carro);
+            }
+        }
+        return resultado;
+    }
+
+    public ArrayList<Carro> getCarrosAcimaDe100Cavalos() {
+        ArrayList<Carro> resultado = new ArrayList<>();
+        for (Carro carro : getCarros()) {
+            if (carro.getCavalos() > getQTD_CAVALOS()) {
+                resultado.add(carro);
+            }
+        }
+        return resultado;
+    }
+
+    public int getQtdCarrosComPlaca() {
+        int contador = 0;
+        for (Carro carro : getCarros()) {
+            if (carro.getPlaca().startsWith(getINICIO_PLACA())) {
+                contador++;
+            }
+        }
+        return contador;
     }
 
     public String getNome() {
@@ -56,6 +90,18 @@ public class Veiculo {
 
     public void setPlaca(String placa) {
         this.placa = placa;
+    }
+
+    public String getMARCA_CARRO() {
+        return this.MARCA_CARRO;
+    }
+
+    public String getINICIO_PLACA() {
+        return this.INICIO_PLACA;
+    }
+
+    public int getQTD_CAVALOS() {
+        return this.QTD_CAVALOS;
     }
 
     public boolean placaExiste(String placa) {
