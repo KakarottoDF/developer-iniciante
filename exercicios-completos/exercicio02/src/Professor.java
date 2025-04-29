@@ -32,7 +32,7 @@ public class Professor extends Pessoa{
 
     @Override
     public String toString() {
-        return "PROFESSOR:" +
+        return "\nPROFESSOR:" +
                 "\nNome: " + getNome() +
                 "\nMatrícula: " + getMatricula() +
                 "\nTitulação: " + getTitulacao() +
