@@ -22,8 +22,7 @@ public class GerenciadorDePessoas{
 
     @Override
     public String toString() {
-        return "GerenciadorDePessoas{" +
-                "professores=" + getProfessores() +
-                '}';
+        return "GerenciadorDePessoas" +
+                "\n----- LISTA DE PROFESSORES -----" + getProfessores();
     }
 }
