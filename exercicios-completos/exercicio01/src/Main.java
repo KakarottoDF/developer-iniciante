@@ -7,7 +7,9 @@ public class Main {
 
         View.cadastrar(veiculo);
         Printer.imprimirVeiculos(veiculo);
-        Printer.
+        Printer.imprimirVeiculosGM(veiculo);
+        Printer.imprimirVeiculosComMaisDeCemCavalos(veiculo);
+        Printer.imprimirQuantidadeDePlacas(veiculo);
 
     }
 }
