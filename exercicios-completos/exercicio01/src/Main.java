@@ -40,7 +40,7 @@ public class Main {
                     break;
                 case 5:
                     if(veiculo.getCarros().isEmpty() || veiculo.getQtdCarrosComPlacaEspecifica() == 0) {
-                        System.out.println("Não existe veículo cadastrado ou não existem carros com a pla de início " + veiculo.getINICIO_PLACA() + ".");
+                        System.out.println("Não existe veículo cadastrado ou não existem carros com a placa de início " + veiculo.getINICIO_PLACA() + ".");
                     }else {
                         Printer.imprimirQuantidadeDePlacas(veiculo);
                     }
