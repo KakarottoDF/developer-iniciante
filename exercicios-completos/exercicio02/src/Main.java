@@ -8,6 +8,7 @@ public class Main {
         View.cadastrar(gerenciadorDePessoas);
 
         Printer.imprimirProfessores(gerenciadorDePessoas);
+        Printer.imprimirNomeComPalavraEspecifica(gerenciadorDePessoas);
 
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
