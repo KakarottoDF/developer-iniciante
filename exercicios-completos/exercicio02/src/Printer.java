@@ -4,11 +4,16 @@ public class Printer {
 
     public static void imprimirNomeComPalavraEspecifica(GerenciadorDePessoas gerenciadorDePessoas){
         System.out.println("-------- LISTA DOS NOME QUE TEM " + gerenciadorDePessoas.getPALAVRA() + " NO NOME --------");
-        gerenciadorDePessoas.acharPalavraEspecificaNoNome();
+        gerenciadorDePessoas.acharProfessores(gerenciadorDePessoas.getPALAVRA());
     }
 
     public static void imprimirDoutores(GerenciadorDePessoas gerenciadorDePessoas){
         System.out.println("-------- LISTA DOS DOUTORES --------");
-        gerenciadorDePessoas.acharDoutores();
+        gerenciadorDePessoas.acharProfessores(Titulacao.DOUTORADO);
+    }
+
+    public static void imprimirProfessoresComSalarioEspecifico(GerenciadorDePessoas gerenciadorDePessoas){
+        System.out.println("-------- LISTA DOS PROFESSORES COM SALÁRIO ACIMA DE " + gerenciadorDePessoas.getSALARIO() + " --------");
+        gerenciadorDePessoas.acharProfessores(gerenciadorDePessoas.getSALARIO());
     }
 }

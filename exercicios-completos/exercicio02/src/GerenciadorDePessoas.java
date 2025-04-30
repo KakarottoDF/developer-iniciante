@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class GerenciadorDePessoas{
     ArrayList<Professor> professores;
     private final String PALAVRA = "SILVA";
+    private final double SALARIO = 12000.00;
 
     public GerenciadorDePessoas() {
         this.professores = new ArrayList<>();
@@ -20,39 +21,54 @@ public class GerenciadorDePessoas{
         return this.PALAVRA;
     }
 
+    public double getSALARIO() {
+        return SALARIO;
+    }
+
     public boolean matriculaExiste(String matricula){
         Professor novoProfessor = new Professor("", matricula, Titulacao.DOUTORADO, 0);
         return getProfessores().contains(novoProfessor);
     }
 
-    public void acharPalavraEspecificaNoNome(){
-        boolean encontrou = false;
-
-        for (Professor professores : getProfessores()) {
-            if (professores.getNome().contains(getPALAVRA())) {
-                System.out.println(professores);
-                encontrou = true;
-            }
-        }
-
-        if (!encontrou) {
-            System.out.println("Não existem professores com " + getPALAVRA() + " no nome.");
-        }
-
-    }
-
-    public void acharDoutores(){
+    public void acharProfessores(String palavra){
         boolean encontrou = false;
 
         for (Professor professor : getProfessores()) {
-            if (professor.getTitulacao().equals(Titulacao.DOUTORADO)) {
+            if (professor.getNome().contains(palavra)) {
+                System.out.println(professor);
+                encontrou = true;
+            }
+        }
+        if (!encontrou) {
+            System.out.println("Não existem professores com " + palavra + " no nome.");
+        }
+    }
+
+    public void acharProfessores(Titulacao titulacao){
+        boolean encontrou = false;
+        for (Professor professor : getProfessores()) {
+            if (professor.getTitulacao().equals(titulacao)) {
                 System.out.println(professor);
                 encontrou = true;
             }
         }
 
         if (!encontrou) {
-            System.out.println("Não existem professores com doutorado");
+            System.out.println("Não existem professores com titulacao " + titulacao);
+        }
+    }
+
+    public void acharProfessores(double salario){
+        boolean encontrou = false;
+        for (Professor professor : getProfessores()) {
+            if (professor.getSalario() > salario) {
+                System.out.println(professor);
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            System.out.println("Não existem professores com salário acima de R$ " + getSALARIO());
         }
     }
 

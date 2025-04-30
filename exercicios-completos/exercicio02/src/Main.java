@@ -10,6 +10,7 @@ public class Main {
         Printer.imprimirProfessores(gerenciadorDePessoas);
         Printer.imprimirNomeComPalavraEspecifica(gerenciadorDePessoas);
         Printer.imprimirDoutores(gerenciadorDePessoas);
+        Printer.imprimirProfessoresComSalarioEspecifico(gerenciadorDePessoas);
 
 
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
