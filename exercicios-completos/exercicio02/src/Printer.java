@@ -6,4 +6,9 @@ public class Printer {
         System.out.println("-------- LISTA DOS NOME QUE TEM " + gerenciadorDePessoas.getPALAVRA() + " NO NOME --------");
         gerenciadorDePessoas.acharPalavraEspecificaNoNome();
     }
+
+    public static void imprimirDoutores(GerenciadorDePessoas gerenciadorDePessoas){
+        System.out.println("-------- LISTA DOS DOUTORES --------");
+        gerenciadorDePessoas.acharDoutores();
+    }
 }

@@ -26,10 +26,33 @@ public class GerenciadorDePessoas{
     }
 
     public void acharPalavraEspecificaNoNome(){
-        for(Professor professor : getProfessores()){
-            if(professor.getNome().contains(getPALAVRA())){
-                System.out.println(professor);
+        boolean encontrou = false;
+
+        for (Professor professores : getProfessores()) {
+            if (professores.getNome().contains(getPALAVRA())) {
+                System.out.println(professores);
+                encontrou = true;
             }
+        }
+
+        if (!encontrou) {
+            System.out.println("Não existem professores com " + getPALAVRA() + " no nome.");
+        }
+
+    }
+
+    public void acharDoutores(){
+        boolean encontrou = false;
+
+        for (Professor professor : getProfessores()) {
+            if (professor.getTitulacao().equals(Titulacao.DOUTORADO)) {
+                System.out.println(professor);
+                encontrou = true;
+            }
+        }
+
+        if (!encontrou) {
+            System.out.println("Não existem professores com doutorado");
         }
     }
 
