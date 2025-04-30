@@ -16,4 +16,12 @@ public class Printer {
         System.out.println("-------- LISTA DOS PROFESSORES COM SALÁRIO ACIMA DE " + gerenciadorDePessoas.getSALARIO() + " --------");
         gerenciadorDePessoas.acharProfessores(gerenciadorDePessoas.getSALARIO());
     }
+
+    public static void menu(){
+        System.out.println("[1]Cadastro");
+        System.out.println("[2]Imprimir todos");
+        System.out.println("[3]Imprimir todos que tem SILVA no nome");
+        System.out.println("[4]Imprimir doutores");
+        System.out.println("[5]Imprimir professores que recebem mais de R$ 12.000");
+    }
 }
