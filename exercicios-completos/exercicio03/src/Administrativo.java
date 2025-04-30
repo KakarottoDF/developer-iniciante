@@ -15,4 +15,21 @@ public class Administrativo extends Sistema{
     public void setQuantidadeUsuariosSimultaneos(int quantidadeUsuariosSimultaneos) {
         this.quantidadeUsuariosSimultaneos = quantidadeUsuariosSimultaneos;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Tipo: Administrativo\n" +
+                "Usuários Simultâneos: " + getQuantidadeUsuariosSimultaneos();
+    }
+
+    public int calcularFuncionarios() {
+        if (isFullTime()) {
+            if (quantidadeUsuariosSimultaneos > 200) {
+                return 3; // 1 + 2 adicionais
+            }
+            return 1;
+        }
+        return 0;
+    }
 }

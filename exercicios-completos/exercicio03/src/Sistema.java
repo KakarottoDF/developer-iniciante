@@ -69,4 +69,34 @@ public class Sistema {
         return this.corporativos;
     }
 
+    public int calcularFuncionarios(Administrativo administrativo) {
+        int funcionarios = 1; // 1 funcionário mínimo para sistemas administrativos
+        if (administrativo.isFullTime()) {
+            if (administrativo.getQuantidadeUsuariosSimultaneos() > 200) {
+                funcionarios += 2; // Adicional de 2 funcionários
+            }
+        }
+        return funcionarios;
+    }
+
+    public int calcularFuncionarios(Corporativo corporativo) {
+        int funcionarios = 2; // 2 funcionários mínimo para sistemas corporativos
+        if (corporativo.isFullTime()) {
+            if (corporativo.getQuantidadeAcessosPorMinuto() >= 3000 && corporativo.getQuantidadeAcessosPorMinuto() <= 5000) {
+                funcionarios += 2; // Adicional de 2 funcionários
+            } else if (corporativo.getQuantidadeAcessosPorMinuto() > 5000) {
+                funcionarios += 3; // Adicional de 3 funcionários
+            }
+        }
+        return funcionarios;
+    }
+
+    @Override
+    public String toString() {
+        return "Sistema: " + getNomeSistema() + "\n" +
+                "Responsável: " + getNomeResponsavel() + "\n" +
+                "Telefone: " + getTelefone() + "\n" +
+                "Full Time: " + (isFullTime() ? "Sim" : "Não");
+    }
+
 }

@@ -15,4 +15,23 @@ public class Corporativo extends Sistema{
     public void setQuantidadeAcessosPorMinuto(int quantidadeAcessosPorMinuto) {
         this.quantidadeAcessosPorMinuto = quantidadeAcessosPorMinuto;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Tipo: Corporativo\n" +
+                "Acessos por Minuto: " + quantidadeAcessosPorMinuto;
+    }
+
+    public int calcularFuncionarios() {
+        if (isFullTime()) {
+            if (quantidadeAcessosPorMinuto > 5000) {
+                return 5; // 2 iniciais + 3 adicionais
+            } else if (quantidadeAcessosPorMinuto >= 3000) {
+                return 4; // 2 iniciais + 2 adicionais
+            }
+            return 2; // 2 iniciais
+        }
+        return 0;
+    }
 }
