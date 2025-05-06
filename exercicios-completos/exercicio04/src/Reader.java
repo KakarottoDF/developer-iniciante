@@ -74,8 +74,7 @@ public class Reader{
     }
 
     public static char lerChar() {
-        Scanner scanner = new Scanner(System.in);
-        return scanner.next().charAt(0);
+        return new Scanner(System.in).next().toUpperCase().charAt(0);
     }
 
     public static char lerChar(String msg) {

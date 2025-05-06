@@ -21,18 +21,31 @@ public class View {
 
     public static void cadastrar(Atleta atleta){
         boolean continuar = true;
+        while(continuar) {
+            int escolha = Reader.lerInt("Digite 1 para cadastrar um atleta Olímpico\nDigite 2 para cadastrar um atleta Paraolímpico: ", "Digite somente 1 ou 2: ", 1, 2);
 
-        while (continuar) {
-            atleta.adicionar(cadastrarOlimpico());
+            switch (escolha) {
+                case 1:
+                    boolean continuarOlimpico = true;
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Olímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
-        }
+                    while (continuarOlimpico) {
+                        atleta.adicionar(cadastrarOlimpico());
 
-        continuar = true;
-        while (continuar) {
-            atleta.adicionar(cadastrarParaolimpico());
+                        continuarOlimpico = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Olímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+                    }
+                    break;
+                case 2:
+                    boolean continuarParaolimpico = true;
+                    while (continuarParaolimpico) {
+                        atleta.adicionar(cadastrarParaolimpico());
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Paraolímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+                        continuarParaolimpico = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Paraolímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+                    }
+                    break;
+                default:
+                    System.out.println("Erro inesperado!");
+            }
+            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
 }
