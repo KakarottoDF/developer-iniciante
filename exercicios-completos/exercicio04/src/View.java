@@ -25,14 +25,14 @@ public class View {
         while (continuar) {
             atleta.adicionar(cadastrarOlimpico());
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de Sistema Administrativo? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Olímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
 
         continuar = true;
         while (continuar) {
             atleta.adicionar(cadastrarParaolimpico());
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de Sistema Corporativo? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Paraolímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
 }
