@@ -22,9 +22,19 @@ public class Atleta {
         return this.olimpicos;
     }
 
-    public void adicionar(Paraolimpico paraolimpico, Olimpico olimpico){
+    public void adicionar(Paraolimpico paraolimpico){
         getParaolimpicos().add(paraolimpico);
+    }
+
+    public void adicionar(Olimpico olimpico){
         getOlimpicos().add(olimpico);
+    }
+
+    public Atleta(String nome, char sexo, int idade, int numero) {
+        setNome(nome);
+        setSexo(sexo);
+        setIdade(idade);
+        setNumero(numero);
     }
 
     public String getNome() {
@@ -57,5 +67,16 @@ public class Atleta {
 
     public void setNumero(int numero) {
         this.numero = numero;
+    }
+
+    @Override
+    public String toString() {
+        return "Atleta{" +
+                "nome='" + getNome() + '\'' +
+                ", sexo=" + getSexo() +
+                ", idade=" + getIdade() +
+                ", numero=" + getNumero() +
+                ", paraolimpicos=" + getParaolimpicos() +
+                ", olimpicos=" + getOlimpicos();
     }
 }

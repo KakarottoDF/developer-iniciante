@@ -72,4 +72,25 @@ public class Reader{
             }
         } while(true);
     }
+
+    public static char lerChar() {
+        Scanner scanner = new Scanner(System.in);
+        return scanner.next().charAt(0);
+    }
+
+    public static char lerChar(String msg) {
+        System.out.print(msg);
+        return lerChar();
+    }
+
+    public static char lerChar(String msg, String msgError, char opcao1, char opcao2){
+        char escolha;
+        do{
+            escolha = lerChar(msg);
+            if(escolha != opcao1 && escolha != opcao2){
+                System.out.println(msgError);
+            }
+        } while(escolha != opcao1 && escolha != opcao2);
+        return escolha;
+    }
 }
