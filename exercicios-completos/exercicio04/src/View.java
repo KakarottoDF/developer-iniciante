@@ -1,67 +1,51 @@
-import java.util.Scanner;
-
 public class View {
-
-    public static Olimpico cadastrarOlimpico() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Informe o nome do atleta olímpico: ");
-        String nome = sc.nextLine();
-        System.out.print("Sexo: [M]Masculino [F]Feminino: ");
-        char sexo = sc.next().charAt(0);
-        System.out.print("Informe a idade do atleta: ");
-        int idade = sc.nextInt();
-        System.out.print("Informe o número do atleta: ");
-        int numero = sc.nextInt();
-        System.out.print("Informe a quantidade de títulos mundiais do atleta: ");
-        int titulos = sc.nextInt();
-
-        return new Olimpico(nome, sexo, idade, numero, titulos);
+    public static Olimpico cadastrarOlimpico(){
+        return new Olimpico(
+                Reader.lerString("Informe o nome do atleta olímpico: "),
+                Reader.lerChar("Sexo: [M]Masculino [F]Feminino: ", "Digite somente [M]Masculino [F]Feminino: ", 'M', 'F'),
+                Reader.lerInt("Informe a idade do atleta: "),
+                Reader.lerInt("Inform o número do atleta: "),
+                Reader.lerInt("Informe a quantidade de títulos mundiais do atleta: ")
+        );
     }
 
-    public static Paraolimpico cadastrarParaolimpico() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Informe o nome do atleta paraolímpico: ");
-        String nome = sc.nextLine();
-        System.out.print("Sexo: [M]Masculino [F]Feminino: ");
-        char sexo = sc.next().charAt(0);
-        System.out.print("Informe a idade do atleta: ");
-        int idade = sc.nextInt();
-        System.out.print("Informe o número do atleta: ");
-        int numero = sc.nextInt();
-        System.out.print("Informe o nome do responsável: ");
-        sc.nextLine(); // Consumir a quebra de linha pendente
-        String responsavel = sc.nextLine();
-
-        return new Paraolimpico(nome, sexo, idade, numero, responsavel);
+    public static Paraolimpico cadastrarParaolimpico(){
+        return new Paraolimpico(
+                Reader.lerString("Informe o nome do atleta olímpico: "),
+                Reader.lerChar("Sexo: [M]Masculino [F]Feminino: ", "Digite somente [M]Masculino [F]Feminino: ", 'M', 'F'),
+                Reader.lerInt("Informe a idade do atleta: "),
+                Reader.lerInt("Inform o número do atleta: "),
+                Reader.lerString("Informe o nome do responsável do atleta: ")
+        );
     }
 
-    public static void cadastrar(Atleta atleta) {
+    public static void cadastrar(Atleta atleta){
         boolean continuar = true;
-        while (continuar) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Digite 1 para cadastrar um atleta Olímpico");
-            System.out.println("Digite 2 para cadastrar um atleta Paraolímpico: ");
-            int escolha = sc.nextInt();
+        while(continuar) {
+            int escolha = Reader.lerInt("Digite 1 para cadastrar um atleta Olímpico\nDigite 2 para cadastrar um atleta Paraolímpico: ", "Digite somente 1 ou 2: ", 1, 2);
 
             switch (escolha) {
                 case 1:
-                    atleta.adicionar(cadastrarOlimpico());
+                    boolean continuarOlimpico = true;
+
+                    while (continuarOlimpico) {
+                        atleta.adicionar(cadastrarOlimpico());
+
+                        continuarOlimpico = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Olímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+                    }
                     break;
                 case 2:
-                    atleta.adicionar(cadastrarParaolimpico());
+                    boolean continuarParaolimpico = true;
+                    while (continuarParaolimpico) {
+                        atleta.adicionar(cadastrarParaolimpico());
+
+                        continuarParaolimpico = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta Paraolímpico? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+                    }
                     break;
                 default:
-                    System.out.println("Opção inválida!");
-                    continue;
+                    System.out.println("Erro inesperado!");
             }
-
-            System.out.print("Deseja continuar? [S]Sim [N]Não: ");
-            char resposta = sc.next().charAt(0);
-            if (resposta == 'N' || resposta == 'n') {
-                continuar = false;
-            }
+            continuar = Reader.lerBoolean("Deseja continuar com o cadastro de outro atleta? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
 }
