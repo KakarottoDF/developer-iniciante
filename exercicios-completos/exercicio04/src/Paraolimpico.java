@@ -16,7 +16,10 @@ public class Paraolimpico extends Atleta{
 
     @Override
     public String toString() {
-        return "Paraolimpico{" +
-                "nomeResponsavel='" + getNomeResponsavel();
+        return  "\nNome: " + getNome() +
+                "\nSexo: " + getSexo() +
+                "\nIdade: " + getIdade() +
+                "\nNúmero: " + getNumero() +
+                "\nNome do Responsável: " + getNomeResponsavel();
     }
 }

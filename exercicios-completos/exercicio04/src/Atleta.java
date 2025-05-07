@@ -71,12 +71,8 @@ public class Atleta {
 
     @Override
     public String toString() {
-        return "Atleta{" +
-                "nome='" + getNome() + '\'' +
-                ", sexo=" + getSexo() +
-                ", idade=" + getIdade() +
-                ", numero=" + getNumero() +
-                ", paraolimpicos=" + getParaolimpicos() +
-                ", olimpicos=" + getOlimpicos();
+        return "Atletas:" +
+                "\nParaolímpicos:" + getParaolimpicos() +
+                "\nOlímpicos:" + getOlimpicos();
     }
 }

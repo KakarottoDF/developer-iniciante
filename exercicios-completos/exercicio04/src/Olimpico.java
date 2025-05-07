@@ -16,7 +16,10 @@ public class Olimpico extends Atleta{
 
     @Override
     public String toString() {
-        return "Olimpico{" +
-                "quantidadeDeTitulosMundiais=" + getQuantidadeDeTitulosMundiais();
+        return "\nNome: " + getNome() +
+               "\nSexo: " + getSexo() +
+               "\nIdade: " + getIdade() +
+               "\nNúmero: " + getNumero() +
+               "quantidadeDeTitulosMundiais=" + getQuantidadeDeTitulosMundiais();
     }
 }

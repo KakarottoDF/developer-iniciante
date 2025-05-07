@@ -5,6 +5,7 @@ public class Main {
         Atleta atleta = new Atleta();
 
         View.cadastrar(atleta);
+        Printer.imprimirAtletas(atleta);
 
     }
 }
