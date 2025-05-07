@@ -31,7 +31,9 @@ public class AtletaService {
     }
 
     public static Atleta getMenorCusto(ArrayList<Atleta> atletas) {
-        if (atletas.isEmpty()) return null;
+        if (atletas.isEmpty()){
+            return null;
+        }
         Atleta menor = atletas.get(0);
         for (Atleta a : atletas) {
             if (a.calcularCusto() < menor.calcularCusto()) {

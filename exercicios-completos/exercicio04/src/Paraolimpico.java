@@ -1,5 +1,6 @@
 public class Paraolimpico extends Atleta {
     private String nomeResponsavel;
+    private final String TREINADOR_PADRAO = "HENRIQUE SIQUEIRA";
 
     public Paraolimpico(String nome, char sexo, int idade, int numero, String nomeResponsavel) {
         setNome(nome);
@@ -17,11 +18,15 @@ public class Paraolimpico extends Atleta {
         this.nomeResponsavel = nomeResponsavel;
     }
 
+    public String getTREINADOR_PADRAO() {
+        return TREINADOR_PADRAO;
+    }
+
     @Override
     public double calcularCusto() {
         double custoBase = getNumero();
-        if ("HENRIQUE SIQUEIRA".equals(getNomeResponsavel())) {
-            custoBase *= 0.9;
+        if (getTREINADOR_PADRAO().equals(getNomeResponsavel())) {
+            custoBase *= 0.10;
         }
         return custoBase;
     }
