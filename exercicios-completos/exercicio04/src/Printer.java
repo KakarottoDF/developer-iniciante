@@ -21,7 +21,7 @@ public class Printer {
         }
 
         double total = AtletaService.calcularCustoTotal(ordenados);
-        System.out.println("\nTOTAL DE CUSTO PARA O COB: R$ " + total);
+        System.out.println("\nTOTAL DE CUSTO PARA O COMITÊ OLÍMPICO BRASILEIRO: R$ " + total);
 
         ArrayList<Atleta> mulheres = AtletaService.filtrarMulheres(ordenados);
         System.out.println("\n--- ATLETAS MULHERES ---");
