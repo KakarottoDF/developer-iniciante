@@ -9,32 +9,25 @@ public class Atleta {
     private ArrayList<Paraolimpico> paraolimpicos;
     private ArrayList<Olimpico> olimpicos;
 
-    public Atleta(){
+    public Atleta() {
         this.paraolimpicos = new ArrayList<>();
         this.olimpicos = new ArrayList<>();
     }
 
-    public ArrayList<Paraolimpico> getParaolimpicos(){
+    public ArrayList<Paraolimpico> getParaolimpicos() {
         return this.paraolimpicos;
     }
 
-    public ArrayList<Olimpico> getOlimpicos(){
+    public ArrayList<Olimpico> getOlimpicos() {
         return this.olimpicos;
     }
 
-    public void adicionar(Paraolimpico paraolimpico){
+    public void adicionar(Paraolimpico paraolimpico) {
         getParaolimpicos().add(paraolimpico);
     }
 
-    public void adicionar(Olimpico olimpico){
+    public void adicionar(Olimpico olimpico) {
         getOlimpicos().add(olimpico);
-    }
-
-    public Atleta(String nome, char sexo, int idade, int numero) {
-        setNome(nome);
-        setSexo(sexo);
-        setIdade(idade);
-        setNumero(numero);
     }
 
     public String getNome() {
@@ -69,10 +62,15 @@ public class Atleta {
         this.numero = numero;
     }
 
+    public double calcularCusto() {
+        return 0.0;
+    }
+
     @Override
     public String toString() {
-        return "Atletas:" +
-                "\nParaolímpicos:" + getParaolimpicos() +
-                "\nOlímpicos:" + getOlimpicos();
+        return "\nNome: " + getNome() +
+               "\nSexo: " + getSexo() +
+               "\nIdade: " + getIdade() +
+               "\nNúmero: " + getNumero();
     }
 }
