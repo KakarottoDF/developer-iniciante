@@ -34,8 +34,8 @@ public class Professor extends Pessoa{
     public String toString() {
         return "\nPROFESSOR:" +
                 super.toString() +
-                "\nTitulação: " + getTitulacao() +
-                "\nSalário: R$ " + getSalario() +
+                "\nTITULAÇÃO: " + getTitulacao() +
+                "\nSALÁRIO: R$ " + getSalario() +
                 "\n";
     }
 }

@@ -10,7 +10,7 @@ public class Main {
 
         do {
             Printer.menu();
-            opcao = Reader.lerInt("Escolha uma das opções:".toUpperCase(), "Digite um número somente de 1 a 5".toUpperCase(), 1, 5);
+            opcao = Reader.lerInt("ESCOLHA UMA DAS OPÇÕES: ", "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 5", 1, 5);
 
             switch(opcao) {
                 case 1:
@@ -18,28 +18,28 @@ public class Main {
                     break;
                 case 2:
                     if (gerenciadorDePessoas.getProfessores().isEmpty()) {
-                        System.out.println("Não existe professor cadastrado.".toUpperCase());
+                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
                     } else {
                         Printer.imprimirProfessores(gerenciadorDePessoas);
                     }
                     break;
                 case 3:
                     if (gerenciadorDePessoas.getProfessores().isEmpty()) {
-                        System.out.println("Não existe professor cadastrado.".toUpperCase());
+                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
                     } else {
                         Printer.imprimirNomeComPalavraEspecifica(gerenciadorDePessoas);
                     }
                     break;
                 case 4:
                     if(gerenciadorDePessoas.getProfessores().isEmpty()){
-                        System.out.println("Não existe professor cadastrado.".toUpperCase());
+                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
                     } else {
                         Printer.imprimirDoutores(gerenciadorDePessoas);
                     }
                     break;
                 case 5:
                     if(gerenciadorDePessoas.getProfessores().isEmpty()){
-                        System.out.println("Não existe professor cadastrado.".toUpperCase());
+                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
                     }else {
                         Printer.imprimirProfessoresComSalarioEspecifico(gerenciadorDePessoas);
                     }
@@ -48,12 +48,7 @@ public class Main {
                     System.out.println("ERRO INESPERADO.");
                     break;
             }
-            escolha = Reader.lerBoolean("Deseja encerrar o programa? [S]Sim [N]Não: ".toUpperCase(), "Escolha somente [S]Sim [N]Não: ".toUpperCase(), "S", "N");
+            escolha = Reader.lerBoolean("DESEJA ENCERRAR O PROGRAMA? [S]SIM [N]NÃO: ", "ESCOLHA SOMENTE [S]SIM [N]NÃO: ", "S", "N");
         }while(!escolha);
-
-
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-
     }
 }

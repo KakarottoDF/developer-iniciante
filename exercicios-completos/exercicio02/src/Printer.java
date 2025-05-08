@@ -19,10 +19,10 @@ public class Printer {
     }
 
     public static void menu(){
-        System.out.println("[1]Cadastro".toUpperCase());
-        System.out.println("[2]Imprimir todos".toUpperCase());
-        System.out.println("[3]Imprimir todos que tem SILVA no nome".toUpperCase());
-        System.out.println("[4]Imprimir doutores".toUpperCase());
-        System.out.println("[5]Imprimir professores que recebem mais de R$ 12.000".toUpperCase());
+        System.out.println("[1]CADASTRO");
+        System.out.println("[2]IMPRIMIR TODOS OS PROFESSORES");
+        System.out.println("[3]IMPRIMIR TODOS OS PROFESSORES QUE TEM SILVA NO NOME");
+        System.out.println("[4]IMPRIMIR TODOS OS DOUTORES");
+        System.out.println("[5]IMPRIMIR PROFESSORES QUE RECEBEM MAIS DE R$ 12.000");
     }
 }
