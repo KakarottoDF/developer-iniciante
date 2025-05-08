@@ -20,7 +20,7 @@ public class Main {
                     if (gerenciadorDePessoas.getProfessores().isEmpty()) {
                         System.out.println("Não existe professor cadastrado.".toUpperCase());
                     } else {
-                        Printer.imprimirDoutores(gerenciadorDePessoas);
+                        Printer.imprimirProfessores(gerenciadorDePessoas);
                     }
                     break;
                 case 3:
