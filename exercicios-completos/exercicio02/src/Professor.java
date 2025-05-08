@@ -33,8 +33,7 @@ public class Professor extends Pessoa{
     @Override
     public String toString() {
         return "\nPROFESSOR:" +
-                "\nNome: " + getNome() +
-                "\nMatrícula: " + getMatricula() +
+                super.toString() +
                 "\nTitulação: " + getTitulacao() +
                 "\nSalário: R$ " + getSalario() +
                 "\n";

@@ -25,9 +25,7 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + getNome() + '\'' +
-                ", matricula='" + getMatricula() + '\'' +
-                '}';
+        return  "\nNOME: " + getNome() +
+                "\nMATRÍCULA: " + getMatricula();
     }
 }
