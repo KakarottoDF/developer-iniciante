@@ -2,10 +2,6 @@ public class Pessoa {
     private String nome;
     private String matricula;
 
-    public  Pessoa(){
-
-    }
-
     public Pessoa(String nome, String matricula) {
         setNome(nome);
         setMatricula(matricula);

@@ -2,10 +2,6 @@ public class Professor extends Pessoa{
     private Titulacao titulacao;
     private double salario;
 
-    public Professor(){
-
-    }
-
     public Professor(String nome, String matricula, Titulacao titulacao, double salario) {
         super(nome, matricula);
         setTitulacao(titulacao);
