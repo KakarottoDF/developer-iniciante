@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class GerenciadorDePessoas{
-    ArrayList<Professor> professores;
+    private ArrayList<Professor> professores;
     private final String PALAVRA = "SILVA";
     private final double SALARIO = 12000.00;
 
