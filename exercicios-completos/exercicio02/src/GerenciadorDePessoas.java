@@ -40,7 +40,7 @@ public class GerenciadorDePessoas{
             }
         }
         if (!encontrou) {
-            System.out.println("Não existem professores com " + palavra + " no nome.");
+            System.out.println("Não existem professores com ".toUpperCase() + palavra.toUpperCase() + " no nome.".toUpperCase());
         }
     }
 
@@ -54,7 +54,7 @@ public class GerenciadorDePessoas{
         }
 
         if (!encontrou) {
-            System.out.println("Não existem professores com titulacao " + titulacao);
+            System.out.println("Não existem professores com titulacao ".toUpperCase() + titulacao);
         }
     }
 
@@ -68,13 +68,12 @@ public class GerenciadorDePessoas{
         }
 
         if (!encontrou) {
-            System.out.println("Não existem professores com salário acima de R$ " + getSALARIO());
+            System.out.println("Não existem professores com salário acima de R$ ".toUpperCase() + getSALARIO());
         }
     }
 
     @Override
     public String toString() {
-        return "GerenciadorDePessoas" +
-                "\n----- LISTA DE PROFESSORES -----" + getProfessores();
+        return "\n----- LISTA DE PROFESSORES -----" + getProfessores();
     }
 }
