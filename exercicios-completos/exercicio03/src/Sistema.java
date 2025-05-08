@@ -6,8 +6,8 @@ public class Sistema {
     private boolean fullTime;
     private String nomeSistema;
 
-    ArrayList<Administrativo> administrativos;
-    ArrayList<Corporativo> corporativos;
+    private ArrayList<Administrativo> administrativos;
+    private ArrayList<Corporativo> corporativos;
 
     public Sistema(){
         this.administrativos = new ArrayList<>();

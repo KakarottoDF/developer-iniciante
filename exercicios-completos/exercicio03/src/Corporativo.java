@@ -20,17 +20,17 @@ public class Corporativo extends Sistema{
     public String toString() {
         return super.toString() + "\n" +
                 "Tipo: Corporativo\n" +
-                "Acessos por Minuto: " + quantidadeAcessosPorMinuto;
+                "Acessos por Minuto: " + getQuantidadeAcessosPorMinuto();
     }
 
     public int calcularFuncionarios() {
         if (isFullTime()) {
-            if (quantidadeAcessosPorMinuto > 5000) {
-                return 5; // 2 iniciais + 3 adicionais
-            } else if (quantidadeAcessosPorMinuto >= 3000) {
-                return 4; // 2 iniciais + 2 adicionais
+            if (getQuantidadeAcessosPorMinuto() > 5000) {
+                return 5;
+            } else if (getQuantidadeAcessosPorMinuto() >= 3000) {
+                return 4;
             }
-            return 2; // 2 iniciais
+            return 2;
         }
         return 0;
     }

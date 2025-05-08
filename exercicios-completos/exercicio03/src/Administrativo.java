@@ -25,8 +25,8 @@ public class Administrativo extends Sistema{
 
     public int calcularFuncionarios() {
         if (isFullTime()) {
-            if (quantidadeUsuariosSimultaneos > 200) {
-                return 3; // 1 + 2 adicionais
+            if (getQuantidadeUsuariosSimultaneos() > 200) {
+                return 3;
             }
             return 1;
         }
