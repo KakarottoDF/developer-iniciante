@@ -6,18 +6,6 @@ public class GerenciadorDePessoas{
     private final String PALAVRA = "SILVA";
     private final double SALARIO = 12000.00;
 
-    public GerenciadorDePessoas() {
-        this.professores = new ArrayList<>();
-    }
-
-    public ArrayList<Professor> getProfessores() {
-        return this.professores;
-    }
-
-    public void setProfessores(Professor professores) {
-        getProfessores().add(professores);
-    }
-
     public String getPALAVRA() {
         return this.PALAVRA;
     }
@@ -26,10 +14,62 @@ public class GerenciadorDePessoas{
         return SALARIO;
     }
 
-    public boolean matriculaExiste(String matricula){
-        Professor novoProfessor = new Professor("", matricula, Titulacao.DOUTORADO, 0);
-        return getProfessores().contains(novoProfessor);
+    private ArrayList<Pessoa> pessoas;
+
+    public GerenciadorDePessoas() {
+        this.pessoas = new ArrayList<>();
     }
+
+    public void adicionarPessoa(Pessoa pessoa) {
+        pessoas.add(pessoa);
+    }
+
+    public ArrayList<Pessoa> getPessoas() {
+        return pessoas;
+    }
+
+    public ArrayList<Professor> getProfessores() {
+        ArrayList<Professor> professores = new ArrayList<>();
+        for (Pessoa p : pessoas) {
+            if (p instanceof Professor) {
+                professores.add((Professor) p);
+            }
+        }
+        return professores;
+    }
+
+    public ArrayList<Aluno> getAlunos() {
+        ArrayList<Aluno> alunos = new ArrayList<>();
+        for (Pessoa p : pessoas) {
+            if (p instanceof Aluno) {
+                alunos.add((Aluno) p);
+            }
+        }
+        return alunos;
+    }
+
+    public boolean matriculaExiste(String matricula) {
+        for (Pessoa p : pessoas) {
+            if (p.getMatricula().equalsIgnoreCase(matricula)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean existeProfessorCadastrado() {
+        return !getProfessores().isEmpty();
+    }
+
+    public boolean existeAlunoCadastrado() {
+        return !getAlunos().isEmpty();
+    }
+
+    /*public boolean matriculaExiste(String matricula){
+        *//*Professor novoProfessor = new Professor("", matricula, Titulacao.DOUTORADO, 0);
+        return getProfessores().contains(novoProfessor);*//*
+        return getProfessores().contains(new Professor("", matricula, Titulacao.GRADUADO, 0));
+    }*/
 
     public void acharProfessores(String palavra){
         boolean encontrou = false;

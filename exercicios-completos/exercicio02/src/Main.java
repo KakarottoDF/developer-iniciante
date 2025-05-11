@@ -1,8 +1,5 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
         boolean escolha;
         int opcao;
 
@@ -10,45 +7,40 @@ public class Main {
 
         do {
             Printer.menu();
-            opcao = Reader.lerInt("ESCOLHA UMA DAS OPÇÕES: ", "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 5", 1, 5);
+            opcao = Reader.lerInt("ESCOLHA UMA DAS OPÇÕES: ", "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 8", 1, 8);
 
             switch(opcao) {
                 case 1:
-                    View.cadastrar(gerenciadorDePessoas);
+                    View.cadastrarProfessores(gerenciadorDePessoas);
                     break;
                 case 2:
-                    if (gerenciadorDePessoas.getProfessores().isEmpty()) {
-                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
-                    } else {
-                        Printer.imprimirProfessores(gerenciadorDePessoas);
-                    }
+                    Printer.imprimirProfessores(gerenciadorDePessoas);
                     break;
                 case 3:
-                    if (gerenciadorDePessoas.getProfessores().isEmpty()) {
-                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
-                    } else {
-                        Printer.imprimirNomeComPalavraEspecifica(gerenciadorDePessoas);
-                    }
+                    View.cadastrarAlunos(gerenciadorDePessoas);
                     break;
                 case 4:
-                    if(gerenciadorDePessoas.getProfessores().isEmpty()){
-                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
-                    } else {
-                        Printer.imprimirDoutores(gerenciadorDePessoas);
-                    }
+                    Printer.imprimirAlunos(gerenciadorDePessoas);
                     break;
                 case 5:
-                    if(gerenciadorDePessoas.getProfessores().isEmpty()){
-                        System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
-                    }else {
-                        Printer.imprimirProfessoresComSalarioEspecifico(gerenciadorDePessoas);
-                    }
+                    Printer.imprimirNomeComPalavraEspecifica(gerenciadorDePessoas);
                     break;
+                case 6:
+                    Printer.imprimirDoutores(gerenciadorDePessoas);
+                    break;
+                case 7:
+                    Printer.imprimirProfessoresComSalarioEspecifico(gerenciadorDePessoas);
+                    break;
+                case 8:
+                    escolha = true;
+                    continue;
                 default:
                     System.out.println("ERRO INESPERADO.");
                     break;
             }
+
             escolha = Reader.lerBoolean("DESEJA ENCERRAR O PROGRAMA? [S]SIM [N]NÃO: ", "ESCOLHA SOMENTE [S]SIM [N]NÃO: ", "S", "N");
-        }while(!escolha);
+
+        } while (!escolha);
     }
 }

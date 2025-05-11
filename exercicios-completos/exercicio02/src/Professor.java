@@ -25,6 +25,14 @@ public class Professor extends Pessoa{
     }
 
     @Override
+    public String toString() {
+        return "\nPROFESSOR:" +
+                super.toString() +
+                "\nTITULAÇÃO: " + getTitulacao() +
+                "\nSALÁRIO: R$ " + getSalario() + "\n";
+    }
+
+    @Override
     public boolean equals(Object obj){
         Professor professor = (Professor) obj;
         return getMatricula().equals(professor.getMatricula());
@@ -33,14 +41,5 @@ public class Professor extends Pessoa{
     @Override
     public int hashCode() {
         return super.hashCode();
-    }
-
-    @Override
-    public String toString() {
-        return "\nPROFESSOR:" +
-                super.toString() +
-                "\nTITULAÇÃO: " + getTitulacao() +
-                "\nSALÁRIO: R$ " + getSalario() +
-                "\n";
     }
 }
