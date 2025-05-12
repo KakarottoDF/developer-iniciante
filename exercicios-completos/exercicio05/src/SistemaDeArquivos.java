@@ -7,13 +7,18 @@ public class SistemaDeArquivos {
     private ArrayList<DotNet> dotNets;
     private ArrayList<C> cArrayList;
 
+    public SistemaDeArquivos(String nome, int qtdLinhas) {
+        setNome(nome);
+        setQtdLinhas(qtdLinhas);
+    }
+
     public SistemaDeArquivos(){
         this.dotNets = new ArrayList<>();
         this.cArrayList = new ArrayList<>();
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
@@ -21,7 +26,7 @@ public class SistemaDeArquivos {
     }
 
     public int getQtdLinhas() {
-        return qtdLinhas;
+        return this.qtdLinhas;
     }
 
     public void setQtdLinhas(int qtdLinhas) {
@@ -32,7 +37,7 @@ public class SistemaDeArquivos {
         return this.dotNets;
     }
 
-    public ArrayList<C> getcArrayList() {
+    public ArrayList<C> getCArrayList() {
         return this.cArrayList;
     }
 
@@ -41,6 +46,24 @@ public class SistemaDeArquivos {
     }
 
     public void adicionar(C cArray){
-        getcArrayList().add(cArray);
+        getCArrayList().add(cArray);
+    }
+
+    public boolean validarSeNomeExiste(String nome) {
+        DotNet novoDotNet = new DotNet(nome, 0, "", 0);
+        C novoArrayC = new C(nome, 0, 0, 0);
+
+        return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
+    }
+
+    public double tempoDeCompilacao(){
+        return 0.0;
+    }
+
+    @Override
+    public String toString() {
+        return  "\nNome: " + getNome() +
+                "\n quantidade de Linhas: " + getQtdLinhas() +
+                "\n";
     }
 }

@@ -1,2 +1,46 @@
 public class DotNet extends SistemaDeArquivos{
+    private String pacote;
+    private int qtdMetodos;
+
+    public DotNet(String nome, int qtdLinhas, String pacote, int qtdMetodos) {
+        super(nome, qtdLinhas);
+        setPacote(pacote);
+        setQtdMetodos(qtdMetodos);
+    }
+
+    public DotNet(String pacote, int qtdMetodos) {
+        this.pacote = pacote;
+        this.qtdMetodos = qtdMetodos;
+    }
+
+    public String getPacote() {
+        return this.pacote;
+    }
+
+    public void setPacote(String pacote) {
+        this.pacote = pacote;
+    }
+
+    public int getQtdMetodos() {
+        return this.qtdMetodos;
+    }
+
+    public void setQtdMetodos(int qtdMetodos) {
+        this.qtdMetodos = qtdMetodos;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        DotNet dotNet = (DotNet) obj;
+        return getNome() != null && getNome().equals(dotNet.getNome());
+    }
+
+    @Override
+    public String toString() {
+        return "DotNet: " +
+                super.toString() +
+                "\nPacote: " + getPacote() +
+                "\nQuantidade de Métodos: " + getQtdMetodos() +
+                "\n";
+    }
 }
