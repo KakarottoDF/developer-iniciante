@@ -56,8 +56,20 @@ public class SistemaDeArquivos {
         return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
     }
 
-    public double tempoDeCompilacao(){
-        return 0.0;
+    public int tempoDeCompilacao(int qtdLinhas) {
+        if (qtdLinhas > 5 && qtdLinhas < 1000) {
+            return 1;
+        } else {
+            if (qtdLinhas >= 1000 && qtdLinhas < 5000) {
+                return 2;
+            } else {
+                if (qtdLinhas >= 5000) {
+                    return 3;
+
+                }
+            }
+        }
+        return 0;
     }
 
     @Override
