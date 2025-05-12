@@ -10,12 +10,12 @@ public class View{
                     System.out.println("VOCÊ TEM QUE DIGITAR UM NOME.");
                 }
             }
-        }while(!sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
+        }while(sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
 
         return new DotNet(
                 nome,
-                Reader.lerInt("Insira a quantidade de linhas deste código."),
-                Reader.lerString("Insira o pacote: "),
+                Reader.lerInt("Insira a quantidade de linhas deste código: "),
+                Reader.lerString("Insira o nome do pacote: "),
                 Reader.lerInt("Informe a quantidade de métodos: ")
         );
     }
@@ -41,21 +41,21 @@ public class View{
         );
     }
 
-    public static void alimentarArrayDotNet(DotNet dotNet){
+    public static void alimentarArrayDotNet(SistemaDeArquivos sistemaDeArquivos){
         boolean continuar = true;
 
         while(continuar){
-            dotNet.adicionar(cadastrarDotNet(dotNet));
+            sistemaDeArquivos.adicionar(cadastrarDotNet(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("Deseja continuar com o cadastro? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
     }
 
-    public static void alimentarArrayC(C cadastroC){
+    public static void alimentarArrayC(SistemaDeArquivos sistemaDeArquivos){
         boolean continuar = true;
 
         while(continuar){
-            cadastroC.adicionar(cadastrarC(cadastroC));
+sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("Deseja continuar com o cadastro? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
         }
