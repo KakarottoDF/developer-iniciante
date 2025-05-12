@@ -32,7 +32,7 @@ public class C extends SistemaDeArquivos{
     @Override
     public boolean equals(Object obj) {
         C novoC = (C) obj;
-        return getNome().equals(novoC.getNome());
+        return getNome() != null && getNome().equals(novoC.getNome());
     }
 
     @Override
@@ -42,10 +42,10 @@ public class C extends SistemaDeArquivos{
 
     @Override
     public String toString() {
-        return "C:" +
+        return "\nC:" +
                 super.toString() +
-                "QUANTIDADE DE BIBLIOTECAS: " + getQtdBibliotecas() +
-                "QUANTIDADE DE FUNÇÕES: " + getQtdFuncoes() +
+                "\nQUANTIDADE DE BIBLIOTECAS: " + getQtdBibliotecas() +
+                "\nQUANTIDADE DE FUNÇÕES: " + getQtdFuncoes() +
                 "\n";
     }
 }

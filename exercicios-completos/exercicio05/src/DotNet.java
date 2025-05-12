@@ -42,7 +42,7 @@ public class DotNet extends SistemaDeArquivos{
 
     @Override
     public String toString() {
-        return "DOTNET: " +
+        return "\nDOTNET: " +
                 super.toString() +
                 "\nNOME DO PACOTE: " + getPacote() +
                 "\nQUANTIDADE DE MÉTODOS: " + getQtdMetodos() +
