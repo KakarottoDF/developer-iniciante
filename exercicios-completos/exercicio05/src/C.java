@@ -39,8 +39,8 @@ public class C extends SistemaDeArquivos{
     public String toString() {
         return "C:" +
                 super.toString() +
-                "Quantidade de Bibliotecas: " + getQtdBibliotecas() +
-                "Quantidade de Funções: " + getQtdFuncoes() +
+                "QUANTIDADE DE BIBLIOTECAS: " + getQtdBibliotecas() +
+                "QUANTIDADE DE FUNÇÕES: " + getQtdFuncoes() +
                 "\n";
     }
 }
