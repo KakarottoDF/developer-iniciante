@@ -2,9 +2,13 @@ import java.util.ArrayList;
 
 public class GerenciadorDePessoas{
 
-    private ArrayList<Professor> professores;
+    private ArrayList<Pessoa> pessoas;
     private final String PALAVRA = "SILVA";
     private final double SALARIO = 12000.00;
+
+    public ArrayList<Pessoa> getPessoas() {
+        return pessoas;
+    }
 
     public String getPALAVRA() {
         return this.PALAVRA;
@@ -14,18 +18,12 @@ public class GerenciadorDePessoas{
         return SALARIO;
     }
 
-    private ArrayList<Pessoa> pessoas;
-
     public GerenciadorDePessoas() {
         this.pessoas = new ArrayList<>();
     }
 
     public void adicionarPessoa(Pessoa pessoa) {
         pessoas.add(pessoa);
-    }
-
-    public ArrayList<Pessoa> getPessoas() {
-        return pessoas;
     }
 
     public ArrayList<Professor> getProfessores() {
@@ -115,6 +113,6 @@ public class GerenciadorDePessoas{
 
     @Override
     public String toString() {
-        return "\n----- LISTA DE PROFESSORES -----" + getProfessores();
+        return "\n----- LISTA DAS PESSOAS CADASTRADAS -----" + getPessoas();
     }
 }

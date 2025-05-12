@@ -1,7 +1,13 @@
 import java.util.ArrayList;
 
 public class Printer {
+
+    public static void imprimirTodasAsPessoas(GerenciadorDePessoas gerenciadorDePessoas){
+        System.out.println(gerenciadorDePessoas.getPessoas());
+    }
+
     public static void imprimirProfessores(GerenciadorDePessoas gerenciadorDePessoas){
+        System.out.println(gerenciadorDePessoas.getProfessores());
         if (!gerenciadorDePessoas.existeProfessorCadastrado()) {
             System.out.println("NÃO EXISTE PROFESSOR CADASTRADO.");
         }else {
