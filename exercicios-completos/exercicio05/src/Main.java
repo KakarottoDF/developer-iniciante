@@ -5,5 +5,8 @@ public class Main {
         SistemaDeArquivos sistemaDeArquivos = new SistemaDeArquivos();
 
         View.alimentarArrayDotNet(sistemaDeArquivos);
+        View.alimentarArrayC(sistemaDeArquivos);
+
+        Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
     }
 }

@@ -14,9 +14,9 @@ public class View{
 
         return new DotNet(
                 nome,
-                Reader.lerInt("Insira a quantidade de linhas deste código: "),
-                Reader.lerString("Insira o nome do pacote: "),
-                Reader.lerInt("Informe a quantidade de métodos: ")
+                Reader.lerInt("INSIRA A QUANTIDADE DE LINHAS DESTE CÓDIGO: "),
+                Reader.lerString("INSIRA O NOME DO PACOTE: "),
+                Reader.lerInt("INFORME A QUANTIDADE DE MÉTODOS: ")
         );
     }
 
@@ -31,13 +31,13 @@ public class View{
                     System.out.println("VOCÊ TEM QUE DIGITAR UM NOME.");
                 }
             }
-        }while(!sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
+        }while(sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
 
         return new C(
                 nome,
-                Reader.lerInt("Insira a quantidade de linhas deste código."),
-                Reader.lerInt("Informe a quantidade de bibliotecas: "),
-                Reader.lerInt("Informe a quantidade de funções: ")
+                Reader.lerInt("INSIRA A QUANTIDADE DE LINHAS DESTE CÓDIGO: "),
+                Reader.lerInt("INFORME A QUANTIDADE DE BIBLIOTECAS: "),
+                Reader.lerInt("INFORME A QUANTIDADE DE FUNÇÕES: ")
         );
     }
 
@@ -47,7 +47,7 @@ public class View{
         while(continuar){
             sistemaDeArquivos.adicionar(cadastrarDotNet(sistemaDeArquivos));
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+            continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
     }
 
@@ -57,7 +57,7 @@ public class View{
         while(continuar){
 sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
 
-            continuar = Reader.lerBoolean("Deseja continuar com o cadastro? [S]Sim [N]Não: ", "Digite somente [S]Sim [N]Não", "S", "N");
+            continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
     }
 

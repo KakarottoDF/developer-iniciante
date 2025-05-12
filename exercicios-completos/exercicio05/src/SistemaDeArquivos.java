@@ -63,7 +63,6 @@ public class SistemaDeArquivos {
     @Override
     public String toString() {
         return  "\nNome: " + getNome() +
-                "\n quantidade de Linhas: " + getQtdLinhas() +
-                "\n";
+                "\nQuantidade de Linhas: " + getQtdLinhas();
     }
 }
