@@ -36,6 +36,11 @@ public class DotNet extends SistemaDeArquivos{
     }
 
     @Override
+    public int hashCode() {
+        return getNome() != null ? getNome().hashCode() : 0;
+    }
+
+    @Override
     public String toString() {
         return "DOTNET: " +
                 super.toString() +
