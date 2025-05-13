@@ -29,6 +29,22 @@ public class DotNet extends SistemaDeArquivos{
         this.qtdMetodos = qtdMetodos;
     }
 
+    public int tempoDeCompilacao(int metodos) {
+        if (metodos > 1 && metodos < 10) {
+            return 2;
+        } else {
+            if (metodos >= 10 && metodos < 20) {
+                return 3;
+            } else {
+                if (metodos >= 20) {
+                    return 4;
+
+                }
+            }
+        }
+        return 0;
+    }
+
     @Override
     public boolean equals(Object obj) {
         DotNet dotNet = (DotNet) obj;

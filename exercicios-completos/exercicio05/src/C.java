@@ -29,6 +29,22 @@ public class C extends SistemaDeArquivos{
         this.qtdFuncoes = qtdFuncoes;
     }
 
+    public int tempoDeCompilacao(int funcoes) {
+        if (funcoes > 1 && funcoes < 60) {
+            return 3;
+        } else {
+            if (funcoes >= 60 && funcoes < 80) {
+                return 4;
+            } else {
+                if (funcoes >= 80) {
+                    return 5;
+
+                }
+            }
+        }
+        return 0;
+    }
+
     @Override
     public boolean equals(Object obj) {
         C novoC = (C) obj;

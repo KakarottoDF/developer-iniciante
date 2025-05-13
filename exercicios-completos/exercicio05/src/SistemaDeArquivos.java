@@ -72,6 +72,23 @@ public class SistemaDeArquivos {
         return 0;
     }
 
+    public int tempoDeCompilacao(String nomeArquivo) {
+        int tamanhoDoNomeDoArquivo = nomeArquivo.length();
+        if (tamanhoDoNomeDoArquivo > 10 && tamanhoDoNomeDoArquivo < 100) {
+            return 1;
+        } else {
+            if (tamanhoDoNomeDoArquivo == 100) {
+                return 1;
+            } else {
+                if (tamanhoDoNomeDoArquivo > 100) {
+                    return 2;
+
+                }
+            }
+        }
+        return 0;
+    }
+
     @Override
     public String toString() {
         return  "\nNOME DO SISTEMA: " + getNome() +
