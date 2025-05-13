@@ -40,10 +40,6 @@ public class SistemaDeArquivos {
         return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
     }
 
-    //É PRA FAZER SOBRESCRITA E NÃO SOBRECARGA SEU CORNOOOOOOO
-    //LEMBRAR QUE A SOBRESCRITA É A ESPECIALIZAÇÃO DE UMA AÇÃO ESPECÍFICA, ONDE SE MANTÉM A MESMA ASSINATURA DO METODO, MAS COM COMPORTAMENTOS DIFERENTES.
-
-
     @Override
     public String toString() {
         return "SISTEMA DE ARQUIVOS:" +

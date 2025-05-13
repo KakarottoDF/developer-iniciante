@@ -23,6 +23,9 @@ public class Arquivo {
         this.qtdLinhas = qtdLinhas;
     }
 
+    //É PRA FAZER SOBRESCRITA E NÃO SOBRECARGA SEU CORNOOOOOOO
+    //LEMBRAR QUE A SOBRESCRITA É A ESPECIALIZAÇÃO DE UMA AÇÃO ESPECÍFICA, ONDE SE MANTÉM A MESMA ASSINATURA DO METODO, MAS COM COMPORTAMENTOS DIFERENTES.
+
     public int tempoDeCompilacao() {
         if (getNome().length() > 10 && getNome().length() <= 100 || getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
             return 1;
