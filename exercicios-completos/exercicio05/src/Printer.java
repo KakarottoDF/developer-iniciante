@@ -29,7 +29,6 @@ public class Printer {
         }
     }
 
-    // IV. Arquivos com "Prova2" no nome
     public static void imprimirArquivosComTermo(SistemaDeArquivos sistema) {
         System.out.println("\nIV. ARQUIVOS COM " + TERMO + " NO NOME:");
 
