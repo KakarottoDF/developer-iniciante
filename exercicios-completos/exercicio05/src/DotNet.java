@@ -29,14 +29,15 @@ public class DotNet extends SistemaDeArquivos{
         this.qtdMetodos = qtdMetodos;
     }
 
-    public int tempoDeCompilacao(int metodos) {
-        if (metodos > 1 && metodos < 10) {
+    @Override
+    public int tempoDeCompilacao() {
+        if (getQtdMetodos() > 1 && getQtdMetodos() < 10) {
             return 2;
         } else {
-            if (metodos >= 10 && metodos < 20) {
+            if (getQtdMetodos() >= 10 && getQtdMetodos() < 20) {
                 return 3;
             } else {
-                if (metodos >= 20) {
+                if (getQtdMetodos() >= 20) {
                     return 4;
 
                 }

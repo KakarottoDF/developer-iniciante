@@ -8,5 +8,8 @@ public class Main {
         View.alimentarArrayC(sistemaDeArquivos);
 
         Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
+
+        Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
+        Printer.imprimirArquivosComTermo(sistemaDeArquivos);
     }
 }

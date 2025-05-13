@@ -56,33 +56,16 @@ public class SistemaDeArquivos {
         return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
     }
 
-    public int tempoDeCompilacao(int qtdLinhas) {
-        if (qtdLinhas > 5 && qtdLinhas < 1000) {
+    public int tempoDeCompilacao() {
+        int tamanhoDoNomeDoArquivo = getNome().length();
+        if (tamanhoDoNomeDoArquivo > 10 && tamanhoDoNomeDoArquivo < 100 || tamanhoDoNomeDoArquivo == 100 || getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
             return 1;
         } else {
-            if (qtdLinhas >= 1000 && qtdLinhas < 5000) {
+            if (tamanhoDoNomeDoArquivo > 100 || getQtdLinhas() > 1000 && getQtdLinhas() < 5000) {
                 return 2;
             } else {
-                if (qtdLinhas >= 5000) {
+                if (getQtdLinhas() >= 5000) {
                     return 3;
-
-                }
-            }
-        }
-        return 0;
-    }
-
-    public int tempoDeCompilacao(String nomeArquivo) {
-        int tamanhoDoNomeDoArquivo = nomeArquivo.length();
-        if (tamanhoDoNomeDoArquivo > 10 && tamanhoDoNomeDoArquivo < 100) {
-            return 1;
-        } else {
-            if (tamanhoDoNomeDoArquivo == 100) {
-                return 1;
-            } else {
-                if (tamanhoDoNomeDoArquivo > 100) {
-                    return 2;
-
                 }
             }
         }
