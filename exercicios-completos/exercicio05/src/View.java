@@ -60,13 +60,4 @@ sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
     }
-
-    public static void alimentarArquivo(SistemaDeArquivos sistemaDeArquivos){
-
-
-
-        }
-
-
-
 }
