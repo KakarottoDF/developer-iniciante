@@ -54,8 +54,9 @@ public class View{
     public static void alimentarArrayC(SistemaDeArquivos sistemaDeArquivos){
         boolean continuar = true;
 
-        while(continuar){
-sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
+        while(continuar) {
+
+            sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
