@@ -56,12 +56,14 @@ public class SistemaDeArquivos {
         return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
     }
 
+    //É PRA FAZER SOBRESCRITA E NÃO SOBRECARGA SEU CORNOOOOOOO
+    //LEMBRAR QUE A SOBRESCRITA É A ESPECIALIZAÇÃO DE UMA AÇÃO ESPECÍFICA, ONDE SE MANTÉM A MESMA ASSINATURA DO METODO, MAS COM COMPORTAMENTOS DIFERENTES.
+
     public int tempoDeCompilacao() {
-        int tamanhoDoNomeDoArquivo = getNome().length();
-        if (tamanhoDoNomeDoArquivo > 10 && tamanhoDoNomeDoArquivo < 100 || tamanhoDoNomeDoArquivo == 100 || getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
+        if (getNome().length() > 10 && getNome().length() <= 100 || getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
             return 1;
         } else {
-            if (tamanhoDoNomeDoArquivo > 100 || getQtdLinhas() > 1000 && getQtdLinhas() < 5000) {
+            if (getNome().length() > 100 || getQtdLinhas() > 1000 && getQtdLinhas() < 5000) {
                 return 2;
             } else {
                 if (getQtdLinhas() >= 5000) {
