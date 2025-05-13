@@ -1,4 +1,4 @@
-public class C extends SistemaDeArquivos{
+public class C extends Arquivo{
     private int qtdBibliotecas;
     private int qtdFuncoes;
 
@@ -6,11 +6,6 @@ public class C extends SistemaDeArquivos{
         super(nome, qtdLinhas);
         setQtdBibliotecas(qtdBibliotecas);
         setQtdFuncoes(qtdFuncoes);
-    }
-
-    public C(int qtdBibliotecas, int qtdFuncoes) {
-        this.qtdBibliotecas = qtdBibliotecas;
-        this.qtdFuncoes = qtdFuncoes;
     }
 
     public int getQtdBibliotecas() {

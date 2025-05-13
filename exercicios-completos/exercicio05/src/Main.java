@@ -9,7 +9,7 @@ public class Main {
 
         Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
 
-        Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
-        Printer.imprimirArquivosComTermo(sistemaDeArquivos);
+        /*Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
+        Printer.imprimirArquivosComTermo(sistemaDeArquivos);*/
     }
 }

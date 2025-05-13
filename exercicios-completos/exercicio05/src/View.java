@@ -61,5 +61,12 @@ sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
         }
     }
 
+    public static void alimentarArquivo(SistemaDeArquivos sistemaDeArquivos){
+
+
+
+        }
+
+
 
 }

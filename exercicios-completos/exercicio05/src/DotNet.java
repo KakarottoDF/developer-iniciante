@@ -1,4 +1,4 @@
-public class DotNet extends SistemaDeArquivos{
+public class DotNet extends Arquivo{
     private String pacote;
     private int qtdMetodos;
 
@@ -6,11 +6,6 @@ public class DotNet extends SistemaDeArquivos{
         super(nome, qtdLinhas);
         setPacote(pacote);
         setQtdMetodos(qtdMetodos);
-    }
-
-    public DotNet(String pacote, int qtdMetodos) {
-        this.pacote = pacote;
-        this.qtdMetodos = qtdMetodos;
     }
 
     public String getPacote() {

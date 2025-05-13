@@ -6,12 +6,12 @@ public class Printer {
     private static final String TERMO = "PROVA2";
 
     public static void imprimirTodosOsSistemas(SistemaDeArquivos sistemaDeArquivos){
-        System.out.println(sistemaDeArquivos.getDotNets());
-        System.out.println(sistemaDeArquivos.getCArrayList());
+        System.out.println(sistemaDeArquivos);
     }
 
     //interface comparable
     //
+
 
     public static void imprimirArquivosCondicionais(SistemaDeArquivos sistema) {
         System.out.println("\nIII. ARQUIVOS ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS:");
