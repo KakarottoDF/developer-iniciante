@@ -41,11 +41,6 @@ public class SistemaDeArquivos {
     }
 
     public void verificarArquivoComMaiorTempoDeCompilacao() {
-        if (getArquivo().isEmpty()) {
-            System.out.println("NENHUM ARQUIVO CADASTRADO.");
-            return;
-        }
-
         Arquivo arquivoComMaiorTempo = getArquivo().get(0);
         int maiorTempo = arquivoComMaiorTempo.tempoDeCompilacaoTotal();
 

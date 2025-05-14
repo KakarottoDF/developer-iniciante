@@ -15,10 +15,9 @@ public class Printer {
     public static void imprimirArquivoComMaiorTempoDeCompilacao(SistemaDeArquivos sistemaDeArquivos) {
         if (sistemaDeArquivos.getArquivo().isEmpty()) {
             System.out.println("NENHUM ARQUIVO CADASTRADO.");
-            return;
+        }else{
+            sistemaDeArquivos.verificarArquivoComMaiorTempoDeCompilacao();
         }
-        sistemaDeArquivos.verificarArquivoComMaiorTempoDeCompilacao();
-
     }
 
     public static void imprimirArquivosCondicionais(SistemaDeArquivos sistema) {
