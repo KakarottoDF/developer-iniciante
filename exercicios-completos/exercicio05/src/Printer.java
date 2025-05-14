@@ -12,6 +12,14 @@ public class Printer {
     //interface comparable
     //
 
+    public static void imprimirArquivoComMaiorTempoDeCompilacao(SistemaDeArquivos sistemaDeArquivos) {
+        if (sistemaDeArquivos.getArquivo().isEmpty()) {
+            System.out.println("NENHUM ARQUIVO CADASTRADO.");
+            return;
+        }
+        sistemaDeArquivos.verificarArquivoComMaiorTempoDeCompilacao();
+
+    }
 
     public static void imprimirArquivosCondicionais(SistemaDeArquivos sistema) {
         System.out.println("\nIII. ARQUIVOS ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS:");

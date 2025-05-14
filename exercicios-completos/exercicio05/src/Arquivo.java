@@ -27,18 +27,30 @@ public class Arquivo {
     //LEMBRAR QUE A SOBRESCRITA É A ESPECIALIZAÇÃO DE UMA AÇÃO ESPECÍFICA, ONDE SE MANTÉM A MESMA ASSINATURA DO METODO, MAS COM COMPORTAMENTOS DIFERENTES.
 
     public int tempoDeCompilacao() {
-        if (getNome().length() > 10 && getNome().length() <= 100 || getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
-            return 1;
-        } else {
-            if (getNome().length() > 100 || getQtdLinhas() > 1000 && getQtdLinhas() < 5000) {
-                return 2;
-            } else {
-                if (getQtdLinhas() >= 5000) {
-                    return 3;
-                }
-            }
+        int tempoDeCompilacao = 0;
+
+        if (getNome().length() > 10 && getNome().length() <= 100) {
+            tempoDeCompilacao += 1;
         }
-        return 0;
+        if (getNome().length() > 100) {
+            tempoDeCompilacao += 2;
+        }
+
+        if (getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
+            tempoDeCompilacao += 1;
+        }
+        if (getQtdLinhas() >= 1000 && getQtdLinhas() < 5000) {
+            tempoDeCompilacao += 2;
+        }
+        if (getQtdLinhas() >= 5000) {
+            tempoDeCompilacao += 3;
+        }
+
+        return tempoDeCompilacao;
+    }
+
+    public int tempoDeCompilacaoTotal() {
+        return tempoDeCompilacao();
     }
 
     @Override

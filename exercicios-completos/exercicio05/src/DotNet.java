@@ -26,19 +26,24 @@ public class DotNet extends Arquivo{
 
     @Override
     public int tempoDeCompilacao() {
-        if (getQtdMetodos() > 1 && getQtdMetodos() < 10) {
-            return 2;
-        } else {
-            if (getQtdMetodos() >= 10 && getQtdMetodos() < 20) {
-                return 3;
-            } else {
-                if (getQtdMetodos() >= 20) {
-                    return 4;
+        int tempo = 0;
 
-                }
-            }
+        if (getQtdMetodos() > 1 && getQtdMetodos() < 10) {
+            tempo += 2;
         }
-        return 0;
+        if (getQtdMetodos() >= 10 && getQtdMetodos() < 20) {
+            tempo += 3;
+        }
+        if (getQtdMetodos() >= 20) {
+            tempo += 4;
+        }
+
+        return tempo;
+    }
+
+    @Override
+    public int tempoDeCompilacaoTotal() {
+        return super.tempoDeCompilacao() + this.tempoDeCompilacao();
     }
 
     @Override

@@ -26,19 +26,24 @@ public class C extends Arquivo{
 
     @Override
     public int tempoDeCompilacao() {
-        if (getQtdFuncoes() > 1 && getQtdFuncoes() < 60) {
-            return 3;
-        } else {
-            if (getQtdFuncoes() >= 60 && getQtdFuncoes() < 80) {
-                return 4;
-            } else {
-                if (getQtdFuncoes() >= 80) {
-                    return 5;
+        int tempo = 0;
 
-                }
-            }
+        if (getQtdFuncoes() > 1 && getQtdFuncoes() < 60) {
+            tempo += 3;
         }
-        return 0;
+        if (getQtdFuncoes() >= 60 && getQtdFuncoes() < 80) {
+            tempo += 4;
+        }
+        if (getQtdFuncoes() >= 80) {
+            tempo += 5;
+        }
+
+        return tempo;
+    }
+
+    @Override
+    public int tempoDeCompilacaoTotal() {
+        return super.tempoDeCompilacao() + this.tempoDeCompilacao();
     }
 
     @Override

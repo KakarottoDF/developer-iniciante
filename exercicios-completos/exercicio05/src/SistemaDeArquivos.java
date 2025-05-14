@@ -40,6 +40,28 @@ public class SistemaDeArquivos {
         return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
     }
 
+    public void verificarArquivoComMaiorTempoDeCompilacao() {
+        if (getArquivo().isEmpty()) {
+            System.out.println("NENHUM ARQUIVO CADASTRADO.");
+            return;
+        }
+
+        Arquivo arquivoComMaiorTempo = getArquivo().get(0);
+        int maiorTempo = arquivoComMaiorTempo.tempoDeCompilacaoTotal();
+
+        for (Arquivo arquivo : getArquivo()) {
+            int tempo = arquivo.tempoDeCompilacaoTotal();
+            if (tempo > maiorTempo) {
+                maiorTempo = tempo;
+                arquivoComMaiorTempo = arquivo;
+            }
+        }
+
+        System.out.println("\nARQUIVO COM MAIOR TEMPO DE COMPILAÇÃO:");
+        System.out.println(arquivoComMaiorTempo);
+        System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + maiorTempo + " SEGUNDOS");
+    }
+
     @Override
     public String toString() {
         return "SISTEMA DE ARQUIVOS:" +

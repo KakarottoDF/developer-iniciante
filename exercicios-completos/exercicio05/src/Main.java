@@ -9,6 +9,8 @@ public class Main {
 
         Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
 
+        Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);
+
         /*Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
         Printer.imprimirArquivosComTermo(sistemaDeArquivos);*/
     }
