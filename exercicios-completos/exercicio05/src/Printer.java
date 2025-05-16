@@ -12,6 +12,15 @@ public class Printer {
     //interface comparable
     //
 
+    public static void imprimirArquivosOrdenadosPorTempoDeCompilacao(SistemaDeArquivos sistema) {
+        System.out.println("\nARQUIVOS ORDENADOS POR TEMPO DE COMPILAÇÃO (DECRESCENTE):");
+
+        for (Arquivo arq : sistema.getArquivosOrdenadosPorTempoDeCompilacaoDecrescente()) {
+            System.out.println(arq);
+            System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + arq.tempoDeCompilacaoTotal() + " SEGUNDOS");
+        }
+    }
+
     public static void imprimirArquivoComMaiorTempoDeCompilacao(SistemaDeArquivos sistemaDeArquivos) {
         if (sistemaDeArquivos.getArquivo().isEmpty()) {
             System.out.println("NENHUM ARQUIVO CADASTRADO.");

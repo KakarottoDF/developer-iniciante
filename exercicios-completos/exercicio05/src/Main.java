@@ -7,9 +7,11 @@ public class Main {
         View.alimentarArrayDotNet(sistemaDeArquivos);
         View.alimentarArrayC(sistemaDeArquivos);
 
-        Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
+        //Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
 
-        Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);
+        Printer.imprimirArquivosOrdenadosPorTempoDeCompilacao(sistemaDeArquivos);
+
+        //Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);
 
         /*Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
         Printer.imprimirArquivosComTermo(sistemaDeArquivos);*/

@@ -1,6 +1,8 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class SistemaDeArquivos {
+public class SistemaDeArquivos{
     private ArrayList<Arquivo> arquivos;
     private ArrayList<DotNet> dotNets;
     private ArrayList<C> cArrayList;
@@ -55,6 +57,12 @@ public class SistemaDeArquivos {
         System.out.println("\nARQUIVO COM MAIOR TEMPO DE COMPILAÇÃO:");
         System.out.println(arquivoComMaiorTempo);
         System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + maiorTempo + " SEGUNDOS");
+    }
+
+    public List<Arquivo> getArquivosOrdenadosPorTempoDeCompilacaoDecrescente() {
+        List<Arquivo> copia = new ArrayList<>(getArquivo());
+        Collections.sort(copia); // Usa o compareTo implementado em Arquivo
+        return copia;
     }
 
     @Override

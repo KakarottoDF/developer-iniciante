@@ -1,4 +1,4 @@
-public class Arquivo {
+public class Arquivo implements Comparable<Arquivo>{
     private String nome;
     private int qtdLinhas;
 
@@ -59,4 +59,8 @@ public class Arquivo {
                 "\nQUANTIDADE DE LINHAS: " + getQtdLinhas();
     }
 
+    @Override
+    public int compareTo(Arquivo arq) {
+        return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());
+    }
 }
