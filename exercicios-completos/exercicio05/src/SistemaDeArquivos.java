@@ -59,8 +59,8 @@ public class SistemaDeArquivos{
         System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + maiorTempo + " SEGUNDOS");
     }
 
-    public List<Arquivo> getArquivosOrdenadosPorTempoDeCompilacaoDecrescente() {
-        List<Arquivo> copia = new ArrayList<>(getArquivo());
+    public ArrayList<Arquivo> getArquivosOrdenadosPorTempoDeCompilacaoDecrescente() {
+        ArrayList<Arquivo> copia = new ArrayList<>(getArquivo());
         Collections.sort(copia); // Usa o compareTo implementado em Arquivo
         return copia;
     }
