@@ -66,8 +66,8 @@ public class Printer {
         System.out.println("[2] CADASTRAR ARQUIVOS C");
         System.out.println("[3] LISTAR ARQUIVOS ORDENADOS EM FORMA DECRESCENTE POR TEMPO DE COMPILAÇÃO");
         System.out.println("[4] LISTAR ARQUIVO QUE MAIS DEMORA PARA SER COMPILADO");
-        System.out.println("[5] LISTAR ARQUIVOS QUE POSSUEM ENTRE" + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS.");
-        System.out.println("[6] LISTAR ARQUIVOS QUE POSSUEM O TERMO " + TERMO + " NO NOME.");
+        System.out.println("[5] LISTAR ARQUIVOS QUE POSSUEM ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS");
+        System.out.println("[6] LISTAR ARQUIVOS QUE POSSUEM O TERMO " + TERMO + " NO NOME");
         System.out.println("[7] SAIR");
     }
 }
