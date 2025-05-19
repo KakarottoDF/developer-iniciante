@@ -4,21 +4,6 @@ public class Terrorista {
     private String nome;
     private int quantidadeDeExplosivos;
 
-    private ArrayList<Terrorista> listaDeTerroristas;
-
-    public Terrorista(){
-        this.listaDeTerroristas = new ArrayList<>();
-    }
-
-    public ArrayList<Terrorista> getListaDeTerroristas() {
-        return this.listaDeTerroristas;
-    }
-
-    public void adicionar(Suicida suicida, NaoSuicida naoSuicida){
-        getListaDeTerroristas().add(suicida);
-        getListaDeTerroristas().add(naoSuicida);
-    }
-
     public Terrorista(String nome, int quantidadeDeExplosivos) {
         setNome(nome);
         setQuantidadeDeExplosivos(quantidadeDeExplosivos);
@@ -44,8 +29,6 @@ public class Terrorista {
     public String toString() {
         return "Terrorista{" +
                 "nome='" + getNome() + '\'' +
-                ", quantidadeDeExplosivos=" + getQuantidadeDeExplosivos() +
-                ", listaDeTerroristas=" + getListaDeTerroristas() +
-                '}';
+                ", quantidadeDeExplosivos=" + getQuantidadeDeExplosivos();
     }
 }
