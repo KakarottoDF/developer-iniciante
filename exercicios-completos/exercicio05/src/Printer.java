@@ -15,7 +15,7 @@ public class Printer {
 
         for (Arquivo arq : sistema.getArquivosOrdenadosPorTempoDeCompilacaoDecrescente()) {
             System.out.println(arq);
-            System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + arq.tempoDeCompilacaoTotal() + " SEGUNDOS");
+            System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + arq.tempoDeCompilacao() + " SEGUNDOS");
         }
     }
 
@@ -23,7 +23,8 @@ public class Printer {
         if (sistemaDeArquivos.getArquivo().isEmpty()) {
             System.out.println("NENHUM ARQUIVO CADASTRADO.");
         }else{
-            sistemaDeArquivos.verificarArquivoComMaiorTempoDeCompilacao();
+            System.out.println("\nARQUIVO COM MAIOR TEMPO DE COMPILAÇÃO:");
+            System.out.println(sistemaDeArquivos.verificarArquivoComMaiorTempoDeCompilacao());
         }
     }
 
@@ -41,7 +42,7 @@ public class Printer {
         System.out.println("\nARQUIVOS COM \"" + TERMO + "\" NO NOME:");
 
         for (Arquivo arquivo : sistema.getArquivo()) {
-            if (arquivo.getNome().toUpperCase().contains(TERMO)) {
+            if (arquivo.getNome().contains(TERMO)) {
                 System.out.println(arquivo);
             }
         }

@@ -29,21 +29,16 @@ public class DotNet extends Arquivo{
         int tempo = 0;
 
         if (getQtdMetodos() > 1 && getQtdMetodos() < 10) {
-            tempo = 2;
+            tempo += 2;
         }
         if (getQtdMetodos() >= 10 && getQtdMetodos() < 20) {
-            tempo = 3;
+            tempo += 3;
         }
         if (getQtdMetodos() >= 20) {
-            tempo = 4;
+            tempo += 4;
         }
 
-        return tempo;
-    }
-
-    @Override
-    public int tempoDeCompilacaoTotal() {
-        return super.tempoDeCompilacao() + this.tempoDeCompilacao();
+        return super.tempoDeCompilacao() + tempo;
     }
 
     @Override

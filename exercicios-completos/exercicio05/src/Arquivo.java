@@ -30,27 +30,23 @@ public class Arquivo implements Comparable<Arquivo>{
         int tempoDeCompilacao = 0;
 
         if (getNome().length() > 10 && getNome().length() <= 100) {
-            tempoDeCompilacao = 1;
+            tempoDeCompilacao += 1;
         }
         if (getNome().length() > 100) {
-            tempoDeCompilacao = 2;
+            tempoDeCompilacao += 2;
         }
 
         if (getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
-            tempoDeCompilacao = 1;
+            tempoDeCompilacao += 1;
         }
         if (getQtdLinhas() >= 1000 && getQtdLinhas() < 5000) {
-            tempoDeCompilacao = 2;
+            tempoDeCompilacao += 2;
         }
         if (getQtdLinhas() >= 5000) {
-            tempoDeCompilacao = 3;
+            tempoDeCompilacao += 3;
         }
 
         return tempoDeCompilacao;
-    }
-
-    public int tempoDeCompilacaoTotal() {
-        return tempoDeCompilacao();
     }
 
     @Override
@@ -61,14 +57,14 @@ public class Arquivo implements Comparable<Arquivo>{
 
     @Override
     public int compareTo(Arquivo arq) {
-        if (this.tempoDeCompilacaoTotal() < arq.tempoDeCompilacaoTotal()) {
+        if (this.tempoDeCompilacao() < arq.tempoDeCompilacao()) {
             return 1; // Coloca o maior tempo primeiro (ordem decrescente)
-        } else if (this.tempoDeCompilacaoTotal() > arq.tempoDeCompilacaoTotal()) {
+        } else if (this.tempoDeCompilacao() > arq.tempoDeCompilacao()) {
             return -1;
         } else {
             return 0;
         }
-        /*return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());
+        /*return Integer.compare(arq.tempoDeCompilacao(), this.tempoDeCompilacao());
         * // Aqui é um forma simplificada do que fiz acima*/
     }
 }

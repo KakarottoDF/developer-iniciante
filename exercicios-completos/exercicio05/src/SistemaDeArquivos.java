@@ -25,21 +25,20 @@ public class SistemaDeArquivos{
         return getArquivo().contains(novoArquivo);
     }
 
-    public void verificarArquivoComMaiorTempoDeCompilacao() {
+    public Arquivo verificarArquivoComMaiorTempoDeCompilacao() {
         Arquivo arquivoComMaiorTempo = getArquivo().get(0);
-        int maiorTempo = arquivoComMaiorTempo.tempoDeCompilacaoTotal();
+        int maiorTempo = arquivoComMaiorTempo.tempoDeCompilacao();
 
         for (Arquivo arquivo : getArquivo()) {
-            int tempo = arquivo.tempoDeCompilacaoTotal();
+            int tempo = arquivo.tempoDeCompilacao();
             if (tempo > maiorTempo) {
                 maiorTempo = tempo;
                 arquivoComMaiorTempo = arquivo;
             }
         }
 
-        System.out.println("\nARQUIVO COM MAIOR TEMPO DE COMPILAÇÃO:");
-        System.out.println(arquivoComMaiorTempo);
         System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + maiorTempo + " SEGUNDOS");
+        return arquivoComMaiorTempo;
     }
 
     public ArrayList<Arquivo> getArquivosOrdenadosPorTempoDeCompilacaoDecrescente() {
