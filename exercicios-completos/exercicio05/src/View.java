@@ -20,7 +20,7 @@ public class View{
         );
     }
 
-    public static C cadastrarC(SistemaDeArquivos sistemaDeArquivos){
+    public static LinguagemC cadastrarC(SistemaDeArquivos sistemaDeArquivos){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
@@ -33,7 +33,7 @@ public class View{
             }
         }while(sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
 
-        return new C(
+        return new LinguagemC(
                 nome,
                 Reader.lerInt("INSIRA A QUANTIDADE DE LINHAS DESTE CÓDIGO: "),
                 Reader.lerInt("INFORME A QUANTIDADE DE BIBLIOTECAS: "),

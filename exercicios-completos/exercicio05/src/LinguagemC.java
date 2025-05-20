@@ -1,8 +1,8 @@
-public class C extends Arquivo{
+public class LinguagemC extends Arquivo{
     private int qtdBibliotecas;
     private int qtdFuncoes;
 
-    public C(String nome, int qtdLinhas, int qtdBibliotecas, int qtdFuncoes) {
+    public LinguagemC(String nome, int qtdLinhas, int qtdBibliotecas, int qtdFuncoes) {
         super(nome, qtdLinhas);
         setQtdBibliotecas(qtdBibliotecas);
         setQtdFuncoes(qtdFuncoes);
@@ -48,8 +48,8 @@ public class C extends Arquivo{
 
     @Override
     public boolean equals(Object obj) {
-        C novoC = (C) obj;
-        return getNome() != null && getNome().equals(novoC.getNome());
+        LinguagemC novoLinguagemC = (LinguagemC) obj;
+        return getNome() != null && getNome().equals(novoLinguagemC.getNome());
     }
 
     @Override

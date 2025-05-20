@@ -4,7 +4,7 @@ import java.util.Collections;
 public class SistemaDeArquivos{
     private ArrayList<Arquivo> arquivos;
     private ArrayList<DotNet> dotNets;
-    private ArrayList<C> cArrayList;
+    private ArrayList<LinguagemC> linguagemCArrayList;
 
     public SistemaDeArquivos(){
         setArquivos(new ArrayList<>());
@@ -28,12 +28,12 @@ public class SistemaDeArquivos{
         this.dotNets = dotNets;
     }
 
-    public ArrayList<C> getCArrayList() {
-        return this.cArrayList;
+    public ArrayList<LinguagemC> getCArrayList() {
+        return this.linguagemCArrayList;
     }
 
-    public void setcArrayList(ArrayList<C> cArrayList) {
-        this.cArrayList = cArrayList;
+    public void setcArrayList(ArrayList<LinguagemC> linguagemCArrayList) {
+        this.linguagemCArrayList = linguagemCArrayList;
     }
 
     public void adicionar(DotNet dotNet){
@@ -41,16 +41,16 @@ public class SistemaDeArquivos{
         getArquivo().add(dotNet);
     }
 
-    public void adicionar(C cArray){
-        getCArrayList().add(cArray);
-        getArquivo().add(cArray);
+    public void adicionar(LinguagemC linguagemCArray){
+        getCArrayList().add(linguagemCArray);
+        getArquivo().add(linguagemCArray);
     }
 
     public boolean validarSeNomeExiste(String nome) {
         DotNet novoDotNet = new DotNet(nome, 0, "", 0);
-        C novoArrayC = new C(nome, 0, 0, 0);
+        LinguagemC novoArrayLinguagemC = new LinguagemC(nome, 0, 0, 0);
 
-        return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayC);
+        return getDotNets().contains(novoDotNet) || getCArrayList().contains(novoArrayLinguagemC);
     }
 
     public void verificarArquivoComMaiorTempoDeCompilacao() {

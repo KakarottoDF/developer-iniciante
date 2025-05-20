@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Printer {
     private static final int LINHA_INICIAL = 1000;
     private static final int LINHA_FINAL = 7000;
@@ -38,9 +36,9 @@ public class Printer {
             }
         }
 
-        for (C c : sistema.getCArrayList()) {
-            if (c.getQtdLinhas() >= LINHA_INICIAL && c.getQtdLinhas() <= LINHA_FINAL) {
-                System.out.println(c);
+        for (LinguagemC linguagemC : sistema.getCArrayList()) {
+            if (linguagemC.getQtdLinhas() >= LINHA_INICIAL && linguagemC.getQtdLinhas() <= LINHA_FINAL) {
+                System.out.println(linguagemC);
             }
         }
     }
@@ -54,9 +52,9 @@ public class Printer {
             }
         }
 
-        for (C c : sistema.getCArrayList()) {
-            if (c.getNome().toUpperCase().contains(TERMO)) {
-                System.out.println(c);
+        for (LinguagemC linguagemC : sistema.getCArrayList()) {
+            if (linguagemC.getNome().toUpperCase().contains(TERMO)) {
+                System.out.println(linguagemC);
             }
         }
     }
