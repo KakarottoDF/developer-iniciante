@@ -68,6 +68,7 @@ public class Arquivo implements Comparable<Arquivo>{
         } else {
             return 0;
         }
-        /*return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());*/
+        /*return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());
+        * // Aqui é um forma simplificada do que fiz acima*/
     }
 }
