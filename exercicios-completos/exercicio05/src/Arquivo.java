@@ -30,20 +30,20 @@ public class Arquivo implements Comparable<Arquivo>{
         int tempoDeCompilacao = 0;
 
         if (getNome().length() > 10 && getNome().length() <= 100) {
-            tempoDeCompilacao += 1;
+            tempoDeCompilacao = 1;
         }
         if (getNome().length() > 100) {
-            tempoDeCompilacao += 2;
+            tempoDeCompilacao = 2;
         }
 
         if (getQtdLinhas() > 5 && getQtdLinhas() < 1000) {
-            tempoDeCompilacao += 1;
+            tempoDeCompilacao = 1;
         }
         if (getQtdLinhas() >= 1000 && getQtdLinhas() < 5000) {
-            tempoDeCompilacao += 2;
+            tempoDeCompilacao = 2;
         }
         if (getQtdLinhas() >= 5000) {
-            tempoDeCompilacao += 3;
+            tempoDeCompilacao = 3;
         }
 
         return tempoDeCompilacao;

@@ -29,13 +29,13 @@ public class LinguagemC extends Arquivo{
         int tempo = 0;
 
         if (getQtdFuncoes() > 1 && getQtdFuncoes() < 60) {
-            tempo += 3;
+            tempo = 3;
         }
         if (getQtdFuncoes() >= 60 && getQtdFuncoes() < 80) {
-            tempo += 4;
+            tempo = 4;
         }
         if (getQtdFuncoes() >= 80) {
-            tempo += 5;
+            tempo = 5;
         }
 
         return tempo;
