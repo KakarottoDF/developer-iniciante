@@ -24,7 +24,7 @@ public class Main {
                     Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);
                     break;
                 case 5:
-                    Printer.imprimirArquivosCondicionais(sistemaDeArquivos);
+                    Printer.imprimirArquivosComLinhasCondicionais(sistemaDeArquivos);
                     break;
                 case 6:
                     Printer.imprimirArquivosComTermo(sistemaDeArquivos);

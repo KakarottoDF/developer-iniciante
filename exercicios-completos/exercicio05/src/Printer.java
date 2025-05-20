@@ -27,7 +27,7 @@ public class Printer {
         }
     }
 
-    public static void imprimirArquivosCondicionais(SistemaDeArquivos sistema) {
+    public static void imprimirArquivosComLinhasCondicionais(SistemaDeArquivos sistema) {
         System.out.println("\nARQUIVOS ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS:");
 
         for (DotNet dotnet : sistema.getDotNets()) {
