@@ -23,28 +23,14 @@ public class Governo {
 
     public void adicionar(Suicida suicida, NaoSuicida naoSuicida){
         getListaDeTerroristasSuicidas().add(suicida);
-        getListaDeTerroristasNaoSuicidas().add(naoSuicida);
         getListaDeTerroristas().add(suicida);
+        getListaDeTerroristasNaoSuicidas().add(naoSuicida);
         getListaDeTerroristas().add(naoSuicida);
     }
 
-    public void setListaDeTerroristas(ArrayList<Terrorista> listaDeTerroristas) {
-        this.listaDeTerroristas = listaDeTerroristas;
-    }
-
-    public ArrayList<Suicida> getSuicidas() {
-        return suicidas;
-    }
-
-    public void setSuicidas(ArrayList<Suicida> suicidas) {
-        this.suicidas = suicidas;
-    }
-
-    public ArrayList<NaoSuicida> getNaoSuicidas() {
-        return naoSuicidas;
-    }
-
-    public void setNaoSuicidas(ArrayList<NaoSuicida> naoSuicidas) {
-        this.naoSuicidas = naoSuicidas;
+    @Override
+    public String toString() {
+        return "Governo{" +
+                "listaDeTerroristas=" + getListaDeTerroristas();
     }
 }

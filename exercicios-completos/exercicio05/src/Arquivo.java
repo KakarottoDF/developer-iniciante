@@ -61,6 +61,13 @@ public class Arquivo implements Comparable<Arquivo>{
 
     @Override
     public int compareTo(Arquivo arq) {
-        return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());
+        if (this.tempoDeCompilacaoTotal() < arq.tempoDeCompilacaoTotal()) {
+            return 1; // Coloca o maior tempo primeiro (ordem decrescente)
+        } else if (this.tempoDeCompilacaoTotal() > arq.tempoDeCompilacaoTotal()) {
+            return -1;
+        } else {
+            return 0;
+        }
+        /*return Integer.compare(arq.tempoDeCompilacaoTotal(), this.tempoDeCompilacaoTotal());*/
     }
 }

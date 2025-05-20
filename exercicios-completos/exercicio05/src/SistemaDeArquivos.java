@@ -7,21 +7,33 @@ public class SistemaDeArquivos{
     private ArrayList<C> cArrayList;
 
     public SistemaDeArquivos(){
-        this.arquivos = new ArrayList<>();
-        this.dotNets = new ArrayList<>();
-        this.cArrayList = new ArrayList<>();
+        setArquivos(new ArrayList<>());
+        setDotNets(new ArrayList<>());
+        setcArrayList(new ArrayList<>());
     }
 
     public ArrayList<Arquivo> getArquivo() {
         return this.arquivos;
     }
 
+    public void setArquivos(ArrayList<Arquivo> arquivos) {
+        this.arquivos = arquivos;
+    }
+
     public ArrayList<DotNet> getDotNets() {
         return this.dotNets;
     }
 
+    public void setDotNets(ArrayList<DotNet> dotNets) {
+        this.dotNets = dotNets;
+    }
+
     public ArrayList<C> getCArrayList() {
         return this.cArrayList;
+    }
+
+    public void setcArrayList(ArrayList<C> cArrayList) {
+        this.cArrayList = cArrayList;
     }
 
     public void adicionar(DotNet dotNet){

@@ -21,15 +21,6 @@ public class Reader{
         return escolha;
     }
 
-    public static double lerDouble(){
-        return new Scanner(System.in).nextDouble();
-    }
-
-    public static double lerDouble(String msg){
-        System.out.print(msg);
-        return lerDouble();
-    }
-
     public static String lerString(){
         return new Scanner(System.in).nextLine().trim().toUpperCase();
     }
@@ -71,25 +62,5 @@ public class Reader{
                 System.out.println(msgError);
             }
         } while(true);
-    }
-
-    public static char lerChar() {
-        return new Scanner(System.in).next().toUpperCase().charAt(0);
-    }
-
-    public static char lerChar(String msg) {
-        System.out.print(msg);
-        return lerChar();
-    }
-
-    public static char lerChar(String msg, String msgError, char opcao1, char opcao2){
-        char escolha;
-        do{
-            escolha = lerChar(msg);
-            if(escolha != opcao1 && escolha != opcao2){
-                System.out.println(msgError);
-            }
-        } while(escolha != opcao1 && escolha != opcao2);
-        return escolha;
     }
 }
