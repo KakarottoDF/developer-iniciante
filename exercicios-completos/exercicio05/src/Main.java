@@ -40,6 +40,5 @@ public class Main {
             escolha = Reader.lerBoolean("DESEJA ENCERRAR O PROGRAMA? [S]SIM [N]NÃO: ", "ESCOLHA SOMENTE [S]SIM [N]NÃO: ", "S", "N");
 
         } while (!escolha);
-
     }
 }

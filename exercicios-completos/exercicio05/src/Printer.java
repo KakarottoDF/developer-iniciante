@@ -30,31 +30,19 @@ public class Printer {
     public static void imprimirArquivosComLinhasCondicionais(SistemaDeArquivos sistema) {
         System.out.println("\nARQUIVOS ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS:");
 
-        for (DotNet dotnet : sistema.getDotNets()) {
-            if (dotnet.getQtdLinhas() >= LINHA_INICIAL && dotnet.getQtdLinhas() <= LINHA_FINAL) {
-                System.out.println(dotnet);
-            }
-        }
-
-        for (LinguagemC linguagemC : sistema.getCArrayList()) {
-            if (linguagemC.getQtdLinhas() >= LINHA_INICIAL && linguagemC.getQtdLinhas() <= LINHA_FINAL) {
-                System.out.println(linguagemC);
+        for (Arquivo arquivo : sistema.getArquivo()) {
+            if (arquivo.getQtdLinhas() >= LINHA_INICIAL && arquivo.getQtdLinhas() <= LINHA_FINAL) {
+                System.out.println(arquivo);
             }
         }
     }
 
     public static void imprimirArquivosComTermo(SistemaDeArquivos sistema) {
-        System.out.println("\nARQUIVOS COM " + TERMO + " NO NOME:");
+        System.out.println("\nARQUIVOS COM \"" + TERMO + "\" NO NOME:");
 
-        for (DotNet dotnet : sistema.getDotNets()) {
-            if (dotnet.getNome().toUpperCase().contains(TERMO)) {
-                System.out.println(dotnet);
-            }
-        }
-
-        for (LinguagemC linguagemC : sistema.getCArrayList()) {
-            if (linguagemC.getNome().toUpperCase().contains(TERMO)) {
-                System.out.println(linguagemC);
+        for (Arquivo arquivo : sistema.getArquivo()) {
+            if (arquivo.getNome().toUpperCase().contains(TERMO)) {
+                System.out.println(arquivo);
             }
         }
     }
@@ -68,4 +56,21 @@ public class Printer {
         System.out.println("[6] LISTAR ARQUIVOS QUE POSSUEM O TERMO " + TERMO + " NO NOME");
         System.out.println("[7] SAIR");
     }
+
+    public static void imprimirArquivosDotNet(SistemaDeArquivos sistema) {
+        for (Arquivo arquivo : sistema.getArquivo()) {
+            if (arquivo instanceof DotNet) {
+                System.out.println(arquivo);
+            }
+        }
+    }
+
+    public static void imprimirArquivosLinguagemC(SistemaDeArquivos sistema) {
+        for (Arquivo arquivo : sistema.getArquivo()) {
+            if (arquivo instanceof LinguagemC) {
+                System.out.println(arquivo);
+            }
+        }
+    }
+
 }
