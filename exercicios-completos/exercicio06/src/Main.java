@@ -28,6 +28,12 @@ public class Main {
                 case 6:
                     Printer.imprimirQuantidadeTerroristasComExplosivos(governo);
                     break;
+                case 7:
+                    Printer.imprimirPercentualNaoArabes(governo);
+                    break;
+                case 8:
+                    escolha = true;
+                    continue;
                 default:
                     System.out.println("ERRO INESPERADO");
                     break;

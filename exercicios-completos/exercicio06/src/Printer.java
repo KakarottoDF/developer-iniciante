@@ -34,6 +34,12 @@ public class Printer {
         System.out.println("A QUANTIDADE DE TERRORISTAS COM MAIS DE 10 EXPLOSIVOS É DE " + contador);
     }
 
+    public static void imprimirPercentualNaoArabes(Governo governo) {
+        double percentual = governo.calcularPercentualNaoArabes();
+        System.out.printf("PERCENTUAL DE TERRORISTAS QUE NÃO SÃO DA ARÁBIA: %.2f%%\n", percentual);
+    }
+
+
     public static void menu(){
         System.out.println("[1] CADASTRAR TERRORISTA SUICIDA");
         System.out.println("[2] CADASTRAR TERRORISTA NÃO SUICIDA");
@@ -41,6 +47,7 @@ public class Printer {
         System.out.println("[4] LISTAR TERRORISTAS COM GRAU DE PERICULOSIDADE MAIOR QUE " + GRAU_PERICULOSIDADE);
         System.out.println("[5] LISTAR TERRORISTAS QUE POSSUEM " + NOME + " NO NOME");
         System.out.println("[6] QUANTIDADE DE TERRORISTAS COM MAIS DE " + QTD_EXPLOSIVOS + " EXPLOSIVOS");
+        System.out.println("[7] PERCENTUAL DE TERRORISTAS QUE NÃO SÃO DA ARÁBIA");
         System.out.println("[8] SAIR");
     }
 }
