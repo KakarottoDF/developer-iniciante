@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class Reader{
     public static String lerString(){
-        return new Scanner(System.in).nextLine().toUpperCase();
+        return new Scanner(System.in).nextLine().trim().toUpperCase();
     }
 
     public static String lerString(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerString();
     }
 
@@ -27,7 +27,7 @@ public class Reader{
     }
 
     public static boolean lerBoolean(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerBoolean();
     }
 
@@ -38,7 +38,7 @@ public class Reader{
         do{
             leitor = lerString(msg);
             if(!leitor.equals(entrada) && !leitor.equals(saida)){
-                System.out.println(msgError);
+                System.out.print(msgError);
             }else{
                 if(leitor.equals(entrada)){
                     resultado = true;
@@ -57,7 +57,7 @@ public class Reader{
     }
 
     public static int lerInt(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerInt();
     }
 
@@ -67,7 +67,7 @@ public class Reader{
         do{
             leitor = lerInt(msg);
             if(leitor < min || leitor > max) {
-                System.out.println(msgError);
+                System.out.print(msgError);
             }
         }while(leitor < min || leitor > max);
         return leitor;
@@ -78,7 +78,7 @@ public class Reader{
     }
 
     public static double lerDouble(String msg){
-        System.out.println(msg);
+        System.out.print(msg);
         return lerDouble();
     }
 

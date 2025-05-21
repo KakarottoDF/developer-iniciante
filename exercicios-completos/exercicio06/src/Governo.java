@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class Governo {
     private ArrayList<Terrorista> listaDeTerroristas;
-    private ArrayList<Suicida> suicidas;
-    private ArrayList<NaoSuicida> naoSuicidas;
 
     public Governo(){
         this.listaDeTerroristas = new ArrayList<>();
@@ -13,24 +11,15 @@ public class Governo {
         return this.listaDeTerroristas;
     }
 
-    public ArrayList<Suicida> getListaDeTerroristasSuicidas() {
-        return this.suicidas;
-    }
 
-    public ArrayList<NaoSuicida> getListaDeTerroristasNaoSuicidas() {
-        return this.naoSuicidas;
-    }
-
-    public void adicionar(Suicida suicida, NaoSuicida naoSuicida){
-        getListaDeTerroristasSuicidas().add(suicida);
-        getListaDeTerroristas().add(suicida);
-        getListaDeTerroristasNaoSuicidas().add(naoSuicida);
-        getListaDeTerroristas().add(naoSuicida);
+    public void adicionar(Terrorista terrorista){
+        getListaDeTerroristas().add(terrorista);
     }
 
     @Override
     public String toString() {
-        return "Governo{" +
-                "listaDeTerroristas=" + getListaDeTerroristas();
+        return "---------- LISTA DE TERRORISTAS ----------" +
+                "\n" +
+                getListaDeTerroristas();
     }
 }

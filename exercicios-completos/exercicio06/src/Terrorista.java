@@ -27,8 +27,7 @@ public class Terrorista {
 
     @Override
     public String toString() {
-        return "Terrorista{" +
-                "nome='" + getNome() + '\'' +
-                ", quantidadeDeExplosivos=" + getQuantidadeDeExplosivos();
+        return "\nNOME: " + getNome() +
+               "\nQUANTIDADE DE EXPLOSIVOS: " + getQuantidadeDeExplosivos();
     }
 }

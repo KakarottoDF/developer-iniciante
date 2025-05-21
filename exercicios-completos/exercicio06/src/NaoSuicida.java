@@ -16,6 +16,9 @@ public class NaoSuicida extends Terrorista{
 
     @Override
     public String toString() {
-        return super.toString() + ", País de Origem: " + getPaisDeOrigem();
+        return "\nTERRORISTA NÃO SUICIDA:" +
+                super.toString() +
+                "\nPAÍS DE ORIGEM: " + getPaisDeOrigem()
+                + "\n";
     }
 }

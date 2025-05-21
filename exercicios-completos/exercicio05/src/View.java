@@ -20,7 +20,7 @@ public class View{
         );
     }
 
-    public static LinguagemC cadastrarC(SistemaDeArquivos sistemaDeArquivos){
+    public static LinguagemC cadastrarLinguagemC(SistemaDeArquivos sistemaDeArquivos){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
@@ -56,7 +56,7 @@ public class View{
 
         while(continuar) {
 
-            sistemaDeArquivos.adicionar(cadastrarC(sistemaDeArquivos));
+            sistemaDeArquivos.adicionar(cadastrarLinguagemC(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }

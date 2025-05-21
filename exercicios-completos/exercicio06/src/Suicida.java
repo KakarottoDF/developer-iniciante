@@ -1,21 +1,24 @@
 public class Suicida extends Terrorista{
-    private String religiao;
+    private final String RELIGIAO;
 
-    public Suicida(String nome, int quantidadeDeExplosivos, String religiao) {
+    public Suicida(String nome, int quantidadeDeExplosivos, boolean religiaoInformada) {
         super(nome, quantidadeDeExplosivos);
-        setReligiao(religiao);
+        if (religiaoInformada == true) {
+            this.RELIGIAO = "ISLAMISMO";
+        } else {
+            this.RELIGIAO = "OUTROS";
+        }
     }
 
     public String getReligiao() {
-        return this.religiao;
-    }
-
-    public void setReligiao(String religiao) {
-        this.religiao = religiao;
+        return this.RELIGIAO;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", Religião: " + getReligiao();
+        return "\nTERRORISTA SUICIDA:" +
+                super.toString() +
+                "\nRELIGIÃO: " + getReligiao()
+                + "\n";
     }
 }
