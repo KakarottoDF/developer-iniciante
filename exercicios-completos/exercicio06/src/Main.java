@@ -22,6 +22,12 @@ public class Main {
                 case 4:
                     Printer.imprimirListaGrauPericulosidade(governo);
                     break;
+                case 5:
+                    Printer.imprimirTerroristasComNomeEspecifico(governo);
+                    break;
+                case 6:
+                    Printer.imprimirQuantidadeTerroristasComExplosivos(governo);
+                    break;
                 default:
                     System.out.println("ERRO INESPERADO");
                     break;
