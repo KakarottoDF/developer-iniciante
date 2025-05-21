@@ -12,10 +12,10 @@ public class Main {
 
             switch(opcao) {
                 case 1:
-                    View.alimentarArrayDotNet(sistemaDeArquivos);
+                    View.cadastrarDotNet(sistemaDeArquivos);
                     break;
                 case 2:
-                    View.alimentarArrayC(sistemaDeArquivos);
+                    View.cadastrarLinguagemC(sistemaDeArquivos);
                     break;
                 case 3:
                     Printer.imprimirArquivosOrdenadosPorTempoDeCompilacao(sistemaDeArquivos);

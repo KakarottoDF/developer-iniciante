@@ -1,5 +1,5 @@
 public class View{
-    public static DotNet cadastrarDotNet(SistemaDeArquivos sistemaDeArquivos){
+    public static DotNet alimentarArrayDotNet(SistemaDeArquivos sistemaDeArquivos){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
@@ -20,7 +20,7 @@ public class View{
         );
     }
 
-    public static LinguagemC cadastrarLinguagemC(SistemaDeArquivos sistemaDeArquivos){
+    public static LinguagemC alimentarArrayC(SistemaDeArquivos sistemaDeArquivos){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
@@ -41,22 +41,22 @@ public class View{
         );
     }
 
-    public static void alimentarArrayDotNet(SistemaDeArquivos sistemaDeArquivos){
+    public static void cadastrarDotNet(SistemaDeArquivos sistemaDeArquivos){
         boolean continuar = true;
 
         while(continuar){
-            sistemaDeArquivos.adicionar(cadastrarDotNet(sistemaDeArquivos));
+            sistemaDeArquivos.adicionar(alimentarArrayDotNet(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
     }
 
-    public static void alimentarArrayC(SistemaDeArquivos sistemaDeArquivos){
+    public static void cadastrarLinguagemC(SistemaDeArquivos sistemaDeArquivos){
         boolean continuar = true;
 
         while(continuar) {
 
-            sistemaDeArquivos.adicionar(cadastrarLinguagemC(sistemaDeArquivos));
+            sistemaDeArquivos.adicionar(alimentarArrayC(sistemaDeArquivos));
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }

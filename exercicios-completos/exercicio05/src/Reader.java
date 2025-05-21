@@ -15,7 +15,7 @@ public class Reader{
         do{
             escolha = lerInt(msg);
             if(escolha < inicio || escolha > fim) {
-                System.out.println(msgError);
+                System.out.print(msgError);
             }
         } while(escolha < inicio || escolha > fim);
         return escolha;
@@ -35,7 +35,7 @@ public class Reader{
         do{
             escolha = lerString(msg);
             if(!escolha.equalsIgnoreCase(opcao1) && !escolha.equalsIgnoreCase(opcao2)){
-                System.out.println(msgError);
+                System.out.print(msgError);
             }
         } while(!escolha.equalsIgnoreCase(opcao1) && !escolha.equalsIgnoreCase(opcao2));
         return escolha;
@@ -59,7 +59,7 @@ public class Reader{
             } else if(escolha.equalsIgnoreCase(no)) {
                 return false;
             } else {
-                System.out.println(msgError);
+                System.out.print(msgError);
             }
         } while(true);
     }
