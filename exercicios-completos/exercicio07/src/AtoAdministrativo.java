@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class AtoAdministrativo {
     //Um ato administrativo não pode ter o mesmo assunto que outro
+    private AgentePublico agentePublico;
     private String assunto;
     private String exposicaoDeMotivos;
-    private AgentePublico agentePublico;
 
-    public AtoAdministrativo(String assunto, String exposicaoDeMotivos, AgentePublico agentePublico) {
+    public AtoAdministrativo(AgentePublico agentePublico, String assunto, String exposicaoDeMotivos) {
+        setAgentePublico(agentePublico);
         setAssunto(assunto);
         setExposicaoDeMotivos(exposicaoDeMotivos);
-        setAgentePublico(agentePublico);
     }
 
     public String getAssunto() {
@@ -37,11 +37,21 @@ public class AtoAdministrativo {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        AtoAdministrativo atoAdministrativo = (AtoAdministrativo) obj;
+        return getAssunto() != null && getAssunto().equals(atoAdministrativo.getAssunto());
+    }
+
+    @Override
+    public int hashCode() {
+        return getAssunto() != null ? getAssunto().hashCode() : 0;
+    }
+
+    @Override
     public String toString() {
-        return "AtoAdministrativo{" +
-                "assunto='" + getAssunto() + '\'' +
-                ", exposicaoDeMotivos='" + getExposicaoDeMotivos() + '\'' +
-                ", agentePublico=" + getAgentePublico() +
-                '}';
+        return "\nATO ADMINISTRATIVO:" +
+                "\nAGENTE PÚBLICO DESTE ATO: " + getAgentePublico() +
+                "\nASSUNTO: " + getAssunto() +
+                "\nEXPOSIÇÃO DE MOTIVOS: " + getExposicaoDeMotivos();
     }
 }

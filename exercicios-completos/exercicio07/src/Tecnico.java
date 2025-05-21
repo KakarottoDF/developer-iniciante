@@ -16,8 +16,8 @@ public class Tecnico extends AtoAdministrativo{
 
     @Override
     public String toString() {
-        return "Tecnico{" +
-                "notaTecnica='" + getNotaTecnica() + '\'' +
-                '}';
+        return "\nPOSICIONAMENTO DOUTRINÁRIO TÉCNICO" +
+                super.toString() +
+                "\nNOTA TÉCNICA: " + getNotaTecnica();
     }
 }

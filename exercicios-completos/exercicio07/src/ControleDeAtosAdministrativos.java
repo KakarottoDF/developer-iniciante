@@ -11,10 +11,14 @@ public class ControleDeAtosAdministrativos {
         return this.listaAtoAdministrativos;
     }
 
+    public boolean validarSeAssuntoExiste(String assunto) {
+        AtoAdministrativo novoAtoAdministrativo = new AtoAdministrativo(null, assunto, null);
+        return getListaAtoAdministrativos().contains(novoAtoAdministrativo);
+    }
+
     @Override
     public String toString() {
-        return "ControleDeAtosAdministrativos{" +
-                "listaAtoAdministrativos=" + getListaAtoAdministrativos() +
-                '}';
+        return "---------- SISTEMA DE CONTROLE DE ATOS ADMINISTRATIVOS ----------" +
+                "\nLISTA DE ATOS ADMINISTRATIVOS: " + getListaAtoAdministrativos();
     }
 }
