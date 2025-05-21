@@ -9,7 +9,7 @@ public class Printer {
     public static void imprimirListaGrauPericulosidade(Governo governo){
 
         for (Terrorista terrorista : governo.getListaDeTerroristas()){
-            if(terrorista.grauDePericulosidade() > 50){
+            if(terrorista.grauDePericulosidade() > GRAU_PERICULOSIDADE){
                 System.out.println(terrorista);
             }
         }
