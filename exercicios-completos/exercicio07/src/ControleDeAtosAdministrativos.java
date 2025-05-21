@@ -8,7 +8,7 @@ public class ControleDeAtosAdministrativos {
     }
 
     public ArrayList<AtoAdministrativo> getListaAtoAdministrativos() {
-        return listaAtoAdministrativos;
+        return this.listaAtoAdministrativos;
     }
 
     @Override

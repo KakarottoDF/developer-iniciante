@@ -6,9 +6,14 @@ public class AtoAdministrativo {
     private String exposicaoDeMotivos;
     private AgentePublico agentePublico;
 
+    public AtoAdministrativo(String assunto, String exposicaoDeMotivos, AgentePublico agentePublico) {
+        setAssunto(assunto);
+        setExposicaoDeMotivos(exposicaoDeMotivos);
+        setAgentePublico(agentePublico);
+    }
 
     public String getAssunto() {
-        return assunto;
+        return this.assunto;
     }
 
     public void setAssunto(String assunto) {
@@ -16,7 +21,7 @@ public class AtoAdministrativo {
     }
 
     public String getExposicaoDeMotivos() {
-        return exposicaoDeMotivos;
+        return this.exposicaoDeMotivos;
     }
 
     public void setExposicaoDeMotivos(String exposicaoDeMotivos) {
@@ -24,7 +29,7 @@ public class AtoAdministrativo {
     }
 
     public AgentePublico getAgentePublico() {
-        return agentePublico;
+        return this.agentePublico;
     }
 
     public void setAgentePublico(AgentePublico agentePublico) {
