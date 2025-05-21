@@ -25,6 +25,10 @@ public class Terrorista {
         this.quantidadeDeExplosivos = quantidadeDeExplosivos;
     }
 
+    public int grauDePericulosidade(){
+        return 0;
+    }
+
     @Override
     public String toString() {
         return "\nNOME: " + getNome() +

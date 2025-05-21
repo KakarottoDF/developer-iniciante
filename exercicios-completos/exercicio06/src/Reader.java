@@ -16,7 +16,7 @@ public class Reader{
         do{
             leitor = lerString(msg);
             if(!leitor.equals(entrada) || !leitor.equals(saida)){
-                System.out.println(msgError);
+                System.out.print(msgError);
             }
         }while(!leitor.equals(entrada) && !leitor.equals(saida));
         return leitor;
