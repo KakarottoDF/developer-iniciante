@@ -1,39 +1,39 @@
 public class Suicida extends Terrorista{
-    private final String RELIGIAO;
-    private final int RELIGIAO_ISLA = 5;
-    private final int RELIGIAO_OUTROS = 2;
+    private String religiao;
+    private final int CONST_RELIGIAO_ISLA = 5;
+    private final int CONST_RELIGIAO_OUTROS = 2;
 
-    public Suicida(String nome, int quantidadeDeExplosivos, boolean religiaoInformada) {
+    public Suicida(String nome, int quantidadeDeExplosivos, String religiao) {
         super(nome, quantidadeDeExplosivos);
-        if (religiaoInformada == true) {
-            this.RELIGIAO = "ISLAMISMO";
-        } else {
-            this.RELIGIAO = "OUTRA";
-        }
+        setReligiao(religiao);
     }
 
     @Override
     public int grauDePericulosidade(){
-        return getRELIGIAO() == "ISLAMISMO" ? (3 * getQuantidadeDeExplosivos()) + getRELIGIAO_ISLA() : (3 * getQuantidadeDeExplosivos()) + getRELIGIAO_OUTROS();
+        return getReligiao() == "ISLAMISMO" ? (3 * getQuantidadeDeExplosivos()) + getCONST_RELIGIAO_ISLA() : (3 * getQuantidadeDeExplosivos()) + getCONST_RELIGIAO_OUTROS();
     }
 
-    public String getRELIGIAO() {
-        return RELIGIAO;
+    public String getReligiao() {
+        return religiao;
     }
 
-    public int getRELIGIAO_ISLA() {
-        return RELIGIAO_ISLA;
+    public void setReligiao(String religiao) {
+        this.religiao = religiao;
     }
 
-    public int getRELIGIAO_OUTROS() {
-        return RELIGIAO_OUTROS;
+    public int getCONST_RELIGIAO_ISLA() {
+        return this.CONST_RELIGIAO_ISLA;
+    }
+
+    public int getCONST_RELIGIAO_OUTROS() {
+        return this.CONST_RELIGIAO_OUTROS;
     }
 
     @Override
     public String toString() {
         return "\nTERRORISTA SUICIDA:" +
                 super.toString() +
-                "\nRELIGIÃO: " + getRELIGIAO()
+                "\nRELIGIÃO: " + getReligiao()
                 + "\n";
     }
 }
