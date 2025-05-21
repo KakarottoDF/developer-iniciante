@@ -1,7 +1,7 @@
 public class NaoSuicida extends Terrorista{
     private String paisDeOrigem;
-    private final int CONST_PAIS_ARABIA = 7;
-    private final int CONST_PAIS_OUTROS = 5;
+    private static final int CONST_PAIS_ARABIA = 7;
+    private static final int CONST_PAIS_OUTROS = 5;
 
     public NaoSuicida(String nome, int quantidadeDeExplosivos, String paisDeOrigem) {
         super(nome, quantidadeDeExplosivos);
@@ -10,7 +10,7 @@ public class NaoSuicida extends Terrorista{
 
     @Override
     public int grauDePericulosidade(){
-        return getPaisDeOrigem() == "ARÁBIA" ? (3 * getQuantidadeDeExplosivos()) + getCONST_PAIS_ARABIA() : (3 * getQuantidadeDeExplosivos()) + getCONST_PAIS_OUTROS();
+        return getPaisDeOrigem().equals("ARÁBIA") ? (3 * getQuantidadeDeExplosivos()) + CONST_PAIS_ARABIA : (3 * getQuantidadeDeExplosivos()) + CONST_PAIS_OUTROS;
     }
 
     public String getPaisDeOrigem() {
@@ -21,19 +21,12 @@ public class NaoSuicida extends Terrorista{
         this.paisDeOrigem = paisDeOrigem;
     }
 
-    public int getCONST_PAIS_ARABIA() {
-        return CONST_PAIS_ARABIA;
-    }
-
-    public int getCONST_PAIS_OUTROS() {
-        return CONST_PAIS_OUTROS;
-    }
-
     @Override
     public String toString() {
         return "\nTERRORISTA NÃO SUICIDA:" +
                 super.toString() +
-                "\nPAÍS DE ORIGEM: " + getPaisDeOrigem()
-                + "\n";
+                "\nPAÍS DE ORIGEM: " + getPaisDeOrigem() +
+                "\nGRAU DE PERICULOSIDADE: " + grauDePericulosidade() +
+                "\n";
     }
 }

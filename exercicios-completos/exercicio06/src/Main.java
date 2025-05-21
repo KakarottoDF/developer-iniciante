@@ -7,7 +7,7 @@ public class Main {
         do {
             Printer.menu();
 
-            opcao = Reader.lerInt("Escolha uma das opções: ", "Escolha somente um número entre 1 a 4", 1, 4);
+            opcao = Reader.lerInt("Escolha uma das opções: ", "Escolha somente um número entre 1 a 8", 1, 8);
 
             switch (opcao) {
                 case 1:
@@ -17,8 +17,10 @@ public class Main {
                     View.cadastrarTerroristaNaoSuicida(governo);
                     break;
                 case 3:
+                    Printer.imprimirListaTodosTerroristas(governo);
                     break;
                 case 4:
+                    Printer.imprimirListaGrauPericulosidade(governo);
                     break;
                 default:
                     System.out.println("ERRO INESPERADO");
