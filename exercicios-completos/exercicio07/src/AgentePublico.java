@@ -25,8 +25,7 @@ public class AgentePublico {
 
     @Override
     public String toString() {
-        return "\nAGENTE PÚBLICO DESTE ATO:" +
-                "\nNOME: " + getNome() +
-                "\nMATRÍCULA" + getMatricula();
+        return  "\nNOME: " + getNome() +
+                "\nMATRÍCULA: " + getMatricula();
     }
 }

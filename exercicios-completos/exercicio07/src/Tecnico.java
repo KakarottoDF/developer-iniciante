@@ -1,8 +1,8 @@
 public class Tecnico extends AtoAdministrativo{
     private String notaTecnica;
 
-    public Tecnico(String assunto, String exposicaoDeMotivos, AgentePublico agentePublico, String notaTecnica) {
-        super(assunto, exposicaoDeMotivos, agentePublico);
+    public Tecnico(AgentePublico agentePublico, String assunto, String exposicaoDeMotivos, String notaTecnica) {
+        super(agentePublico, assunto, exposicaoDeMotivos);
         setNotaTecnica(notaTecnica);
     }
 

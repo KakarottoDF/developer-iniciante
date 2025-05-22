@@ -11,6 +11,10 @@ public class ControleDeAtosAdministrativos {
         return this.listaAtoAdministrativos;
     }
 
+    public void adicionar(AtoAdministrativo atoAdministrativo){
+        getListaAtoAdministrativos().add(atoAdministrativo);
+    }
+
     public boolean validarSeAssuntoExiste(String assunto) {
         AtoAdministrativo novoAtoAdministrativo = new AtoAdministrativo(null, assunto, null);
         return getListaAtoAdministrativos().contains(novoAtoAdministrativo);
