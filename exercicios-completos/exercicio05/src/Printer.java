@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class Printer {
     private static final int LINHA_INICIAL = 1000;
     private static final int LINHA_FINAL = 7000;
@@ -46,16 +48,6 @@ public class Printer {
                 System.out.println(arquivo);
             }
         }
-    }
-
-    public static void menu(){
-        System.out.println("[1] CADASTRAR ARQUIVOS DOTNET");
-        System.out.println("[2] CADASTRAR ARQUIVOS C");
-        System.out.println("[3] LISTAR ARQUIVOS ORDENADOS EM FORMA DECRESCENTE POR TEMPO DE COMPILAÇÃO");
-        System.out.println("[4] LISTAR ARQUIVO QUE MAIS DEMORA PARA SER COMPILADO");
-        System.out.println("[5] LISTAR ARQUIVOS QUE POSSUEM ENTRE " + LINHA_INICIAL + " E " + LINHA_FINAL + " LINHAS");
-        System.out.println("[6] LISTAR ARQUIVOS QUE POSSUEM O TERMO " + TERMO + " NO NOME");
-        System.out.println("[7] SAIR");
     }
 
     public static void imprimirArquivosDotNet(SistemaDeArquivos sistema) {

@@ -1,85 +1,93 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class Reader{
-    public static String lerString(){
-        return new Scanner(System.in).nextLine().trim().toUpperCase();
+public class Reader {
+
+    public static String lerString() {
+        return JOptionPane.showInputDialog(null, "").trim().toUpperCase();
     }
 
-    public static String lerString(String msg){
-        System.out.print(msg);
-        return lerString();
+    public static String lerString(String msg) {
+        return JOptionPane.showInputDialog(null, msg).trim().toUpperCase();
     }
 
-    public static String lerString(String msg, String msgError, String entrada, String saida){
+    public static String lerString(String msg, String msgError, String entrada, String saida) {
         String leitor;
 
-        do{
-            leitor = lerString(msg);
-            if(!leitor.equals(entrada) || !leitor.equals(saida)){
-                System.out.print(msgError);
+        do {
+            leitor = JOptionPane.showInputDialog(null, msg).trim().toUpperCase();
+            if (!leitor.equals(entrada) && !leitor.equals(saida)) {
+                JOptionPane.showMessageDialog(null, msgError);
             }
-        }while(!leitor.equals(entrada) && !leitor.equals(saida));
+        } while (!leitor.equals(entrada) && !leitor.equals(saida));
+
         return leitor;
     }
 
-    public static boolean lerBoolean(){
-        return new Scanner(System.in).nextBoolean();
+    public static boolean lerBoolean() {
+        String input = JOptionPane.showInputDialog(null, "").trim().toLowerCase();
+        return Boolean.parseBoolean(input);
     }
 
-    public static boolean lerBoolean(String msg){
-        System.out.print(msg);
-        return lerBoolean();
+    public static boolean lerBoolean(String msg) {
+        String input = JOptionPane.showInputDialog(null, msg).trim().toLowerCase();
+        return Boolean.parseBoolean(input);
     }
 
-    public static boolean lerBoolean(String msg, String msgError, String entrada, String saida){
+    public static boolean lerBoolean(String msg, String msgError, String entrada, String saida) {
         String leitor;
         boolean resultado = true;
 
-        do{
-            leitor = lerString(msg);
-            if(!leitor.equals(entrada) && !leitor.equals(saida)){
-                System.out.print(msgError);
-            }else{
-                if(leitor.equals(entrada)){
-                    resultado = true;
-                }else{
-                    if(leitor.equals(saida)){
-                        resultado = false;
-                    }
-                }
+        do {
+            leitor = JOptionPane.showInputDialog(null, msg).trim().toUpperCase();
+            if (!leitor.equals(entrada) && !leitor.equals(saida)) {
+                JOptionPane.showMessageDialog(null, msgError);
+            } else {
+                resultado = leitor.equals(entrada);
             }
-        }while(!leitor.equals(entrada) && !leitor.equals(saida));
+        } while (!leitor.equals(entrada) && !leitor.equals(saida));
+
         return resultado;
     }
 
-    public static int lerInt(){
-        return new Scanner(System.in).nextInt();
+    public static int lerInt() {
+        String input = JOptionPane.showInputDialog(null, "");
+        return Integer.parseInt(input.trim());
     }
 
-    public static int lerInt(String msg){
-        System.out.print(msg);
-        return lerInt();
+    public static int lerInt(String msg) {
+        String input = JOptionPane.showInputDialog(null, msg);
+        return Integer.parseInt(input.trim());
     }
 
-    public static int lerInt(String msg, String msgError, int min, int max){
-        int leitor;
+    public static int lerInt(String msg, String msgError, int min, int max) {
+        int leitor = 0;
+        boolean valido = false;
 
-        do{
-            leitor = lerInt(msg);
-            if(leitor < min || leitor > max) {
-                System.out.print(msgError);
+        do {
+            try {
+                String input = JOptionPane.showInputDialog(null, msg);
+                leitor = Integer.parseInt(input.trim());
+                if (leitor < min || leitor > max) {
+                    JOptionPane.showMessageDialog(null, msgError);
+                } else {
+                    valido = true;
+                }
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, msgError);
             }
-        }while(leitor < min || leitor > max);
+        } while (!valido);
+
         return leitor;
     }
 
-    public static double lerDouble(){
-        return new Scanner(System.in).nextDouble();
+    public static double lerDouble() {
+        String input = JOptionPane.showInputDialog(null, "");
+        return Double.parseDouble(input.trim());
     }
 
-    public static double lerDouble(String msg){
-        System.out.print(msg);
-        return lerDouble();
+    public static double lerDouble(String msg) {
+        String input = JOptionPane.showInputDialog(null, msg);
+        return Double.parseDouble(input.trim());
     }
 
 }

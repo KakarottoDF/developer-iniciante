@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         boolean escolha;
@@ -7,10 +5,18 @@ public class Main {
         SistemaDeArquivos sistemaDeArquivos = new SistemaDeArquivos();
 
         do {
-            Printer.menu();
-            opcao = Reader.lerInt("ESCOLHA UMA DAS OPÇÕES: ", "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 7", 1, 7);
+            opcao = Reader.lerInt("""
+        ESCOLHA UMA DAS OPÇÕES:
+        [1] Cadastrar arquivos DotNet
+        [2] Cadastrar arquivos C
+        [3] Listar arquivos ordenados por tempo de compilação (decrescente)
+        [4] Arquivo com maior tempo de compilação
+        [5] Arquivos com 1000 a 7000 linhas
+        [6] Arquivos com o termo "PROVA2" no nome
+        [7] Sair
+        """, "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 7", 1, 7);
 
-            switch(opcao) {
+            switch (opcao) {
                 case 1:
                     View.cadastrarDotNet(sistemaDeArquivos);
                     break;

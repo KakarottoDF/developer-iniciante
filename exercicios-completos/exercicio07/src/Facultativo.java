@@ -16,7 +16,7 @@ public class Facultativo extends AtoAdministrativo {
 
     @Override
     public String toString() {
-        return "\nPOSICIONAMENTO DOUTRINÁRIO FACULTATIVO" +
+        return "\n*** POSICIONAMENTO DOUTRINÁRIO FACULTATIVO ***" +
                 super.toString() +
                 "\nCONCLUSÃO: " + getConclusao() +
                 "\n";
