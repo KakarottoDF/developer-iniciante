@@ -24,7 +24,7 @@ public class Main {
                     View.cadastrarLinguagemC(sistemaDeArquivos);
                     break;
                 case 3:
-                    Printer.imprimirArquivosOrdenadosPorTempoDeCompilacao(sistemaDeArquivos);
+                    Printer.imprimirArquivosOrdenadosPorTempoDeCompilacaoDecrescente(sistemaDeArquivos);
                     break;
                 case 4:
                     Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);

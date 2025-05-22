@@ -12,14 +12,17 @@ public class Printer {
     //interface comparable
     //
 
-    public static void imprimirArquivosOrdenadosPorTempoDeCompilacao(SistemaDeArquivos sistema) {
-        System.out.println("\nARQUIVOS ORDENADOS POR TEMPO DE COMPILAÇÃO (DECRESCENTE):");
+    public static void imprimirArquivosOrdenadosPorTempoDeCompilacaoDecrescente(SistemaDeArquivos sistema) {
+        StringBuilder sb = new StringBuilder("ARQUIVOS ORDENADOS POR TEMPO DE COMPILAÇÃO (DECRESCENTE):\n\n");
 
         for (Arquivo arq : sistema.getArquivosOrdenadosPorTempoDeCompilacaoDecrescente()) {
-            System.out.println(arq);
-            System.out.println("TEMPO TOTAL DE COMPILAÇÃO: " + arq.tempoDeCompilacao() + " SEGUNDOS");
+            sb.append(arq).append("\n");
+            sb.append("TEMPO TOTAL DE COMPILAÇÃO: ").append(arq.tempoDeCompilacao()).append(" SEGUNDOS\n\n");
         }
+
+        JOptionPane.showMessageDialog(null, sb.toString(), "Resultado", JOptionPane.INFORMATION_MESSAGE);
     }
+
 
     public static void imprimirArquivoComMaiorTempoDeCompilacao(SistemaDeArquivos sistemaDeArquivos) {
         if (sistemaDeArquivos.getArquivo().isEmpty()) {
