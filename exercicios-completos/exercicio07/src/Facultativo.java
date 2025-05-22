@@ -1,8 +1,8 @@
 public class Facultativo extends AtoAdministrativo {
     private String conclusao;
 
-    public Facultativo(String assunto, String exposicaoDeMotivos, AgentePublico agentePublico, String conclusao) {
-        super(assunto, exposicaoDeMotivos, agentePublico);
+    public Facultativo(AgentePublico agentePublico, String assunto, String exposicaoDeMotivos, String conclusao) {
+        super(agentePublico, assunto, exposicaoDeMotivos);
         setConclusao(conclusao);
     }
 
