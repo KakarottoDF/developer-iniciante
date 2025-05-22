@@ -3,7 +3,7 @@ public class View {
     private static final String NACIONALIDADE = "ARÁBIA";
     private static final String RELIGIAO = "ISLAMISMO";
 
-    public static Suicida alimentaArrayTerroristaSuicida(){
+    public static Suicida alimentaArrayTerroristaSuicida() {
 
         String nome = Reader.lerString("DIGITE O NOME DESTE TERRORISTA: ");
         int qtdExplosivos = Reader.lerInt("INFORME A QUANTIDADE DE EXPLOSIVOS: ");
@@ -12,9 +12,9 @@ public class View {
 
         boolean validarReligiao = Reader.lerBoolean("O TERRORISTA PERTENCE A RELIGIÃO DO " + RELIGIAO + "? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM OU [N]NÃO: ", "S", "N");
 
-        if(validarReligiao){
+        if (validarReligiao) {
             religiao = RELIGIAO;
-        }else{
+        } else {
             religiao = Reader.lerString("INFORME A RELIGIÃO DESSE TERRORISTA: ");
         }
 
@@ -25,18 +25,18 @@ public class View {
         );
     }
 
-    public static void cadastrarTerroristaSuicida(Governo governo){
+    public static void cadastrarTerroristaSuicida(Governo governo) {
 
         boolean continuar = true;
 
-        while(continuar){
+        while (continuar) {
             governo.adicionar(alimentaArrayTerroristaSuicida());
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO: ", "S", "N");
         }
     }
 
-    public static NaoSuicida alimentaArrayTerroristaNaoSuicida(){
+    public static NaoSuicida alimentaArrayTerroristaNaoSuicida() {
 
         String nome = Reader.lerString("DIGITE O NOME DESTE TERRORISTA: ");
         int qtdExplosivos = Reader.lerInt("INFORME A QUANTIDADE DE EXPLOSIVOS: ");
@@ -45,9 +45,9 @@ public class View {
 
         boolean validarPais = Reader.lerBoolean("O TERRORISTA NASCEU NA " + NACIONALIDADE + "? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM OU [N]NÃO: ", "S", "N");
 
-        if(validarPais){
+        if (validarPais) {
             paisOrigem = NACIONALIDADE;
-        }else{
+        } else {
             paisOrigem = Reader.lerString("INFORME O PAÍS DE ORIGEM DESSE TERRORISTA: ");
         }
 
@@ -58,11 +58,11 @@ public class View {
         );
     }
 
-    public static void cadastrarTerroristaNaoSuicida(Governo governo){
+    public static void cadastrarTerroristaNaoSuicida(Governo governo) {
 
         boolean continuar = true;
 
-        while(continuar){
+        while (continuar) {
             governo.adicionar(alimentaArrayTerroristaNaoSuicida());
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO: ", "S", "N");

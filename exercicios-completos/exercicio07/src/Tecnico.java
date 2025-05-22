@@ -18,6 +18,7 @@ public class Tecnico extends AtoAdministrativo{
     public String toString() {
         return "\nPOSICIONAMENTO DOUTRINÁRIO TÉCNICO" +
                 super.toString() +
-                "\nNOTA TÉCNICA: " + getNotaTecnica();
+                "\nNOTA TÉCNICA: " + getNotaTecnica() +
+                "\n";
     }
 }

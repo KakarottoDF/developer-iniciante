@@ -18,6 +18,7 @@ public class Facultativo extends AtoAdministrativo {
     public String toString() {
         return "\nPOSICIONAMENTO DOUTRINÁRIO FACULTATIVO" +
                 super.toString() +
-                "\nCONCLUSÃO: " + getConclusao();
+                "\nCONCLUSÃO: " + getConclusao() +
+                "\n";
     }
 }
