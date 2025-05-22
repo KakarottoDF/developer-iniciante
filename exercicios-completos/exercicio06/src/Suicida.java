@@ -1,4 +1,4 @@
-public class Suicida extends Terrorista{
+public class Suicida extends Terrorista implements Periculosidade{
     private String religiao;
     private static final int CONST_RELIGIAO_ISLA = 5;
     private static final int CONST_RELIGIAO_OUTROS = 2;

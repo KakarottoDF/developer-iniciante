@@ -37,7 +37,6 @@ public class LinguagemC extends Arquivo{
         if (getQtdFuncoes() >= 80) {
             tempo += 5;
         }
-
         return super.tempoDeCompilacao() + tempo;
     }
 
