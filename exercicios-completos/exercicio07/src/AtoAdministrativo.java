@@ -49,8 +49,8 @@ public class AtoAdministrativo {
 
     @Override
     public String toString() {
-        return "\nATO ADMINISTRATIVO:" +
-                "\nAGENTE PÚBLICO DESTE ATO: " + getAgentePublico() +
+        return "\nAGENTE PÚBLICO DESTE ATO: " + getAgentePublico() +
+                "\n--- ATO ADMINISTRATIVO ---" +
                 "\nASSUNTO: " + getAssunto() +
                 "\nEXPOSIÇÃO DE MOTIVOS: " + getExposicaoDeMotivos();
     }
