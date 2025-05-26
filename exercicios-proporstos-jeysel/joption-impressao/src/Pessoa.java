@@ -48,6 +48,7 @@ public class Pessoa {
         return "\nNOME: " + getNome() +
                 "\nMATRÍCULA: " + getMatricula() +
                 getEndereco() +
-                "\nTELEFONE: " + getTelefone();
+                "\nTELEFONE: " + getTelefone() +
+                "\n";
     }
 }
