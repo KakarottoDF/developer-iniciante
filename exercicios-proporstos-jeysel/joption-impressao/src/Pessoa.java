@@ -2,9 +2,9 @@ public class Pessoa {
     private String nome;
     private int matricula;
     private Endereco endereco;
-    private int telefone;
+    private String telefone;
 
-    public Pessoa(String nome, int matricula, Endereco endereco, int telefone) {
+    public Pessoa(String nome, int matricula, Endereco endereco, String telefone) {
         setNome(nome);
         setMatricula(matricula);
         setEndereco(endereco);
@@ -35,11 +35,11 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 

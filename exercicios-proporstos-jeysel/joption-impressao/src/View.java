@@ -13,7 +13,7 @@ public class View {
           Reader.lerString("Informe o nome da pessoa: "),
           Reader.lerInt("Informe a matrícula: "),
           alimentarEndereco(),
-          Reader.lerInt("Informe o telefone: ")
+          Reader.lerString("Informe o telefone: ")
         );
     }
 
