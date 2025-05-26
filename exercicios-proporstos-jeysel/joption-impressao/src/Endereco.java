@@ -35,8 +35,8 @@ public class Endereco {
 
     @Override
     public String toString() {
-        return  "\nENDEREÇO: " + getLogradouro() + '\'' +
-                "\nCIDADE: " + getCidade() + '\'' +
+        return  "\nENDEREÇO: " + getLogradouro() +
+                "\nCIDADE: " + getCidade() +
                 "\nESTADO: " + getEstado();
     }
 }
