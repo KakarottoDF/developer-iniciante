@@ -1,13 +1,24 @@
 import javax.swing.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Printer {
     private static final int LINHA_INICIAL = 1000;
     private static final int LINHA_FINAL = 7000;
     private static final String TERMO = "PROVA2";
 
-    /*public static void imprimirTodosOsSistemas(SistemaDeArquivos sistemaDeArquivos){
-        System.out.println(sistemaDeArquivos);
-    }*/
+    public static void imprimirTodosOsSistemas(SistemaDeArquivos sistemaDeArquivos){
+        File file = new File("arquivos.txt");
+        try(FileWriter fw = new FileWriter(file, true);
+            BufferedWriter br = new BufferedWriter(fw)){
+            br.write(sistemaDeArquivos.toString());
+            br.flush();
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
 
     //interface comparable
     //
