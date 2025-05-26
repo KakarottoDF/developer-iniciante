@@ -17,8 +17,6 @@ public class GerenciarPessoas {
 
     @Override
     public String toString() {
-        return "GerenciarPessoas{" +
-                "listaDePessoas=" + getPessoas() +
-                '}';
+        return "----- RELAÇÃO DE PESSOAS -----" + getPessoas();
     }
 }

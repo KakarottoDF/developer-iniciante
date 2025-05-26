@@ -3,5 +3,6 @@ public class Main {
         GerenciarPessoas gerenciarPessoas = new GerenciarPessoas();
 
         View.cadastrarPessoa(gerenciarPessoas);
+        Printer.imprimirPessoas(gerenciarPessoas);
     }
 }
