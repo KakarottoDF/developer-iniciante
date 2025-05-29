@@ -18,6 +18,12 @@ public class Morador extends Pessoa implements Observer {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        Morador morador = (Morador) obj;
+        return getNome().equals(morador.getNome());
+    }
+
+    @Override
     public void update(Observable o, Object arg) {
 
     }

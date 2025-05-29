@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GerenciadorBanca{
+public class GerenciadorBanca implements Validador{
     private ArrayList<Morador> listaMoradores;
     private ArrayList<Banca> listaBancas;
 
@@ -15,6 +15,26 @@ public class GerenciadorBanca{
 
     public void adicionar(Banca banca){
         getListaBancas().add(banca);
+    }
+
+    @Override
+    public boolean moradorExiste(String nome){
+        for(Morador morador : getListaMoradores()){
+            if(morador.getNome().equalsIgnoreCase(nome)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean revistaExiste(String nome){
+        for(Banca banca : getListaBancas()){
+            if(banca.getRevista().getNome().equalsIgnoreCase(nome)){
+                return true;
+            }
+        }
+        return false;
     }
 
     public ArrayList<Morador> getListaMoradores() {

@@ -41,6 +41,12 @@ public class Revista extends Observable {
     }
 
     @Override
+    public boolean equals(Object obj){
+        Revista revista = (Revista) obj;
+        return getNome().equals(revista.getNome());
+    }
+
+    @Override
     public String toString() {
         return "Revista{" +
                 "nome='" + getNome() + '\'' +
