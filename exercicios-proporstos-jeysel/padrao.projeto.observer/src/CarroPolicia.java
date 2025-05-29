@@ -28,6 +28,8 @@ public class CarroPolicia implements Observer, Carro{
         CarroRoubado carroObservado = (CarroRoubado)arg0;
         String acao = String.valueOf(arg1);
 
+        JOptionPane.showMessageDialog(null, "DEBUG: Ação atual do carro roubado: " + carroObservado.getAcao());
+
         if(acao.equals("frente")){
             this.frente();
         }else{
