@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class GerenciadorBanca {
+public class GerenciadorBanca{
     private ArrayList<Morador> listaMoradores;
     private ArrayList<Banca> listaBancas;
 
@@ -9,8 +9,11 @@ public class GerenciadorBanca {
         this.listaBancas = new ArrayList<>();
     }
 
-    public void adicionar(Morador morador, Banca banca){
+    public void adicionar(Morador morador){
         getListaMoradores().add(morador);
+    }
+
+    public void adicionar(Banca banca){
         getListaBancas().add(banca);
     }
 

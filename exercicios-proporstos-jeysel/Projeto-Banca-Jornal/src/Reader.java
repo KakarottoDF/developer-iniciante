@@ -24,6 +24,11 @@ public class Reader {
         return Double.parseDouble(message.trim());
     }
 
+    public static int lerInt(String msg){
+        String message = JOptionPane.showInputDialog(null, msg);
+        return Integer.parseInt(message.trim());
+    }
+
     public static boolean lerBoolean(String msg){
         String message = JOptionPane.showInputDialog(null, msg);
         return Boolean.parseBoolean(message.trim());
@@ -34,9 +39,9 @@ public class Reader {
         boolean retorno = true;
 
         do{
-            message = JOptionPane.showInputDialog(null, msg);
+            message = JOptionPane.showInputDialog(null, msg).toUpperCase();
             if(!message.equals(entrada) && !message.equals(saida)){
-                JOptionPane.showMessageDialog(null, msg, "SISTEMA DE GESTÃO DE BANCA DE JORNAL", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, msgError, "SISTEMA DE GESTÃO DE BANCA DE JORNAL", JOptionPane.INFORMATION_MESSAGE);
             }else{
                 retorno = message.equals(entrada);
             }

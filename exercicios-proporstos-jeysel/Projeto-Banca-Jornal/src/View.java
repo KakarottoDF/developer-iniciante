@@ -2,7 +2,7 @@ import javax.swing.*;
 
 public class View {
 
-    public Endereco cadastrarEndereco(){
+    public static Endereco cadastrarEndereco(){
         return new Endereco(
                 Reader.lerString("Digite o endereço: "),
                 Reader.lerString("Digite a cidade: "),
@@ -11,7 +11,7 @@ public class View {
         );
     }
 
-    public Morador cadastrarMoradores(){
+    public static Morador cadastrarMoradores(){
         String resposta = Reader.lerString(
                 "Qual é a região deste morador?\n[1] " + Regiao.CNB + "\n[2] " + Regiao.QNA,
                 "Digite somente:\n[1] " + Regiao.CNB + "\n[2] " + Regiao.QNA,
@@ -26,5 +26,39 @@ public class View {
                 Reader.lerString("Digite o telefone do morador: "),
                 regiao
         );
+    }
+
+    public static Revista cadastrarRevista(){
+        return new Revista(
+                Reader.lerString("Informe o nome da revista"),
+                Reader.lerDouble("Digite o valor dessa revista R$ "),
+                Reader.lerInt("Informe a quantidade de revistas: ")
+        );
+    }
+
+    public static Banca cadastrarBanca(){
+        return new Banca(
+                Reader.lerString("Digite o nome da banca: "),
+                cadastrarEndereco(),
+                cadastrarRevista()
+        );
+    }
+
+    public static void alimentarArrayMorador(GerenciadorBanca gerenciadorBanca){
+        boolean continuar = true;
+
+        while(continuar) {
+            gerenciadorBanca.adicionar(cadastrarMoradores());
+            continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
+        }
+    }
+
+    public static void alimentarArrayBanca(GerenciadorBanca gerenciadorBanca){
+        boolean continuar = true;
+
+        while(continuar) {
+            gerenciadorBanca.adicionar(cadastrarBanca());
+            continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
+        }
     }
 }

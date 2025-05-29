@@ -3,6 +3,13 @@ import java.util.Observable;
 public class Revista extends Observable {
     private String nome;
     private double valor;
+    private int qtdRevistas;
+
+    public Revista(String nome, double valor, int qtdRevistas) {
+        setNome(nome);
+        setValor(valor);
+        setQtdRevistas(qtdRevistas);
+    }
 
     public String getNome() {
         return this.nome;
@@ -20,6 +27,14 @@ public class Revista extends Observable {
         this.valor = valor;
     }
 
+    public int getQtdRevistas() {
+        return this.qtdRevistas;
+    }
+
+    public void setQtdRevistas(int qtdRevistas) {
+        this.qtdRevistas = qtdRevistas;
+    }
+
     public void mudaEstado(){
         setChanged();
         notifyObservers(getNome());
@@ -30,6 +45,7 @@ public class Revista extends Observable {
         return "Revista{" +
                 "nome='" + getNome() + '\'' +
                 ", valor=" + getValor() +
+                ", qtdRevistas=" + getQtdRevistas() +
                 '}';
     }
 }
