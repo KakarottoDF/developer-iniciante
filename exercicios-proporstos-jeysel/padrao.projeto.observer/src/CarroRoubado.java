@@ -33,8 +33,8 @@ public class CarroRoubado extends Observable implements Carro{
     }
 
     public void mudaEstado(){
-        setChanged();
-        notifyObservers(getAcao());
+        setChanged(); //Mudou o estado
+        notifyObservers(getAcao()); //Notifica os observadores
     }
 
     public String getAcao() {
