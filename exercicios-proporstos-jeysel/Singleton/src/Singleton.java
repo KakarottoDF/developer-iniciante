@@ -5,9 +5,11 @@ public class Singleton {
         //Construtor criado para não deixar criar a instância da classe, pois é privada
     }
 
-    public static synchronized Singleton getInstance(){
-        if(uniqueInstance == null){
-            uniqueInstance = new Singleton();
+    public static Singleton getInstance(){
+        synchronized (Singleton.class) {
+            if (uniqueInstance == null) {
+                uniqueInstance = new Singleton();
+            }
         }
         return uniqueInstance;
     }
