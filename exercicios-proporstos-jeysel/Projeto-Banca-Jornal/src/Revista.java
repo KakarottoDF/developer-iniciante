@@ -39,7 +39,7 @@ public class Revista extends Observable {
     public void mudaEstado(){
         if (getNome().equals(REVISTA)) {
             setChanged();
-            notifyObservers("Nova edição da revista ISTO É disponível!");
+            notifyObservers("Nova edição da revista '" + REVISTA + "' está disponível!");
             }
 
     }
