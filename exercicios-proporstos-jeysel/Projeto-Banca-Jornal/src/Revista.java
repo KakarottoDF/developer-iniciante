@@ -3,13 +3,13 @@ import java.util.Observable;
 public class Revista extends Observable {
     private String nome;
     private double valor;
-    private int qtdRevistas;
+    private int qtdEmEstoque;
     private final String REVISTA = "ISTO É";
 
-    public Revista(String nome, double valor, int qtdRevistas) {
+    public Revista(String nome, double valor, int qtdEmEstoque) {
         setNome(nome);
         setValor(valor);
-        setQtdRevistas(qtdRevistas);
+        setQtdEmEstoque(qtdEmEstoque);
     }
 
     public String getNome() {
@@ -28,12 +28,12 @@ public class Revista extends Observable {
         this.valor = valor;
     }
 
-    public int getQtdRevistas() {
-        return this.qtdRevistas;
+    public int getQtdEmEstoque() {
+        return this.qtdEmEstoque;
     }
 
-    public void setQtdRevistas(int qtdRevistas) {
-        this.qtdRevistas = qtdRevistas;
+    public void setQtdEmEstoque(int qtdEmEstoque) {
+        this.qtdEmEstoque = qtdEmEstoque;
     }
 
     public void mudaEstado(){
@@ -52,10 +52,9 @@ public class Revista extends Observable {
 
     @Override
     public String toString() {
-        return "Revista{" +
-                "nome='" + getNome() + '\'' +
-                ", valor=" + getValor() +
-                ", qtdRevistas=" + getQtdRevistas() +
-                '}';
+        return "\nREVISTA: " + getNome() +
+                "\nVALOR R$ " + getValor() +
+                "\nESTOQUE: " + getQtdEmEstoque() +
+                "\n";
     }
 }

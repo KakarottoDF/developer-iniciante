@@ -1,1 +1,71 @@
-[Morador{Pessoa{nome='CRISTIANO AYUB', endereco=Endereco{logradouro='QNA 30', cidade='TAGUATINGA SUL', estado='DF', cep='7200000'}, telefone='61ASD'}regiao=CNB}][Morador{Pessoa{nome='ASD', endereco=Endereco{logradouro='ASD', cidade='ASD', estado='ASD', cep='ASD'}, telefone='ASD'}regiao=CNB}][Morador{Pessoa{nome='AS', endereco=Endereco{logradouro='ASD', cidade='ASD', estado='ASD', cep='ASD'}, telefone='ASD'}regiao=CNB}]
+[Morador{Pessoa{nome='CRISTIANO AYUB', endereco=Endereco{logradouro='QNA 30', cidade='TAGUATINGA SUL', estado='DF', cep='7200000'}, telefone='61ASD'}regiao=CNB}][Morador{Pessoa{nome='ASD', endereco=Endereco{logradouro='ASD', cidade='ASD', estado='ASD', cep='ASD'}, telefone='ASD'}regiao=CNB}][Morador{Pessoa{nome='AS', endereco=Endereco{logradouro='ASD', cidade='ASD', estado='ASD', cep='ASD'}, telefone='ASD'}regiao=CNB}][
+NOME: ASD
+ENDEREÇO: ASD
+CIDADE: ASD
+ESTADO: ASD
+CEP: ASD
+
+TELEFONE: ASD
+
+REGIÃO: QNA
+][
+NOME: AYUB
+ENDEREÇO: SADASD
+CIDADE: DASD
+ESTADO: ASD
+CEP: ASD
+
+TELEFONE: 69+
+
+REGIÃO: CNB
+, 
+NOME: GABRIEL
+ENDEREÇO: \ZXX\ZX
+CIDADE: ERF
+ESTADO: WEF
+CEP: WEF
+
+TELEFONE: 88
+
+REGIÃO: QNA
+, 
+NOME: EVELYN AYUB
+ENDEREÇO: ASD
+CIDADE: ASDASD
+ESTADO: ASDASD
+CEP: ASDASD
+
+TELEFONE: 369
+
+REGIÃO: CNB
+][
+NOME: CRISTIANO AYUB
+ENDEREÇO: CNB 10
+CIDADE: TAGUATINGA
+ESTADO: DF
+CEP: 72110125
+
+TELEFONE: 99
+
+REGIÃO: CNB
+, 
+NOME: GABRIEL DE CAMPOS
+ENDEREÇO: QNA 34
+CIDADE: NORTE
+ESTADO: GO
+CEP: 72110147
+
+TELEFONE: 589
+
+REGIÃO: QNA
+, 
+NOME: EVELYN
+ENDEREÇO: TESTE
+CIDADE: DF
+ESTADO: DF
+CEP: 321456
+
+TELEFONE: 874569
+
+REGIÃO: CNB
+]

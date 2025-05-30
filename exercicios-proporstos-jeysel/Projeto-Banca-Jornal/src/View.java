@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 public class View {
+    private static final String REVISTA = "ISTO É";
 
     public static Endereco cadastrarEndereco(){
         return new Endereco(
@@ -51,13 +52,37 @@ public class View {
         );
     }
 
-    public static Banca cadastrarBanca(GerenciadorBanca gerenciadorBanca){
-        return new Banca(
-                Reader.lerString("Digite o nome da banca: "),
-                cadastrarEndereco(),
-                cadastrarRevista(gerenciadorBanca)
-        );
+    public static Banca cadastrarBanca(GerenciadorBanca gerenciadorBanca) {
+        String nomeBanca = Reader.lerString("Digite o nome da banca: ");
+        Endereco endereco = cadastrarEndereco();
+        Banca banca = new Banca(nomeBanca, endereco);
+
+        boolean adicionarMaisRevistas = true;
+        while (adicionarMaisRevistas) {
+            Revista revista = cadastrarRevista(gerenciadorBanca);
+
+            // Adiciona observadores
+            for (Morador morador : gerenciadorBanca.getListaMoradores()) {
+                revista.addObserver(morador);
+            }
+
+            // Adiciona à banca
+            banca.adicionarRevista(revista);
+
+            // Notifica se for ISTO É
+            if (revista.getNome().equalsIgnoreCase("ISTO É")) {
+                revista.mudaEstado();
+            }
+
+            adicionarMaisRevistas = Reader.lerBoolean(
+                    "Deseja adicionar outra revista para esta banca? [S]SIM [N]NÃO: ",
+                    "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N"
+            );
+        }
+
+        return banca;
     }
+
 
     public static void alimentarArrayMorador(GerenciadorBanca gerenciadorBanca){
         boolean continuar = true;
@@ -68,12 +93,19 @@ public class View {
         }
     }
 
-    public static void alimentarArrayBanca(GerenciadorBanca gerenciadorBanca){
+    public static void alimentarArrayBanca(GerenciadorBanca gerenciadorBanca) {
         boolean continuar = true;
 
-        while(continuar) {
-            gerenciadorBanca.adicionar(cadastrarBanca(gerenciadorBanca));
-            continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
+        while (continuar) {
+            Banca banca = cadastrarBanca(gerenciadorBanca);
+            gerenciadorBanca.adicionar(banca);
+
+            continuar = Reader.lerBoolean(
+                    "Deseja cadastrar outra banca? [S]SIM [N]NÃO: ",
+                    "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N"
+            );
         }
     }
+
+
 }

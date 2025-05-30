@@ -28,14 +28,17 @@ public class GerenciadorBanca implements Validador{
     }
 
     @Override
-    public boolean revistaExiste(String nome){
-        for(Banca banca : getListaBancas()){
-            if(banca.getRevista().getNome().equalsIgnoreCase(nome)){
-                return true;
+    public boolean revistaExiste(String nome) {
+        for (Banca banca : getListaBancas()) {
+            for (Revista revista : banca.getRevistas()) {
+                if (revista.getNome().equalsIgnoreCase(nome)) {
+                    return true;
+                }
             }
         }
         return false;
     }
+
 
     public ArrayList<Morador> getListaMoradores() {
         return this.listaMoradores;

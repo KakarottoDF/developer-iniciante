@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.util.Observable;
 import java.util.Observer;
 
-public class Morador extends Pessoa implements Observer {
+public class Morador extends Pessoa implements Observer{
     private Regiao regiao;
 
     public Morador(String nome, Endereco endereco, String telefone, Regiao regiao) {
@@ -27,7 +27,7 @@ public class Morador extends Pessoa implements Observer {
     @Override
     public void update(Observable aguardarRevista, Object arg) {
         if (aguardarRevista instanceof Revista) {
-            Revista revista = (Revista) aguardarRevista;
+            Revista revista = (Revista) aguardarRevista; //casting que mostra o estado atual de revista
             JOptionPane.showMessageDialog(null,
                     "Morador " + getNome() + " foi notificado:\n" + arg,
                     "NOTIFICAÇÃO", JOptionPane.INFORMATION_MESSAGE);
@@ -37,7 +37,7 @@ public class Morador extends Pessoa implements Observer {
     @Override
     public String toString() {
         return super.toString() +
-                "\nREGIÃO: " + getRegiao() +
+                "REGIÃO: " + getRegiao() +
                 "\n";
     }
 }

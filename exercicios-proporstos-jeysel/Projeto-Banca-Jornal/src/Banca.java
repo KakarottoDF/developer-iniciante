@@ -1,14 +1,18 @@
-import java.util.Observable;
+import java.util.ArrayList;
 
 public class Banca {
     private String nome;
     private Endereco endereco;
-    private Revista revista;
+    private ArrayList<Revista> revistas;
 
-    public Banca(String nome, Endereco endereco, Revista revista) {
+    public Banca(String nome, Endereco endereco) {
         setNome(nome);
         setEndereco(endereco);
-        setRevista(revista);
+        setRevistas(new ArrayList<>());
+    }
+
+    public void adicionarRevista(Revista revista) {
+        revistas.add(revista);
     }
 
     public String getNome() {
@@ -27,19 +31,19 @@ public class Banca {
         this.endereco = endereco;
     }
 
-    public Revista getRevista() {
-        return revista;
+    public ArrayList<Revista> getRevistas() {
+        return this.revistas;
     }
 
-    public void setRevista(Revista revista) {
-        this.revista = revista;
+    public void setRevistas(ArrayList<Revista> revistas) {
+        this.revistas = revistas;
     }
 
     @Override
     public String toString() {
-        return "\nNOME: " + getNome() +
+        return "\nNOME DA BANCA: " + getNome() +
                 getEndereco() +
-                "\nREVISTA: " + getRevista() +
+                "\nREVISTAS: " + getRevistas() +
                 "\n";
     }
 }
