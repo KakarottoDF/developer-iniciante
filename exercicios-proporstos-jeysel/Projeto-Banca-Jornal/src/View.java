@@ -70,7 +70,7 @@ public class View {
             banca.adicionarRevista(revista);
 
             // Notifica se for ISTO É
-            if (revista.getNome().equalsIgnoreCase("ISTO É")) {
+            if (revista.getNome().equalsIgnoreCase(REVISTA)) {
                 revista.mudaEstado();
             }
 
