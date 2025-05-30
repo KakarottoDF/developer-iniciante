@@ -37,10 +37,9 @@ public class Banca {
 
     @Override
     public String toString() {
-        return "Banca{" +
-                "nome='" + getNome() + '\'' +
-                ", endereco=" + getEndereco() +
-                ", revista=" + getRevista() +
-                '}';
+        return "\nNOME: " + getNome() +
+                getEndereco() +
+                "\nREVISTA: " + getRevista() +
+                "\n";
     }
 }

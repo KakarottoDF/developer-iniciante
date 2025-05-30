@@ -47,9 +47,9 @@ public class GerenciadorBanca implements Validador{
 
     @Override
     public String toString() {
-        return "GerenciadorBanca{" +
-                "moradores=" + getListaMoradores() +
-                ", bancas=" + getListaBancas() +
-                '}';
+        return "--- SISTEMA GERENCIADOR DE BANCA ---" +
+                "\nLISTA DOS MORADORES" + getListaMoradores() +
+                "\nLISTA DE BANCAS" + getListaBancas() +
+                "\n";
     }
 }

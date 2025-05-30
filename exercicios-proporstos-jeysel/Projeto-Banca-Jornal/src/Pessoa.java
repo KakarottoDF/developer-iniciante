@@ -35,10 +35,9 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return "Pessoa{" +
-                "nome='" + getNome() + '\'' +
-                ", endereco=" + getEndereco() +
-                ", telefone='" + getTelefone() + '\'' +
-                '}';
+        return "\nNOME: " + getNome() +
+                getEndereco() +
+                "\nTELEFONE: " + getTelefone() +
+                "\n";
     }
 }

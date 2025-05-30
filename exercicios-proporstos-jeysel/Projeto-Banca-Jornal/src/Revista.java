@@ -4,6 +4,7 @@ public class Revista extends Observable {
     private String nome;
     private double valor;
     private int qtdRevistas;
+    private final String REVISTA = "ISTO É";
 
     public Revista(String nome, double valor, int qtdRevistas) {
         setNome(nome);
@@ -36,8 +37,11 @@ public class Revista extends Observable {
     }
 
     public void mudaEstado(){
-        setChanged();
-        notifyObservers(getNome());
+        if (getNome().equals(REVISTA)) {
+            setChanged();
+            notifyObservers("Nova edição da revista ISTO É disponível!");
+            }
+
     }
 
     @Override
