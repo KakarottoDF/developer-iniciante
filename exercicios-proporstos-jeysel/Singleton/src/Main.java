@@ -12,7 +12,7 @@ public class Main {
         if(c == c2){
             System.out.println("Singleton funcionou");
         }else{
-            System.out.println("Singleton não funcionou");
+            System.out.println("Singleton falhou");
         }
     }
 }
