@@ -17,6 +17,14 @@ public class GerenciadorBanca implements Validador{
         getListaBancas().add(banca);
     }
 
+    public ArrayList<Morador> getListaMoradores() {
+        return this.listaMoradores;
+    }
+
+    public ArrayList<Banca> getListaBancas() {
+        return this.listaBancas;
+    }
+
     @Override
     public boolean moradorExiste(String nome){
         for(Morador morador : getListaMoradores()){
@@ -37,15 +45,6 @@ public class GerenciadorBanca implements Validador{
             }
         }
         return false;
-    }
-
-
-    public ArrayList<Morador> getListaMoradores() {
-        return this.listaMoradores;
-    }
-
-    public ArrayList<Banca> getListaBancas() {
-        return this.listaBancas;
     }
 
     @Override
