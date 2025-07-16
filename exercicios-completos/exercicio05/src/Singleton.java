@@ -3,7 +3,7 @@ public class Singleton {
     private SistemaDeArquivos sistema;
 
     private Singleton() {
-        sistema = new SistemaDeArquivos(); // Inicializa aqui
+        sistema = new SistemaDeArquivos(); // Inicializa o Sistema de Arquivos
     }
 
     public static Singleton getInstancia() {

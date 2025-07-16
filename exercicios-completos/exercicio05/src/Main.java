@@ -14,7 +14,7 @@ public class Main {
         [6] Arquivos com o termo "PROVA2" no nome
         [7] Sair
         [8] Resetar o Sistema
-        """, "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 7", 1, 7);
+        """, "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 8", 1, 8);
 
             switch (opcao) {
                 case 1:
