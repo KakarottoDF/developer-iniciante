@@ -27,7 +27,7 @@ public class Morador extends Pessoa implements Observer{
     @Override
     public void update(Observable aguardarRevista, Object arg) {
         if (aguardarRevista instanceof Revista) {
-            Revista revista = (Revista) aguardarRevista; //casting que mostra o estado atual de revista
+            //Revista revista = (Revista) aguardarRevista; //casting que mostra o estado atual de revista
             JOptionPane.showMessageDialog(null,
                     "Morador " + getNome() + " foi notificado:\n" + arg,
                     "NOTIFICAÇÃO", JOptionPane.INFORMATION_MESSAGE);

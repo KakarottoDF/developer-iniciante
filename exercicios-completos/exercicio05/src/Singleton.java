@@ -9,8 +9,8 @@ public class Singleton {
     public static Singleton getInstancia() {
         if (instanciaUnica == null) {
             synchronized (Singleton.class) {
-                instanciaUnica = new Singleton();
-            }
+                    instanciaUnica = new Singleton();
+                }
         }
         return instanciaUnica;
     }
