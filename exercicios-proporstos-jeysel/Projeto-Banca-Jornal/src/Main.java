@@ -6,6 +6,7 @@ public class Main {
         Printer.imprimirMoradores(gerenciadorBanca);
 
         View.alimentarArrayBanca(gerenciadorBanca);
+        
 
         Printer.imprimirListaGeral(gerenciadorBanca);
     }
