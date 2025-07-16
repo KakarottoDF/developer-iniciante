@@ -13,6 +13,7 @@ public class Main {
         [5] Arquivos com 1000 a 7000 linhas
         [6] Arquivos com o termo "PROVA2" no nome
         [7] Sair
+        [8] Resetar o Sistema
         """, "DIGITE SOMENTE UM NÚMERO ENTRE 1 A 7", 1, 7);
 
             switch (opcao) {
