@@ -2,7 +2,6 @@ public class Main {
     public static void main(String[] args) {
         boolean escolha;
         int opcao;
-        SistemaDeArquivos sistemaDeArquivos = new SistemaDeArquivos();
 
         do {
             opcao = Reader.lerInt("""
@@ -18,33 +17,38 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    View.cadastrarDotNet(sistemaDeArquivos);
+                    View.cadastrarDotNet();
                     break;
                 case 2:
-                    View.cadastrarLinguagemC(sistemaDeArquivos);
+                    View.cadastrarLinguagemC();
                     break;
                 case 3:
-                    Printer.imprimirTodosOsSistemas(sistemaDeArquivos);
-                    Printer.imprimirArquivosOrdenadosPorTempoDeCompilacaoDecrescente(sistemaDeArquivos);
+                    Printer.imprimirTodosOsSistemas();
+                    Printer.imprimirArquivosOrdenadosPorTempoDeCompilacaoDecrescente();
                     break;
                 case 4:
-                    Printer.imprimirArquivoComMaiorTempoDeCompilacao(sistemaDeArquivos);
+                    Printer.imprimirArquivoComMaiorTempoDeCompilacao();
                     break;
                 case 5:
-                    Printer.imprimirArquivosComLinhasCondicionais(sistemaDeArquivos);
+                    Printer.imprimirArquivosComLinhasCondicionais();
                     break;
                 case 6:
-                    Printer.imprimirArquivosComTermo(sistemaDeArquivos);
+                    Printer.imprimirArquivosComTermo();
                     break;
                 case 7:
                     escolha = true;
                     continue;
+                case 8:
+                    Singleton.getInstancia().resetarSistema();
+                    System.out.println("Sistema resetado com sucesso!");
+                    break;
                 default:
                     System.out.println("ERRO INESPERADO.");
                     break;
             }
 
-            escolha = Reader.lerBoolean("DESEJA ENCERRAR O PROGRAMA? [S]SIM [N]NÃO: ", "ESCOLHA SOMENTE [S]SIM [N]NÃO: ", "S", "N");
+            escolha = Reader.lerBoolean("DESEJA ENCERRAR O PROGRAMA? [S]SIM [N]NÃO: ",
+                    "ESCOLHA SOMENTE [S]SIM [N]NÃO: ", "S", "N");
 
         } while (!escolha);
     }

@@ -1,16 +1,16 @@
 public class View{
-    public static DotNet alimentarArrayDotNet(SistemaDeArquivos sistemaDeArquivos){
+    public static DotNet alimentarArrayDotNet(){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
-            if(sistemaDeArquivos.validarSeNomeExiste(nome)){
+            if(Singleton.getInstancia().getSistema().validarSeNomeExiste(nome)){
                 System.out.println("O ARQUIVO JÁ EXISTE, INFORME OUTRO!");
             }else{
                 if(nome.isEmpty() || nome.isBlank()){
                     System.out.println("VOCÊ TEM QUE DIGITAR UM NOME.");
                 }
             }
-        }while(sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
+        }while(Singleton.getInstancia().getSistema().validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
 
         return new DotNet(
                 nome,
@@ -20,18 +20,18 @@ public class View{
         );
     }
 
-    public static LinguagemC alimentarArrayC(SistemaDeArquivos sistemaDeArquivos){
+    public static LinguagemC alimentarArrayC(){
         String nome;
         do {
             nome = Reader.lerString("INFORME O NOME DO ARQUIVO: ");
-            if(sistemaDeArquivos.validarSeNomeExiste(nome)){
+            if(Singleton.getInstancia().getSistema().validarSeNomeExiste(nome)){
                 System.out.println("O ARQUIVO JÁ EXISTE, INFORME OUTRO!");
             }else{
                 if(nome.isEmpty() || nome.isBlank()){
                     System.out.println("VOCÊ TEM QUE DIGITAR UM NOME.");
                 }
             }
-        }while(sistemaDeArquivos.validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
+        }while(Singleton.getInstancia().getSistema().validarSeNomeExiste(nome) || nome.isEmpty() || nome.isBlank());
 
         return new LinguagemC(
                 nome,
@@ -41,22 +41,22 @@ public class View{
         );
     }
 
-    public static void cadastrarDotNet(SistemaDeArquivos sistemaDeArquivos){
+    public static void cadastrarDotNet(){
         boolean continuar = true;
 
         while(continuar){
-            sistemaDeArquivos.adicionar(alimentarArrayDotNet(sistemaDeArquivos));
+            Singleton.getInstancia().getSistema().adicionar(alimentarArrayDotNet());
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
     }
 
-    public static void cadastrarLinguagemC(SistemaDeArquivos sistemaDeArquivos){
+    public static void cadastrarLinguagemC(){
         boolean continuar = true;
 
         while(continuar) {
 
-            sistemaDeArquivos.adicionar(alimentarArrayC(sistemaDeArquivos));
+            Singleton.getInstancia().getSistema().adicionar(alimentarArrayC());
 
             continuar = Reader.lerBoolean("DESEJA CONTINUAR COM O CADASTRO? [S]SIM [N]NÃO: ", "DIGITE SOMENTE [S]SIM [N]NÃO", "S", "N");
         }
