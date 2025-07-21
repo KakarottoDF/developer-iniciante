@@ -1,3 +1,5 @@
+package classes.gerais;
+
 public class DotNet extends Arquivo{
     private String pacote;
     private int qtdMetodos;

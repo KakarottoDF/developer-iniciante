@@ -1,3 +1,5 @@
+package classes.gerais;
+
 public class Arquivo implements Comparable<Arquivo>, Compilacao{
     private String nome;
     private int qtdLinhas;

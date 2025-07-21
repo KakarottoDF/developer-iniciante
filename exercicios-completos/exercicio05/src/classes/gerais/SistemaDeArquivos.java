@@ -1,3 +1,5 @@
+package classes.gerais;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -43,7 +45,7 @@ public class SistemaDeArquivos{
 
     public ArrayList<Arquivo> getArquivosOrdenadosPorTempoDeCompilacaoDecrescente() {
         ArrayList<Arquivo> copia = new ArrayList<>(getArquivo());
-        Collections.sort(copia); // Usa o compareTo implementado em Arquivo
+        Collections.sort(copia); // Usa o compareTo implementado em classes.gerais.Arquivo
         return copia;
     }
 

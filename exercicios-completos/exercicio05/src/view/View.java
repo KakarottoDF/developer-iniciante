@@ -1,3 +1,10 @@
+package view;
+
+import classes.gerais.DotNet;
+import classes.gerais.LinguagemC;
+import reader.Reader;
+import singleton.Singleton;
+
 public class View{
     public static DotNet alimentarArrayDotNet(){
         String nome;

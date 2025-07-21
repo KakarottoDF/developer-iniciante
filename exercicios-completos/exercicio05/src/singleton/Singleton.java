@@ -1,3 +1,7 @@
+package singleton;
+
+import classes.gerais.SistemaDeArquivos;
+
 public class Singleton {
     private static Singleton instanciaUnica;
     private SistemaDeArquivos sistema;

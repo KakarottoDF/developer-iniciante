@@ -1,3 +1,5 @@
+package classes.gerais;
+
 public class LinguagemC extends Arquivo{
     private int qtdBibliotecas;
     private int qtdFuncoes;

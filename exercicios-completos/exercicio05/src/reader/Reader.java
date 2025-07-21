@@ -1,3 +1,5 @@
+package reader;
+
 import javax.swing.JOptionPane;
 
 public class Reader {
