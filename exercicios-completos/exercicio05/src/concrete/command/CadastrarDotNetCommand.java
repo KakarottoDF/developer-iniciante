@@ -4,6 +4,7 @@ import command.Command;
 import view.View;
 
 public class CadastrarDotNetCommand implements Command {
+    @Override
     public void executar() {
         View.cadastrarDotNet();
     }
