@@ -17,7 +17,9 @@ public class Menu {
 
         while (true) {
             int opcao = Reader.lerInt("Menu:\n0 - Cadastrar\n1 - Atualizar\n2 - Deletar\n3 - Buscar CPF\n4 - Buscar Nome\n5 - Listar Todos\n6 - Sair");
-            if (opcao >= 0 && opcao < comandos.length) comandos[opcao].executar();
+            if (opcao >= 0 && opcao < comandos.length){
+                comandos[opcao].executar();
+            }
         }
     }
 }
