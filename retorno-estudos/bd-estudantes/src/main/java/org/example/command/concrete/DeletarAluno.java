@@ -1,5 +1,6 @@
-package org.example.command;
+package org.example.command.concrete;
 
+import org.example.command.Command;
 import org.example.dao.AlunoDAO;
 import org.example.model.Reader;
 
