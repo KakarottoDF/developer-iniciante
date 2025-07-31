@@ -8,6 +8,7 @@ import org.example.model.Reader;
 import java.util.ArrayList;
 
 public class BuscarPorNome implements Command {
+    @Override
     public void executar() {
         String nome = Reader.lerString("Digite o nome:");
         ArrayList<Aluno> alunos = new AlunoDAO().pesquisarByNome(nome);

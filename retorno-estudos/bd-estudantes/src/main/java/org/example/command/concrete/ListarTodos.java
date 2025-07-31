@@ -8,6 +8,7 @@ import org.example.model.Reader;
 import java.util.ArrayList;
 
 public class ListarTodos implements Command {
+    @Override
     public void executar() {
         ArrayList<Aluno> alunos = new AlunoDAO().pesquisarTodos();
         StringBuilder sb = new StringBuilder();

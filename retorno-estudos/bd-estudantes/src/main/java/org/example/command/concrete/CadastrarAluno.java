@@ -6,6 +6,7 @@ import org.example.model.Aluno;
 import org.example.model.Reader;
 
 public class CadastrarAluno implements Command {
+    @Override
     public void executar() {
         String nome = Reader.lerString("Digite o nome:");
         String cpf = Reader.lerString("Digite o CPF:");

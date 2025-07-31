@@ -6,6 +6,7 @@ import org.example.model.Aluno;
 import org.example.model.Reader;
 
 public class AtualizarAluno implements Command {
+    @Override
     public void executar() {
         String cpf = Reader.lerString("Digite o CPF do aluno a atualizar:");
         Aluno aluno = new AlunoDAO().pesquisarByCpf(cpf);
