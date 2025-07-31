@@ -14,7 +14,7 @@ public class AlunoDAO implements DAO {
             pst.setInt(3, aluno.getIdade());
             pst.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -26,7 +26,7 @@ public class AlunoDAO implements DAO {
             pst.setString(3, aluno.getCpf());
             pst.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -36,7 +36,7 @@ public class AlunoDAO implements DAO {
             pst.setString(1, cpf);
             pst.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
@@ -50,7 +50,7 @@ public class AlunoDAO implements DAO {
                 alunos.add(new Aluno(rs.getInt("CODIGO"), rs.getString("NOME"), rs.getString("CPF"), rs.getInt("IDADE")));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return alunos;
     }
@@ -64,7 +64,7 @@ public class AlunoDAO implements DAO {
                 alunos.add(new Aluno(rs.getInt("CODIGO"), rs.getString("NOME"), rs.getString("CPF"), rs.getInt("IDADE")));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return alunos;
     }
@@ -78,7 +78,7 @@ public class AlunoDAO implements DAO {
                 return new Aluno(rs.getInt("CODIGO"), rs.getString("NOME"), rs.getString("CPF"), rs.getInt("IDADE"));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return null;
     }
